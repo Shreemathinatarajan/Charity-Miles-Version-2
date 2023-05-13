@@ -1,0 +1,105 @@
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+.home .image{
+    flex: 300px;
+}
+.home .image img{
+    width: 100%;
+}
+.home .content{
+    flex: 300px;
+}
+.home .content h3{
+    align-items: center;
+    font-size: 25px;
+    padding-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: mediumslateblue;
+    line-height: 1.8;
+}
+.home .content p{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    text-shadow: 2px 2px 4px lightslategray;
+    line-height: 1.8;
+    padding: 7px 0;
+}
+.btn{
+    display: inline-block;
+    margin-top: 7px;
+    text-decoration: none;
+    padding: 5px;
+    color: var(--black);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bolder;
+    color: mediumslateblue;
+    border: 2px solid black;
+}
+.btn span{
+    color: mediumslateblue;
+    margin-left: .5rem;
+}
+.btn:hover{
+    color: black;
+    background-color: lightsteelblue;
+}
+.btn:hover span{
+    color: black;
+}
+
+
+.services{
+    padding-top: 20px;
+}
+.heading{
+    text-align: center;
+    color: var(--black);
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+.heading span{
+    color: mediumslateblue;
+    font-size: 30px;
+}
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap:2rem;
+    padding: 20px;
+}
+.services .box-container .box{
+    background: whitesmoke;
+    border-radius: 1px;
+    box-shadow: var(--box-shadow);
+    border: 2px solid mediumslateblue;
+    padding: 10px;
+}
+.services .box-container .box img{
+    color: mediumslateblue;
+    width: 90%;
+    height: 90%;
+    padding-left: 15px;
+    border: 2px solid aliceblue;
+}
+.services .box-container .box h3{
+    color: var(--black);
+    font-size: 25px;
+}
+.services .box-container .box h3:hover{
+    color: mediumslateblue;
+}
+.services .box-container .box p{
+    color: var(--black);
+    font-size: 16px;
+    line-height: 2;
+}
+
+.img{
+    text-align: center;
+}

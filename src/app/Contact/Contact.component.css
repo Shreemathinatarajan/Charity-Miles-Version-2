@@ -1,0 +1,56 @@
+.heading{
+    text-align: center;
+    color: var(--black);
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+.heading span{
+    color: mediumslateblue;
+    font-size: 30px;
+}
+.container .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+    padding-bottom: 30px;
+}
+.container .row .image{
+    flex:1 1 20rem;
+}
+.container .row .image img{
+    width: 90%;
+    padding-left: 50px;
+}
+.container .row form{
+    flex: 1 1 20rem;
+    text-align: center;
+    padding-right: 100px;
+    
+}
+.container .row form h3{
+    color:var(--black);
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.container .row form .box{
+    width: 70%;
+    margin: 10px 0;
+    border-radius: 2px;
+    border:2px solid mediumslateblue;
+    font-size: 14px;
+    color: var(--black);
+    padding: 5px;
+}
+.container .row form .box:hover{
+    background-color: whitesmoke;
+}
+.container .row form .btn{
+    padding:10px;
+    border: 1px solid mediumslateblue;
+    background-color: white;
+}
+.container .row form .btn:hover{
+    background-color: lightsteelblue;
+    border: 2px solid black;
+}

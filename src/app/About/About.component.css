@@ -1,0 +1,45 @@
+.heading{
+    text-align: center;
+    color: var(--black);
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+.heading span{
+    color: mediumslateblue;
+    font-size: 30px;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding-bottom: 50px;
+}
+.about .row .image{
+    flex: 100px;
+    padding-left: 70px;
+}
+.about .row .image img{
+    width: 100%;
+}
+.about .row .content{
+    flex: 1 1 18rem;
+    padding-right: 70px;
+}
+.about .row .content h4{
+    color: var(--black);
+    font-size: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px lightslategray;
+}
+.about .row .content p{
+    color: var(--light-color);
+    padding: 10px 0;
+    font-size: 18px;
+    line-height: 1.8;
+}
+.about .row .content .qoute p{
+    color: mediumslateblue;
+    text-transform: uppercase;
+    font-weight: bold;
+}

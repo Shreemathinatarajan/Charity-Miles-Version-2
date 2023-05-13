@@ -1,0 +1,55 @@
+ 
+.charity .heading{
+    text-align: center;
+    color: mediumslateblue;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px lightslategray;
+}
+.charity .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    gap:2rem;
+    padding: 10px 80px 80px 80px;
+}
+.charity .box-container .box{
+    background: whitesmoke;
+    border: 2px solid mediumslateblue;
+    padding: 10px;
+    height: 70%;
+    width: 90%;
+}
+.charity .box-container .box img{
+    width: 100%;
+    height: 40%;
+    
+}
+.charity .box-container .box:hover img{
+    transform: scale(1.2);
+}
+.charity .box-container .box h3{
+    color: var(--black);
+    font-size: 25px;
+    
+}
+.charity .box-container .box p{
+    color: var(--black);
+    font-size: 16px;
+    line-height: 2;
+}
+.btn{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    border: 2px solid mediumslateblue;
+    padding: 5px;
+}
+.btn span{
+    color: mediumslateblue;
+}
+.btn:hover{
+    background-color: lightsteelblue;
+    color: black;
+}
+.btn:hover span{
+    color: black;
+}

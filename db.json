@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "uname": "shree",
+      "mobileno": "12345678",
+      "emailid": "shreemathinatarajan29@gmail.com",
+      "pass": "12345678",
+      "cpass": "12345678",
+      "id": 1
+    },
+    {
+      "uname": "sam",
+      "mobileno": "sam123456",
+      "emailid": "sam1900@gmail.com",
+      "pass": "sam123456",
+      "cpass": "sam123456",
+      "id": 2
+    }
+  ]
+}
