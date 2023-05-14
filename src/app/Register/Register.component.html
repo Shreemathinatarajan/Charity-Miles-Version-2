@@ -12,7 +12,7 @@
           <div [hidden]="!uname.errors['required']">Enter Username</div>
           <div [hidden]="!uname.errors['pattern']">Enter a valid username</div>
         </div>
-        <input type="email" name="email" #emailid=ngModel [(ngModel)]="email" placeholder="Email" required 
+        <input type="email" name="email" #emailid="ngModel" [(ngModel)]="email" placeholder="Email" required 
         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
         <div *ngIf="emailid.errors && (emailid.dirty||emailid.touched)" class="msg">
           <div [hidden]="!emailid.errors['required']">Enter your email</div>
