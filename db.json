@@ -1,5 +1,12 @@
 {
   "users": [
-
+    {
+      "uname": "shree",
+      "mobileno": "asdfghjkl",
+      "emailid": "shreemathi2901@gmail.com",
+      "pass": "asdfghjkl",
+      "cpass": "asdfghjkl",
+      "id": 1
+    }
   ]
 }
