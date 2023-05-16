@@ -3,6 +3,7 @@ import { FormService } from '../form.service';
 import { FormBuilder } from '@angular/forms';
 
 
+
 @Component({
   selector: 'app-Register',
   templateUrl: './Register.component.html',
@@ -25,12 +26,13 @@ export class RegisterComponent implements OnInit {
       pass:this.password,
       cpass:this.confirmpassword
     }
+    
 
     this.FormService.Information(body).subscribe(data=>{
       alert("Register Successfully");
     })
+}
+  ngOnInit(): void {
+    
   }
-  ngOnInit() {
-  }
-
 }

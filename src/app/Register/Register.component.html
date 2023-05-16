@@ -23,10 +23,10 @@
           <div [hidden]="!mobileno.errors['required']">Enter your mobile number</div>
           <div [hidden]="!mobileno.errors['pattern']">Enter a valid number</div>
         </div>
-        <input type="password" name="password" #pass="ngModel" [(ngModel)]="password" placeholder="Password" required minlength="8"/>
+        <input type="password" name="password" #pass="ngModel" [(ngModel)]="password" placeholder="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,20}"/>
         <div *ngIf="pass.errors && (pass.dirty||pass.touched)" class="msg">
           <div [hidden]="!pass.errors['required']">Enter Password</div>
-          <div [hidden]="!pass.errors['minlength']">Enter Password with atleast 8 characters</div>
+          <div [hidden]="!pass.errors['pattern']">Enter Password contains atleast 8 characters with one uppercase, one lowercase, one number and one special symbols</div>
         </div>
         <input type="password" name="confirmpassword" #cpass="ngModel" [(ngModel)]="confirmpassword" placeholder="Confirm Password" required/>
         <div *ngIf="cpass.errors && (cpass.dirty||cpass.touched)" class="msg">
