@@ -1,3 +1,6 @@
+section{
+    padding-top: 85px;
+}
 .home{
     display: flex;
     align-items: center;
@@ -17,7 +20,7 @@
     align-items: center;
     font-size: 25px;
     padding-top: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: mediumslateblue;
     line-height: 1.8;
 }
@@ -40,6 +43,7 @@
     font-weight: bolder;
     color: mediumslateblue;
     border: 2px solid black;
+    font-family: 'Times New Roman', Times, serif;
 }
 .btn span{
     color: mediumslateblue;
@@ -62,8 +66,10 @@
     color: var(--black);
     font-size: 30px;
     letter-spacing: 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .heading span{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: mediumslateblue;
     font-size: 30px;
 }
@@ -95,6 +101,7 @@
     color: mediumslateblue;
 }
 .services .box-container .box p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: var(--black);
     font-size: 16px;
     line-height: 2;

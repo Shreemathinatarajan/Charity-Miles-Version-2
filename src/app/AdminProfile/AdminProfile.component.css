@@ -1,0 +1,42 @@
+.content{
+    text-align: right;
+    padding-right: 25px;
+    padding-top: 20px;
+}
+.profile img{
+    width: 30px;
+    height: 30px;
+}
+.profile{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+   display: none;
+   background-color: white;
+   border: 1px solid mediumslateblue;
+}
+.dropdown-content a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    text-align: left;
+}
+.dropdown-content a i{
+    color: mediumslateblue;
+}
+.dropdown-content a:hover{
+    background-color: aliceblue;
+    color: mediumslateblue;
+}
+.dropdown-content a:hover i{
+    color: black;
+}
+.profile:hover .dropdown-content{
+    display: block;
+    
+    
+}

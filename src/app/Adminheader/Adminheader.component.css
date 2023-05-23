@@ -1,0 +1,30 @@
+header{
+    position: fixed;
+    width: 17%;
+    height: 100%;
+    border: 2px solid aliceblue;
+    background-color: aliceblue;
+}
+header img{
+    width: 100%;
+}
+header .navbar li{
+    list-style: none;
+}
+header .navbar a{
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+header .navbar a i{
+    color: mediumslateblue;
+}
+header .navbar a:hover {
+    background-color: white;
+    width: 15%;
+    color: mediumslateblue;
+}
+header .navbar a:hover i{
+    color: black;
+}

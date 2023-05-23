@@ -30,6 +30,7 @@ export class RegisterComponent implements OnInit {
 
     this.FormService.Information(body).subscribe(data=>{
       alert("Register Successfully");
+      window.open("Home");
     })
 }
   ngOnInit(): void {

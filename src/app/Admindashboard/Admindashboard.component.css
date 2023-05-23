@@ -1,0 +1,12 @@
+.content{
+    margin-left: 250px;
+}
+.heading h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    color: mediumslateblue;
+}
+.heading h1 i{
+    font-size: 20px;
+    color: black;
+}

@@ -10,5 +10,7 @@ constructor(private client:HttpClient) { }
 Information(body:any){
   return this.client.post("http://localhost:3000/users",body);
 }
-
+getinfo(){
+  return this.client.get("http://localhost:3000/users");
+}
 }

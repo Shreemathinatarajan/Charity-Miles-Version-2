@@ -8,9 +8,21 @@ import { LoginComponent } from './Login/Login.component';
 import { RegisterComponent } from './Register/Register.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AuthGuard } from './auth.guard';
+import { AdminComponent } from './Admin/Admin.component';
+import { HeaderComponent } from './Header/Header.component';
+import { AdminheaderComponent } from './Adminheader/Adminheader.component';
+import { AdmindashboardComponent } from './Admindashboard/Admindashboard.component';
+import { AdmineventComponent } from './Adminevent/Adminevent.component';
+import { AdminAddComponent } from './AdminAdd/AdminAdd.component';
+import { AdminMembershipComponent } from './AdminMembership/AdminMembership.component';
+import { AdminreviewComponent } from './Adminreview/Adminreview.component';
 
 
 const routes: Routes = [
+  {
+    path:'Header',
+    component:HeaderComponent
+  },
   {
     path:'Home',
     component:HomeComponent
@@ -40,6 +52,34 @@ const routes: Routes = [
     path:'Payment',
     component:PaymentComponent,
     canActivate:[AuthGuard]
+  },
+  {
+    path:'Admin',
+    component:AdminComponent
+  },
+  {
+    path:'Adminheader',
+    component:AdminheaderComponent
+  },
+  {
+    path:'Admindashboard',
+    component:AdmindashboardComponent
+  },
+  {
+    path:'Adminevent',
+    component:AdmineventComponent
+  },
+  {
+    path:'AdminAdd',
+    component:AdminAddComponent
+  },
+  {
+    path:'AdminMembership',
+    component:AdminMembershipComponent
+  },
+  {
+    path:'Adminreview',
+    component:AdminreviewComponent
   },
   {
     path:'**',

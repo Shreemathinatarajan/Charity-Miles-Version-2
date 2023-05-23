@@ -7,6 +7,30 @@
       "pass": "asdfghjkl",
       "cpass": "asdfghjkl",
       "id": 1
+    },
+    {
+      "uname": "janasri",
+      "mobileno": "Janu@1234",
+      "emailid": "janasri@gmail.com",
+      "pass": "Janu@1234",
+      "cpass": "Janu@1234",
+      "id": 2
+    },
+    {
+      "uname": "ravi",
+      "mobileno": "Ravi@12345",
+      "emailid": "ravi@gmail.com",
+      "pass": "Ravi@12345",
+      "cpass": "Ravi@12345",
+      "id": 3
+    },
+    {
+      "uname": "raveena",
+      "mobileno": "Raveena@12",
+      "emailid": "raveena29@gmail.com",
+      "pass": "Raveena@12",
+      "cpass": "Raveena@12",
+      "id": 4
     }
   ]
 }

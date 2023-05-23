@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   username:any="";
   password:any="";
   retUrl:any="Home";
+  retUrl1:any="Admin";
 
   constructor(private LoginFormService:LoginformService,private fb:FormBuilder,private route:ActivatedRoute,private router:Router) { }
   form(){
@@ -35,9 +36,13 @@ export class LoginComponent implements OnInit {
         alert("Login Successfully");
         this.router.navigate([this.retUrl]);
       }
+      else if(this.username=="admin" && this.password=="Admin@123"){
+        alert("Admin Logged In Successfully");
+        this.router.navigate([this.retUrl1]);
+      }
       else{
-        alert("Login Successfullly");
-        window.open("Home")
+        alert("Login Successfully");
+        window.open("Home");
       }
     })
   }

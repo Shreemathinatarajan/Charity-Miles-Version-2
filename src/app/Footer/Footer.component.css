@@ -1,0 +1,47 @@
+footer{
+    background: linear-gradient(to bottom, #ffffff 0%, #9999ff 100%);
+}
+.foot .content{
+    display: flex;
+}
+.foot .content .box h2{
+    font-size: 20px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+.foot .content .box h2 span{
+    color: mediumslateblue;
+}
+.foot .content .box{
+    padding-left: 60px;
+}
+.foot .content .box a{
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--black);
+    padding: 10px;
+    text-decoration: none;
+}
+.foot .content .box a:hover{
+    color:dimgray;
+}
+.foot .content .box a i{
+    padding-right: 1px;
+    font-size: 30px;
+}
+.foot .content .box a:hover i{
+    padding-right:  15px;
+    color: mediumslateblue;
+}
+.foot .copy{
+    padding: 5px;
+    padding-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    border-top: 2px solid black;
+    font-size: large;
+    font-weight: bold;
+    background-color: #fff;
+}

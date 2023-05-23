@@ -12,11 +12,22 @@ import { RegisterComponent } from './Register/Register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PaymentComponent } from './payment/payment.component';
+import { AdminComponent } from './Admin/Admin.component';
+import { HeaderComponent } from './Header/Header.component';
+import { FooterComponent } from './Footer/Footer.component';
+import { AdminheaderComponent } from './Adminheader/Adminheader.component';
+import { AdmindashboardComponent } from './Admindashboard/Admindashboard.component';
+import { AdmineventComponent } from './Adminevent/Adminevent.component';
+import { AdminAddComponent } from './AdminAdd/AdminAdd.component';
+import { AdminMembershipComponent } from './AdminMembership/AdminMembership.component';
+import { AdminreviewComponent } from './Adminreview/Adminreview.component';
+import { AdminProfileComponent } from './AdminProfile/AdminProfile.component';
+
 
 
 
 @NgModule({
-  declarations: [											
+  declarations: [																													
     AppComponent,
       HomeComponent,
       CharityComponent,
@@ -24,7 +35,18 @@ import { PaymentComponent } from './payment/payment.component';
       AboutComponent,
       LoginComponent,
       RegisterComponent,
-      PaymentComponent
+      PaymentComponent,
+      AdminComponent,
+      HeaderComponent,
+      FooterComponent,
+      AdminComponent,
+      AdminheaderComponent,
+      AdmindashboardComponent,
+      AdmineventComponent,
+      AdminAddComponent,
+      AdminMembershipComponent,
+      AdminreviewComponent,
+      AdminProfileComponent
    ],
   imports: [
     BrowserModule,
@@ -32,6 +54,7 @@ import { PaymentComponent } from './payment/payment.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
