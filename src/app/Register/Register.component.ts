@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormService } from '../form.service';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ConfirmValidator } from './ConfirmValidator';
+
+
 
 
 
@@ -17,16 +20,29 @@ export class RegisterComponent implements OnInit {
   password:any="";
   confirmpassword:any="";
 
-  constructor(private FormService:FormService,private fb:FormBuilder) { }
+  form: FormGroup=new FormGroup({});
+
+  constructor(private FormService:FormService,private fb:FormBuilder) {
+    this.form=fb.group({
+      pwd:['',[Validators.required]],
+      cpwd:['',[Validators.required]]
+    },{
+      validator:ConfirmValidator('pwd','cpwd')
+    })
+   }
+   get f(){
+    return this.form.controls;
+   }
   Form(){
     var body={
       uname:this.username,
-      mobileno:this.password,
       emailid:this.email,
+      mobileno:this.mobile,
       pass:this.password,
       cpass:this.confirmpassword
     }
     
+
 
     this.FormService.Information(body).subscribe(data=>{
       alert("Register Successfully");

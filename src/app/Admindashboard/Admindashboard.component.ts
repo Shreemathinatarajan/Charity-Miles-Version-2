@@ -3,7 +3,7 @@ import { FormService } from '../form.service';
 
 @Component({
   selector: 'app-Admindashboard',
-  templateUrl: './Admindashboard.component.html',
+  templateUrl:'./Admindashboard.component.html',
   styleUrls: ['./Admindashboard.component.css']
 })
 export class AdmindashboardComponent implements OnInit {

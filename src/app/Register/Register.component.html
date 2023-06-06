@@ -18,7 +18,7 @@
           <div [hidden]="!emailid.errors['required']">Enter your email</div>
           <div [hidden]="!emailid.errors['pattern']">Enter a valid email</div>
         </div>
-        <input type="number" name="mobile" #mobileno="ngModel" [(ngModel)]="mobile" placeholder="Mobile no" required pattern="^[6-9]\d{9}$">
+        <input type="text" name="mobile" #mobileno="ngModel" [(ngModel)]="mobile" placeholder="Mobile no" required pattern="^[6-9]\d{9}$">
         <div *ngIf="mobileno.errors && (mobileno.dirty||mobileno.touched)" class="msg">
           <div [hidden]="!mobileno.errors['required']">Enter your mobile number</div>
           <div [hidden]="!mobileno.errors['pattern']">Enter a valid number</div>
@@ -31,7 +31,7 @@
         <input type="password" name="confirmpassword" #cpass="ngModel" [(ngModel)]="confirmpassword" placeholder="Confirm Password" required/>
         <div *ngIf="cpass.errors && (cpass.dirty||cpass.touched)" class="msg">
           <div [hidden]="!cpass.errors['required']">Confirm your Password</div>
-          <div [hidden]="!cpass.errors['ConfirmedValidator']">Password doesn't match</div>
+          <div *ngIf="">Password doesn't match</div>
         </div>
         <button [disabled]="registerForm.form.invalid">Submit</button>
       </div>

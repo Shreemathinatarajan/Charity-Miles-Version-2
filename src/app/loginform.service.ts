@@ -20,8 +20,17 @@ isLoggedIn : boolean=false;
   isUserLoggedIn():boolean{
     return this.isLoggedIn;
   }
-  logout(){
-    localStorage.clear();
+  isAdminUser():boolean{
+   console.log("un"+this.username)
+   if(this.username=="admin" && this.password=="Admin@123")
+   {
+    return true;
+   }
+   else{
+    return false;
+   }
   }
-
+  LogoutUser():void{
+    this.isLoggedIn=false;
+  }
 }

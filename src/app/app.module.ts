@@ -22,12 +22,13 @@ import { AdminAddComponent } from './AdminAdd/AdminAdd.component';
 import { AdminMembershipComponent } from './AdminMembership/AdminMembership.component';
 import { AdminreviewComponent } from './Adminreview/Adminreview.component';
 import { AdminProfileComponent } from './AdminProfile/AdminProfile.component';
+import { AuthService } from './auth.service';
 
 
 
 
 @NgModule({
-  declarations: [																													
+  declarations: [																														
     AppComponent,
       HomeComponent,
       CharityComponent,
@@ -41,9 +42,9 @@ import { AdminProfileComponent } from './AdminProfile/AdminProfile.component';
       FooterComponent,
       AdminComponent,
       AdminheaderComponent,
-      AdmindashboardComponent,
       AdmineventComponent,
       AdminAddComponent,
+      AdmindashboardComponent,
       AdminMembershipComponent,
       AdminreviewComponent,
       AdminProfileComponent
@@ -56,7 +57,10 @@ import { AdminProfileComponent } from './AdminProfile/AdminProfile.component';
     ReactiveFormsModule
    
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
