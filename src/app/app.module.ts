@@ -24,9 +24,6 @@ import { AdminreviewComponent } from './Adminreview/Adminreview.component';
 import { AdminProfileComponent } from './AdminProfile/AdminProfile.component';
 import { AuthService } from './auth.service';
 
-
-
-
 @NgModule({
   declarations: [																														
     AppComponent,
