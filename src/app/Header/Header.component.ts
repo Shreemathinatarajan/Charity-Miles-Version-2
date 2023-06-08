@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginformService } from '../loginform.service';
+import { LoginAuthService } from '../LoginAuth.service';
 
 @Component({
   selector: 'app-Header',
@@ -8,9 +8,17 @@ import { LoginformService } from '../loginform.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private LoginFormService: LoginformService) { }
-
+  constructor(private Service:LoginAuthService) { }
+  
+  
   ngOnInit() {
+   
   }
-
+  loggedIn(){
+    return localStorage.getItem('token');
+  }
+  onLogout(){
+    localStorage.removeItem('token');
+  }
 }
+

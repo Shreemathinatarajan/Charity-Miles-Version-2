@@ -4,7 +4,6 @@ import { HomeComponent } from './Home/Home.component';
 import { CharityComponent } from './Charity/Charity.component';
 import { AboutComponent } from './About/About.component';
 import { ContactComponent } from './Contact/Contact.component';
-import { LoginComponent } from './Login/Login.component';
 import { RegisterComponent } from './Register/Register.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AuthGuard } from './auth.guard';
@@ -16,6 +15,7 @@ import { AdmineventComponent } from './Adminevent/Adminevent.component';
 import { AdminAddComponent } from './AdminAdd/AdminAdd.component';
 import { AdminMembershipComponent } from './AdminMembership/AdminMembership.component';
 import { AdminreviewComponent } from './Adminreview/Adminreview.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
 
 
 
@@ -40,10 +40,6 @@ const routes: Routes = [
   {
     path:'Contact',
     component:ContactComponent
-  },
-  {
-    path:'Login',
-    component:LoginComponent
   },
   {
     path:'Register',
@@ -81,6 +77,10 @@ const routes: Routes = [
   {
     path:'Adminreview',
     component:AdminreviewComponent
+  },
+  {
+    path:'userlogin',
+    component:UserloginComponent
   },
   {
     path:'**',

@@ -7,7 +7,6 @@ import { HomeComponent } from './Home/Home.component';
 import { CharityComponent } from './Charity/Charity.component';
 import { ContactComponent } from './Contact/Contact.component';
 import { AboutComponent } from './About/About.component';
-import { LoginComponent } from './Login/Login.component';
 import { RegisterComponent } from './Register/Register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,18 +22,20 @@ import { AdminMembershipComponent } from './AdminMembership/AdminMembership.comp
 import { AdminreviewComponent } from './Adminreview/Adminreview.component';
 import { AdminProfileComponent } from './AdminProfile/AdminProfile.component';
 import { AuthService } from './auth.service';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { LoginAuthService } from './LoginAuth.service';
 
 @NgModule({
-  declarations: [																														
+  declarations: [																															
     AppComponent,
       HomeComponent,
       CharityComponent,
       ContactComponent,
       AboutComponent,
-      LoginComponent,
       RegisterComponent,
       PaymentComponent,
       AdminComponent,
+      UserloginComponent,
       HeaderComponent,
       FooterComponent,
       AdminComponent,
@@ -55,7 +56,9 @@ import { AuthService } from './auth.service';
    
   ],
   providers: [
-    AuthService
+    AuthService,
+    LoginAuthService,
+    
   ],
   bootstrap: [AppComponent]
   
