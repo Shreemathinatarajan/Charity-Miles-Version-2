@@ -24,6 +24,7 @@ import { AdminProfileComponent } from './AdminProfile/AdminProfile.component';
 import { AuthService } from './auth.service';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { LoginAuthService } from './LoginAuth.service';
+import { RatingComponent } from './Charity/rating/rating.component';
 
 @NgModule({
   declarations: [																															
@@ -38,6 +39,7 @@ import { LoginAuthService } from './LoginAuth.service';
       UserloginComponent,
       HeaderComponent,
       FooterComponent,
+      RatingComponent,
       AdminComponent,
       AdminheaderComponent,
       AdmineventComponent,

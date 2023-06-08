@@ -2,6 +2,7 @@ section{
     padding-top: 85px;
 }
 .home{
+    margin-top: 80px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -59,7 +60,7 @@ section{
 
 
 .services{
-    padding-top: 20px;
+    padding-top: 85px;
 }
 .heading{
     text-align: center;
