@@ -26,6 +26,7 @@ import { UserloginComponent } from './userlogin/userlogin.component';
 import { LoginAuthService } from './LoginAuth.service';
 import { RatingComponent } from './Charity/rating/rating.component';
 
+
 @NgModule({
   declarations: [																															
     AppComponent,
@@ -55,7 +56,6 @@ import { RatingComponent } from './Charity/rating/rating.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
-   
   ],
   providers: [
     AuthService,
