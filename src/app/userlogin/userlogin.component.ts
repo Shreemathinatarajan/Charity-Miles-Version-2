@@ -22,7 +22,9 @@ export class UserloginComponent implements OnInit {
       uname:this.userName,
       pass:this.password
     }
+    
   }
+  
 
   ngOnInit() {
     this.route.queryParamMap.subscribe(parama=>{
@@ -32,8 +34,8 @@ export class UserloginComponent implements OnInit {
   }
   onLogin(loginForm: NgForm){
     this.LoginAuth.login(this.userName,this.password).subscribe((data)=>{
-      console.log("return to"+this.retUrl);
-   
+      console.log(this.retUrl+"retUrl");
+
     console.log(loginForm.value);
     const token = this.LoginAuth.authUser(loginForm.value);
    
@@ -50,8 +52,8 @@ export class UserloginComponent implements OnInit {
       alert("Login Successfully");
       window.open("/Home")
     }
-    
   })
-    
+  
+
   }
 }

@@ -15,6 +15,17 @@
       "pass": "Shree29@01",
       "cpass": "Shree29@01",
       "id": 2
+    },
+    {
+      "uname": "priya",
+      "emailid": "priya@gmail.com",
+      "mobileno": "9561728189",
+      "pass": "Priya@123",
+      "cpass": "Priya@123",
+      "id": 3
     }
+  ],
+  "payment": [
+    {}
   ]
 }

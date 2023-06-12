@@ -1,75 +1,112 @@
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:20px;
-    min-height: 100vh;
-  }
-  .container form{
-    padding:15px;
-    width:800px;
-    background: whitesmoke;
-    box-shadow: 0 5px 10px rgba(0,0,0,.1);
-  }
-  .container form .row{
-    display: flex;
-    flex-wrap: wrap;
-    gap:20px;
-  }
-  .container form .row .col{
-    flex:1 1 20px;
-  }
-  .container form .row .col .title{
-    font-size: 20px;
-    color:#333;
-    padding-bottom: 5px;
-    text-transform: uppercase;
-  }
-  .container form .row .col .inputBox{
-    margin:10px 0;
-  }
-  .container form .row .col .inputBox span{
-    margin-bottom: 10px;
-    display: block;
-  }
-  .container form .row .col .inputBox input{
-    width: 80%;
-    border:2px solid mediumslateblue;
-    padding:10px 10px;
-    font-size: 15px;
-    text-transform: none;
-  }
-  .container form .row .col .inputBox input:hover{
-    border:2px solid lightsteelblue;
-    background-color: whitesmoke;
-  }
-  .container form .row .col .flex{
-    display: flex;
-    gap:15px;
-  }
-  .container form .row .col .flex .inputBox{
-    margin-top: 5px;
-  }
-  .container form .row .col .inputBox img{
-    height: 50px;
-    margin-top: px;
-    width: 100%;
-  }
-  .container form .btn{
-    text-align: center;
-  }
-  .container form .submit-btn{
-    text-align: center;
-    width: 50%;
-    padding: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    background: mediumslateblue;
-    border: 2px solid mediumslateblue;
-    color: black;
-    margin-top: 5px;
-    cursor: pointer;
-  }
-  .container form .submit-btn:hover{
-    background: lightsteelblue;
-  }
+  overflow: hidden;
+  box-shadow:20px 20px 60px 60px gray ;
+  width: 70%;
+  height: 85vh;
+  margin-left: 130px;
+  margin-top: 50px;
+  position: relative;
+}
+.payment{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.overlay{
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 1s;
+}
+.overlay i{
+  color: mediumslateblue;
+  font-size: 20px;
+}
+.overlay a{
+  padding-top: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: mediumslateblue;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.overlay a:hover{
+  color: gray;
+}
+form{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  background-color: aliceblue;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: 1s;
+}
+form .form img{
+  width: 75%;
+  height: 8%;
+}
+form  .form h1{
+  font-size: 25px;
+  color:mediumslateblue; 
+  font-weight: 200;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+form .form span{
+  font-size: 15px;
+  padding-right: 180px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+form .form input{
+  width: 75%;
+  height: 30px;
+  padding: 0 5px;
+  color: black;
+  border: 2px solid whitesmoke;
+  outline: none;
+  margin: 8px 0;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+form .form .flex{
+  display: flex;
+  padding-left: 48px;
+  gap: 5px;
+}
+form .form .flex input{
+  width: 40%;
+}
+form .form input:hover{
+  background-color: azure;
+  border: 1px solid mediumslateblue;
+}
+form .form input.ng-valid{
+  border: 1.5px solid lightgreen;
+}
+button{
+  border: 2px solid mediumslateblue;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+button:hover{
+  background-color: lightsteelblue;
+}
+.msg{
+  padding-left: 50px;
+  text-align: left;
+  color: red;
+  font-size: 13px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

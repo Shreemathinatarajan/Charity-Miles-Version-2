@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class LoginAuthService {
   userName:string="";
   password:string="";
 
-constructor() { }
+constructor(private client:HttpClient) { }
 authUser(user: any){
   let UserArray= [user];
   if(localStorage.getItem('Users')){
@@ -26,6 +27,5 @@ login(username:string,password:string){
 isUserLoggedIn():boolean{
   return this.isLoggedIn;
 }
-
 }
 

@@ -17,6 +17,7 @@ import { AdminMembershipComponent } from './AdminMembership/AdminMembership.comp
 import { AdminreviewComponent } from './Adminreview/Adminreview.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { RatingComponent } from './Charity/rating/rating.component';
+import { MembershipComponent } from './Charity/Membership/Membership.component';
 
 
 
@@ -86,6 +87,10 @@ const routes: Routes = [
   {
     path:'rating',
     component:RatingComponent
+  },
+  {
+    path:'Membership',
+    component:MembershipComponent
   },
   {
     path:'**',

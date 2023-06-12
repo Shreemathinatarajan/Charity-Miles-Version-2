@@ -25,6 +25,7 @@ import { AuthService } from './auth.service';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { LoginAuthService } from './LoginAuth.service';
 import { RatingComponent } from './Charity/rating/rating.component';
+import { MembershipComponent } from './Charity/Membership/Membership.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { RatingComponent } from './Charity/rating/rating.component';
       HeaderComponent,
       FooterComponent,
       RatingComponent,
+      MembershipComponent,
       AdminComponent,
       AdminheaderComponent,
       AdmineventComponent,

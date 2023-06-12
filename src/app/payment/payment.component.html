@@ -1,68 +1,48 @@
-<i class="fa fa-arrow-circle-o-left"><a routerLink="/Home"> Back to Home</a></i>
 <div class="container">
-    <form action="">
-        <div class="row">
-            <div class="col">
-                <h3 class="title">Make Donation</h3>
-                <div class="inputBox">
-                    <span>Name :</span>
-                    <input type="text" name="Name">
-                </div>
-                <div class="inputBox">
-                    <span>email :</span>
-                    <input type="email">
-                </div>
-                <div class="inputBox">
-                    <span>address :</span>
-                    <input type="text">
-                </div>
-                <div class="flex">
-                    <div class="inputBox">
-                        <span>state :</span>
-                        <input type="text">
-                    </div>
-                    <div class="inputBox">
-                        <span>zip code :</span>
-                        <input type="text">
-                    </div>
-                </div>
-                <div class="inputBox">
-                    <span>Amount :</span>
-                    <input type="number">
-                </div>
-            </div>
-            <div class="col">
-                <h3 class="title">payment</h3>
-                <div class="inputBox">
-                    <span>cards accepted :</span>
-                    <img src="assets/Image/pay img.png" alt="">
-                </div>
-                <div class="inputBox">
-                    <span>card Name :</span>
-                    <input type="text">
-                </div>
-                <div class="inputBox">
-                    <span>card number :</span>
-                    <input type="number">
-                </div>
-                <div class="inputBox">
-                    <span>exp year :</span>
-                    <input type="number">
-                </div>
-                <div class="flex">
-                    <div class="inputBox">
-                        <span>exp month :</span>
-                        <input type="number">
-                    </div>
-                <div class="inputBox">
-                    <span>CVV :</span>
-                    <input type="password">
-                </div>
-            </div>
-            </div>
+    <div class="payment">
+        <div class="overlay">
+            <i class="fa-arrow-circle-o-left"><a routerLink="/Home"> Back to Home</a></i>
+            <img src="assets/Image/Payment.svg" alt="" style="width: 90%; height: 90%;">
         </div>
-        <div class="btn">
-        <input type="submit" value="proceed to checkout" class="submit-btn">
+        <form #paymentform="ngForm" (submit)="SubmitForm()">
+            <div class="form">
+                <h1> MAKE DONATION HERE <i class="fa fa-arrow-circle-o-down"></i></h1>
+                <span>Cards Accepted Here</span>
+                <img src="assets/Image/pay img.png" alt="">
+                <input type="text" name="amount" #uamount="ngModel" [(ngModel)]="amount" placeholder="Enter Amount" required pattern="[0-9]{2,10}$">
+                <div *ngIf="uamount.errors && (uamount.dirty||uamount.touched)" class="msg">
+                    <div [hidden]="!uamount.errors['required']">Enter amount</div>
+                    <div [hidden]="!uamount.errors['pattern']">Enter a valid amount</div>
+                </div>
+                <input type="text" name="name" #uname="ngModel" [(ngModel)]="name" placeholder="Cardholder Name" required pattern="[a-z,A-Z]{3,20}$">
+                <div *ngIf="uname.errors && (uname.dirty||uname.touched)" class="msg">
+                    <div [hidden]="!uname.errors['required']">Enter Username</div>
+                    <div [hidden]="!uname.errors['pattern']">Enter a valid name</div>
+                </div>
+                <input type="text" name="cardno" #ucardno="ngModel" [(ngModel)]="cardno" placeholder="Card Number" required pattern="[0-9]{12}$">
+                <div *ngIf="ucardno.errors && (ucardno.dirty||ucardno.touched)" class="msg">
+                    <div [hidden]="!ucardno.errors['required']">Enter Card Number</div>
+                    <div [hidden]="!ucardno.errors['pattern']">Enter a valid card number</div>
+                </div>
+                <div class="flex">
+                <input type="text" name="year" #uyear="ngModel" [(ngModel)]="year" placeholder="Exp year" required pattern="[0-9]{4}$">
+                <div *ngIf="uyear.errors && (uyear.dirty||uyear.touched)" class="msg">
+                    <div [hidden]="!uyear.errors['required']">Enter Exp Year</div>
+                    <div [hidden]="!uyear.errors['pattern']">Enter a valid year</div>
+                </div>
+                <input type="text" name="month" #umonth="ngModel" [(ngModel)]="month" placeholder="Exp month" required pattern="[0-9]{2}$">
+                <div *ngIf="umonth.errors && (umonth.dirty||umonth.touched)" class="msg">
+                    <div [hidden]="!umonth.errors['required']">Enter Exp month</div>
+                    <div [hidden]="!umonth.errors['pattern']">Enter a valid month</div>
+                </div>
+                </div>
+                <input type="text" name="ccv" #ucvv="ngModel" [(ngModel)]="cvv" placeholder="CCV" required pattern="[0-9]{3}$"><br>
+                <div *ngIf="ucvv.errors && (ucvv.dirty||ucvv.touched)" class="msg">
+                    <div [hidden]="!ucvv.errors['required']">Enter cvv</div>
+                    <div [hidden]="!ucvv.errors['pattern']">Enter a valid cvv</div>
+                </div>
+                <button [disabled]="paymentform.form.invalid">Proceed</button>
+            </div>
+        </form>
     </div>
-    </form>
-</div>    
+</div>
