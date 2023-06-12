@@ -1,6 +1,7 @@
 section{
     padding-top: 85px;
 }
+/*-----Home------*/
 .home{
     margin-top: 80px;
     display: flex;
@@ -57,57 +58,92 @@ section{
 .btn:hover span{
     color: black;
 }
-
-
-.services{
-    padding-top: 85px;
-}
 .heading{
     text-align: center;
     color: var(--black);
     font-size: 30px;
     letter-spacing: 1px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .heading span{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: mediumslateblue;
     font-size: 30px;
 }
-.services .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap:2rem;
-    padding: 20px;
-}
-.services .box-container .box{
-    background: whitesmoke;
-    border-radius: 1px;
-    box-shadow: var(--box-shadow);
-    border: 2px solid mediumslateblue;
-    padding: 10px;
-}
-.services .box-container .box img{
-    color: mediumslateblue;
-    width: 90%;
-    height: 90%;
-    padding-left: 15px;
-    border: 2px solid aliceblue;
-}
-.services .box-container .box h3{
-    color: var(--black);
-    font-size: 25px;
-}
-.services .box-container .box h3:hover{
-    color: mediumslateblue;
-}
-.services .box-container .box p{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: var(--black);
-    font-size: 16px;
-    line-height: 2;
-}
+/*-----Home------*/
 
+/*-----Services------*/
+.service{
+    padding-top: 85px;
+}
+.service .content1{
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 120px;
+    border: 2px solid mediumslateblue;
+    background-color: whitesmoke;
+    margin-bottom: 15px;
+    width: 40%;
+}
+.service .flex{
+    display: flex;
+}
+.service .flex img{
+    width: 20%;
+    height: 30%;
+}
+.service .flex h3{
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px;
+}
+.service .content2{
+    text-align: left;
+    margin-left: 600px;
+    border: 2px solid mediumslateblue;
+    background-color: whitesmoke;
+    margin-bottom: 15px;
+    width: 40%;
+}
+.service .content3{
+    text-align: left;
+    margin-left: 120px;
+    border: 2px solid mediumslateblue;
+    background-color: whitesmoke;
+    margin-bottom: 15px;
+    width: 40%;
+}
+.service .content4{
+    text-align: left;
+    margin-left: 600px;
+    border: 2px solid mediumslateblue;
+    background-color: whitesmoke;
+    margin-bottom: 15px;
+    width: 40%;
+}
+.service .content1:hover{
+    background-color: aliceblue;
+    border: 2px solid gray;
+    padding-left: 20px;
+}
+.service .content2:hover{
+    background-color: aliceblue;
+    border: 2px solid gray;
+    padding-left: 20px;
+}
+.service .content3:hover{
+    background-color: aliceblue;
+    border: 2px solid gray;
+    padding-left: 20px;
+}
+.service .content4:hover{
+    background-color: aliceblue;
+    border: 2px solid gray;
+    padding-left: 20px;
+}
+/*-----Services------*/
+
+/*-----Image-------*/
 .img{
     text-align: center;
+   
 }
+/*-----Image-------*/

@@ -11,5 +11,7 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  message(){
+    alert("Message Sent");
+  }
 }

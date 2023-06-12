@@ -3,6 +3,7 @@ footer{
 }
 .foot .content{
     display: flex;
+    margin-left: 70px;
 }
 .foot .content .box h2{
     font-size: 20px;
@@ -33,6 +34,28 @@ footer{
 .foot .content .box a:hover i{
     padding-right:  15px;
     color: mediumslateblue;
+}
+.foot .content .box form .form{
+    padding: 10px;
+    border: 1px solid black;
+    width: 65%;
+}
+.foot .content .box form .form input{
+    margin-bottom: 10px;
+    width: 90%;
+    padding: 5px;
+    border: none;
+
+}
+.foot .content .box form .form input:hover:focus{
+    border: 1px solid gray;
+}
+button{
+    margin-left: 90px;
+    border: 2px solid black;
+    padding: 3px;
+    font-size: 13px;
+    background-color: white;
 }
 .foot .copy{
     padding: 5px;
