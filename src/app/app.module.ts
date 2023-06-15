@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Home/Home.component';
@@ -24,6 +23,7 @@ import { RatingComponent } from './Charity/rating/rating.component';
 import { MembershipComponent } from './Charity/Membership/Membership.component';
 import { LoginComponent } from './Login/Login.component';
 import { RegistrationComponent } from './Registration/Registration.component';
+
 
 
 
