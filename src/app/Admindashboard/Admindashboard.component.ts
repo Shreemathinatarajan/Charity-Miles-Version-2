@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormService } from '../form.service';
+import { RegisterService } from '../Registration/Register.service';
 
 @Component({
   selector: 'app-Admindashboard',
@@ -8,9 +8,10 @@ import { FormService } from '../form.service';
 })
 export class AdmindashboardComponent implements OnInit {
   regusers:any;
-  constructor(private service:FormService){
-    this.service.getinfo().subscribe(data=>{
-      this.regusers = data;
+  constructor(private registerservice:RegisterService){
+    this.registerservice.getuser().subscribe(data=>{
+      this.regusers.push(data);
+      console.log(this.regusers)
     });
     
   }

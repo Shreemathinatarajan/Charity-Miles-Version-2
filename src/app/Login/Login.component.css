@@ -80,7 +80,7 @@ form .form input:hover{
     border: 1px solid mediumslateblue;
 }
 form .form input.ng-valid{
-    border: 1.5px solid lightgreen;
+    border: 2px solid lightgreen;
 }
 form .form button{
     border: 2px solid mediumslateblue;
@@ -105,9 +105,8 @@ form .form button:hover{
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.msg{
+.error{
+    color: red;
     text-align: left;
     padding-left: 10px;
-    color: red;
-    font-size: 15px;
 }

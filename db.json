@@ -27,5 +27,79 @@
   ],
   "payment": [
     {}
+  ],
+  "registereduser": [
+    {
+      "uname": "shree",
+      "emailid": "shree@gmail.com",
+      "mobileno": "93448007721",
+      "pass": "12345",
+      "cpass": "12345",
+      "id": 1
+    },
+    {
+      "uname": "Priya",
+      "emailid": "priya2002@gmail.com",
+      "mobileno": "9876098176",
+      "pass": "Priya@123",
+      "cpass": "Priya@123",
+      "id": 2
+    },
+    {
+      "uname": "Ram",
+      "emailid": "msram2901@gmail.com",
+      "mobileno": "98398921982",
+      "pass": "Ram@123",
+      "cpass": "Ram@123",
+      "id": 3
+    },
+    {
+      "uname": "",
+      "emailid": "",
+      "mobileno": "",
+      "pass": "",
+      "cpass": "",
+      "id": 4
+    },
+    {
+      "uname": "",
+      "emailid": "",
+      "mobileno": "",
+      "pass": "",
+      "cpass": "",
+      "id": 5
+    },
+    {
+      "uname": "",
+      "emailid": "",
+      "mobileno": "",
+      "pass": "",
+      "cpass": "",
+      "id": 6
+    },
+    {
+      "uname": "",
+      "emailid": "",
+      "mobileno": "",
+      "pass": "",
+      "cpass": "",
+      "id": 7
+    },
+    {
+      "uname": "",
+      "emailid": "",
+      "mobileno": "",
+      "pass": "",
+      "cpass": "",
+      "id": 8
+    },
+    {
+      "uname": "shreemathi",
+      "emailid": "shreemathi2901@gmail.com",
+      "mobileno": "9768123678",
+      "pass": "Shree@123",
+      "cpass": "Shree@123",
+      "id": 9
+    }
   ]
 }

@@ -7,7 +7,6 @@ import { HomeComponent } from './Home/Home.component';
 import { CharityComponent } from './Charity/Charity.component';
 import { ContactComponent } from './Contact/Contact.component';
 import { AboutComponent } from './About/About.component';
-import { RegisterComponent } from './Register/Register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PaymentComponent } from './payment/payment.component';
@@ -21,24 +20,23 @@ import { AdminAddComponent } from './AdminAdd/AdminAdd.component';
 import { AdminMembershipComponent } from './AdminMembership/AdminMembership.component';
 import { AdminreviewComponent } from './Adminreview/Adminreview.component';
 import { AdminProfileComponent } from './AdminProfile/AdminProfile.component';
-import { AuthService } from './auth.service';
-import { UserloginComponent } from './userlogin/userlogin.component';
-import { LoginAuthService } from './LoginAuth.service';
 import { RatingComponent } from './Charity/rating/rating.component';
 import { MembershipComponent } from './Charity/Membership/Membership.component';
+import { LoginComponent } from './Login/Login.component';
+import { RegistrationComponent } from './Registration/Registration.component';
+
 
 
 @NgModule({
-  declarations: [																															
+  declarations: [																																					
     AppComponent,
       HomeComponent,
       CharityComponent,
       ContactComponent,
       AboutComponent,
-      RegisterComponent,
+      LoginComponent,
+      RegistrationComponent,
       PaymentComponent,
-      AdminComponent,
-      UserloginComponent,
       HeaderComponent,
       FooterComponent,
       RatingComponent,
@@ -47,10 +45,10 @@ import { MembershipComponent } from './Charity/Membership/Membership.component';
       AdminheaderComponent,
       AdmineventComponent,
       AdminAddComponent,
-      AdmindashboardComponent,
       AdminMembershipComponent,
       AdminreviewComponent,
-      AdminProfileComponent
+      AdminProfileComponent,
+      AdmindashboardComponent
    ],
   imports: [
     BrowserModule,
@@ -60,8 +58,6 @@ import { MembershipComponent } from './Charity/Membership/Membership.component';
     ReactiveFormsModule
   ],
   providers: [
-    AuthService,
-    LoginAuthService,
     
   ],
   bootstrap: [AppComponent]

@@ -1,11 +1,15 @@
 <header>
   <img src="assets/Image/logo.jpg" alt="">
+  
   <nav class="navbar">
-  <a routerLink="/Home"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
-  <a routerLink="/Charity"><i class="fa fa-heartbeat" aria-hidden="true"></i>Charity</a>
-  <a routerLink="/About"><i class="fa fa-angle-double-right" aria-hidden="true"></i>About us</a>
-  <a routerLink="/Contact"><i class="fa fa-phone" aria-hidden="true"></i>Contact us</a>
-  <a *ngIf="!loggedIn()" routerLink="/userlogin"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Login</a>
-  <a *ngIf="loggedIn()" (click)="onLogout()" ><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>Log Out</a>
-  </nav>
+  <a routerLink="/Home" ><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+  <a routerLink="/Charity" ><i class="fa fa-heartbeat" aria-hidden="true"></i>Charity</a>
+  <a routerLink="/About" ><i class="fa fa-angle-double-right" aria-hidden="true"></i>About us</a>
+  <a routerLink="/Contact" ><i class="fa fa-phone" aria-hidden="true"></i>Contact us</a>
+  <a *ngIf="!loginservice.isLoggedIn" routerLink="/Login"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Login</a>
+ 
+  <a *ngIf="loginservice.isLoggedIn" routerLink="/Home"  onclick="onLogout()"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Logout</a>
+
+</nav>
+
 </header>

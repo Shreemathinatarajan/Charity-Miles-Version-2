@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="login">
+    <div class="overlay">
+        <i class="fa fa-arrow-circle-o-left"><a routerLink="/Home"> Back to Home</a></i>
+        <img src="assets/Image/image2.svg" alt=""  style="width: 110%; height: 120%;">
+    </div>
+  <form [formGroup]="login" (ngSubmit)="logindata(login)">
+  <div class="form">
+    <h1><i class="fa fa-heartbeat"></i> CHARITY MILES</h1>
+    <input type="text" formControlName="uname" placeholder="Username">
+    <div *ngIf="login.controls['uname'].invalid && (login.controls['uname'].dirty || login.controls['uname'].touched)">
+      <div class="error" *ngIf="login.controls['uname'].errors?.['required']">Enter Username</div>
+      <div class="error" *ngIf="login.controls['uname'].errors?.['pattern']">Enter a valid username</div>
+    </div>
+    <input type="password" formControlName="password" placeholder="Password">
+    <div *ngIf="login.controls['password'].invalid && (login.controls['password'].dirty || login.controls['password'].touched)">
+      <div class="error" *ngIf="login.controls['password'].errors?.['required']">Enter Password</div>
+      <div class="error" *ngIf="login.controls['password'].errors?.['pattern']">8 character with 1 uppercase,1 lowercase,1 number,1 special symbol</div>
+    </div>
+ 
+  <button [disabled]="!login.valid" class="btn">LOGIN</button>
+  <p class="button">
+      <a routerLink="#">Forgot Password</a><br><br>
+      Don't Have an Account? <a routerLink="/Registration">Register Here</a>
+  </p>
+</div>
+  </form>
+  </div>   
+</div>

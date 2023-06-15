@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="reg">
+    <div class="overlay">
+      <i class="fa fa-arrow-circle-o-left"><a routerLink="/Login"> Back to Login</a></i>
+      <img src="assets/Image/image2.svg" alt="" style="width: 110%; height: 120%;">
+    </div>
+  <form [formGroup]="registration" (ngSubmit)="registrationdata(registration)">
+  <div class="form">
+     <h1><i class="fa fa-heartbeat"></i> CHARITY MILES</h1>
+    <input type="text" formControlName="uname" placeholder="Username">
+    <div *ngIf="registration.controls['uname'].invalid && (registration.controls['uname'].dirty || registration.controls['uname'].touched)">
+      <div class="error" *ngIf="registration.controls['uname'].errors?.['required']">Enter Username</div>
+      <div class="error" *ngIf="registration.controls['uname'].errors?.['pattern']">Enter a valid username</div>
+    </div>
+    <input type="email" formControlName="emailid" placeholder="Email">
+    <div *ngIf="registration.controls['emailid'].invalid && (registration.controls['emailid'].dirty || registration.controls['emailid'].touched)">
+      <div class="error" *ngIf="registration.controls['emailid'].errors?.['required']">Enter Email</div>
+      <div class="error" *ngIf="registration.controls['emailid'].errors?.['pattern']">Enter a valid email</div>
+    </div>
+    <input type="text" formControlName="mobileno" placeholder="Mobile No">
+    <div *ngIf="registration.controls['mobileno'].invalid && (registration.controls['mobileno'].dirty || registration.controls['mobileno'].touched)">
+      <div class="error" *ngIf="registration.controls['mobileno'].errors?.['required']">Enter Mobile no</div>
+      <div class="error" *ngIf="registration.controls['mobileno'].errors?.['pattern']">Enter a valid mobile no</div>
+    </div>
+    <input type="password" formControlName="pass" placeholder="Password">
+    <div *ngIf="registration.controls['pass'].invalid && (registration.controls['pass'].dirty || registration.controls['pass'].touched)">
+      <div class="error" *ngIf="registration.controls['pass'].errors?.['required']">Enter Password</div>
+      <div class="error" *ngIf="registration.controls['pass'].errors?.['pattern']">8 character with 1 uppercase,1 lowercase,1 number,1 special symbol</div>
+    </div>
+    <input type="password" formControlName="cpass" placeholder="Confirm Password">
+    <div *ngIf="registration.controls['cpass'].invalid && (registration.controls['cpass'].dirty || registration.controls['cpass'].touched)">
+      <div class="error" *ngIf="registration.controls['cpass'].errors?.['required']">Confirm your password</div>
+      <div class="error" *ngIf="registration.controls['cpass'].errors?.['Confirmpassword']">Password doesn't match</div>
+    </div>
+  
+  <button [disabled]="registration.invalid" class="btn">REGISTER</button>
+  </div>
+  </form>
+  </div>
+</div>
