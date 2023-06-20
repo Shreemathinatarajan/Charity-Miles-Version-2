@@ -151,7 +151,23 @@
       "id": 9
     }
   ],
-  "loginuser": [],
+  "loginuser": [
+    {
+      "uname": "shreemathi",
+      "password": "Shree@123",
+      "id": 1
+    },
+    {
+      "uname": "Admin",
+      "password": "Admin@123",
+      "id": 2
+    },
+    {
+      "uname": "Admin",
+      "password": "Admin@123",
+      "id": 3
+    }
+  ],
   "events": [
     {
       "id": 1,

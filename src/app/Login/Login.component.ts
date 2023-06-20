@@ -81,7 +81,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('admin',JSON.stringify(admin));
         this.loginservice.onLogin();
         this.login.reset();
-        this.route.navigate(['/Admin']);
+        this.route.navigate(['/Admindashboard']);
       }
 
     },err=>{
