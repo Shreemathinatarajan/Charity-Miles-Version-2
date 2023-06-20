@@ -25,73 +25,74 @@
       "id": 3
     }
   ],
-  "payment": [
-    {}
-  ],
-  "registereduser": [
+  "admin": [
     {
-      "uname": "shree",
-      "emailid": "shree@gmail.com",
-      "mobileno": "93448007721",
-      "pass": "12345",
-      "cpass": "12345",
+      "uname": "Admin",
+      "emailid": "admincharitymiles@gmail.com",
+      "mobileno": "9345797857",
+      "pass": "Admin@123",
+      "cpass": "Admin@123",
+      "id": 1
+    }
+  ],
+  "payment": [
+    {
+      "Rs": "2500",
+      "uname": "PRIYA S",
+      "cardno": "562710987256718627",
+      "exp": "05/2027",
+      "cvv": "561",
       "id": 1
     },
+    {
+      "Rs": "5000",
+      "uname": "SHREEMATHI R N",
+      "cardno": "6789012789012789",
+      "exp": "09/2024",
+      "cvv": "618",
+      "id": 2
+    },
+    {
+      "Rs": "1000",
+      "uname": "RAM S",
+      "cardno": "9872128912912736",
+      "exp": "08/2023",
+      "cvv": "290",
+      "id": 3
+    },
+    {
+      "Rs": "2000",
+      "uname": "POOJA M",
+      "cardno": "9871108278190128",
+      "exp": "07/2028",
+      "cvv": "781",
+      "id": 4
+    },
+    {
+      "Rs": "15000",
+      "uname": "SWETHA R",
+      "cardno": "2818728171682878",
+      "exp": "05/2026",
+      "cvv": "781",
+      "id": 5
+    }
+  ],
+  "registereduser": [
     {
       "uname": "Priya",
       "emailid": "priya2002@gmail.com",
       "mobileno": "9876098176",
       "pass": "Priya@123",
       "cpass": "Priya@123",
-      "id": 2
+      "id": 1
     },
     {
       "uname": "Ram",
       "emailid": "msram2901@gmail.com",
       "mobileno": "98398921982",
-      "pass": "Ram@123",
-      "cpass": "Ram@123",
-      "id": 3
-    },
-    {
-      "uname": "",
-      "emailid": "",
-      "mobileno": "",
-      "pass": "",
-      "cpass": "",
-      "id": 4
-    },
-    {
-      "uname": "",
-      "emailid": "",
-      "mobileno": "",
-      "pass": "",
-      "cpass": "",
-      "id": 5
-    },
-    {
-      "uname": "",
-      "emailid": "",
-      "mobileno": "",
-      "pass": "",
-      "cpass": "",
-      "id": 6
-    },
-    {
-      "uname": "",
-      "emailid": "",
-      "mobileno": "",
-      "pass": "",
-      "cpass": "",
-      "id": 7
-    },
-    {
-      "uname": "",
-      "emailid": "",
-      "mobileno": "",
-      "pass": "",
-      "cpass": "",
-      "id": 8
+      "pass": "Ram@12345",
+      "cpass": "Ram@12345",
+      "id": 2
     },
     {
       "uname": "shreemathi",
@@ -99,7 +100,244 @@
       "mobileno": "9768123678",
       "pass": "Shree@123",
       "cpass": "Shree@123",
+      "id": 3
+    },
+    {
+      "uname": "suji",
+      "emailid": "suji2002@gmail.com",
+      "mobileno": "9871067829",
+      "pass": "Suji@1234",
+      "cpass": "Suji@1234",
+      "id": 4
+    },
+    {
+      "uname": "pooja",
+      "emailid": "pooja123@gmail.com",
+      "mobileno": "9715560981",
+      "pass": "Pooja@123",
+      "cpass": "pooja@123",
+      "id": 5
+    },
+    {
+      "uname": "swathi",
+      "emailid": "smileswathi@gmail.com",
+      "mobileno": "9781056209",
+      "pass": "Swathi@123",
+      "cpass": "Swathi@123",
+      "id": 6
+    },
+    {
+      "uname": "Saru",
+      "emailid": "saru@gmail.com",
+      "mobileno": "9780917820",
+      "pass": "Saru@1234",
+      "cpass": "Saru@1234",
+      "id": 7
+    },
+    {
+      "uname": "swetha",
+      "emailid": "swetha@gmail.com",
+      "mobileno": "9810789201",
+      "pass": "Swetha@123",
+      "cpass": "Swetha@123",
+      "id": 8
+    },
+    {
+      "uname": "Suthi",
+      "emailid": "suthi@gmail.com",
+      "mobileno": "9856378109",
+      "pass": "Suthi@123",
+      "cpass": "Suthi@123",
       "id": 9
+    }
+  ],
+  "loginuser": [],
+  "events": [
+    {
+      "id": 1,
+      "evedate": "29 June 2023",
+      "event": "Bakrid",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 2,
+      "evedate": "28 July 2023",
+      "event": "Muharram",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 3,
+      "evedate": "13 August 2023",
+      "event": "World Organ Donation Day",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 4,
+      "evedate": "15 August 2023",
+      "event": "Independence Day",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 5,
+      "evedate": "29 August 2023",
+      "event": "Onam",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 6,
+      "evedate": "30 August 2023",
+      "event": "Raksha Bandhan",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 7,
+      "evedate": "17 September 2023",
+      "event": "Ganesh Chaturthi",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 8,
+      "evedate": "24 September 2023",
+      "event": "Pooja Celebration",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 9,
+      "evedate": "02 October 2023",
+      "event": "Gandhi Jayanti",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 10,
+      "evedate": "12 October 2023",
+      "event": "Diwali Celebration",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 11,
+      "evedate": "11 November 2023",
+      "event": "National Education Day",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 12,
+      "evedate": "14 November 2023",
+      "event": "Children's Day",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 13,
+      "evedate": "27 November 2023",
+      "event": "National Organ Donation Day",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 14,
+      "evedate": "25 December 2023",
+      "event": "Christmas Day",
+      "message": "On this special day we are here to do services for peoples Help us by denoting"
+    }
+  ],
+  "platinum": [
+    {
+      "id": 1,
+      "head": "Platinum Membership",
+      "amount": "999",
+      "validity": "1 year"
+    }
+  ],
+  "gold": [
+    {
+      "id": 1,
+      "head": "Gold Membership",
+      "amount": "699",
+      "validity": "6 months"
+    }
+  ],
+  "silver": [
+    {
+      "id": 1,
+      "head": "Silver Membership",
+      "amount": "399",
+      "validity": "3 months"
+    }
+  ],
+  "Platinummember": [
+    {
+      "Rs": "999",
+      "uname": "SHREEMATHI",
+      "cardno": "6789012781097219",
+      "exp": "09/2026",
+      "cvv": "618",
+      "id": 1
+    },
+    {
+      "Rs": "999",
+      "uname": "RAM KUMAR P",
+      "cardno": "6378987626718091",
+      "exp": "02/2025",
+      "cvv": "981",
+      "id": 2
+    },
+    {
+      "Rs": "999",
+      "uname": "SWETHA R",
+      "cardno": "7327382781567153",
+      "exp": "03/2028",
+      "cvv": "618",
+      "id": 3
+    },
+    {
+      "Rs": "999",
+      "uname": "SUTHI G",
+      "cardno": "7168290764764647",
+      "exp": "12/2024",
+      "cvv": "187",
+      "id": 4
+    }
+  ],
+  "Goldmember": [
+    {
+      "Rs": "699",
+      "uname": "PRIYA",
+      "cardno": "8790198017891082",
+      "exp": "09/2027",
+      "cvv": "701",
+      "id": 3
+    },
+    {
+      "Rs": "699",
+      "uname": "SUJITH P",
+      "cardno": "8790768910272722",
+      "exp": "07/2027",
+      "cvv": "413",
+      "id": 4
+    },
+    {
+      "Rs": "699",
+      "uname": "SARULATHA D",
+      "cardno": "3659056729187263",
+      "exp": "07/2029",
+      "cvv": "761",
+      "id": 5
+    }
+  ],
+  "Silvermember": [
+    {
+      "Rs": "399",
+      "uname": "POOJA M",
+      "cardno": "7890567815628090",
+      "exp": "07/2026",
+      "cvv": "861",
+      "id": 1
+    },
+    {
+      "Rs": "399",
+      "uname": "SWATHI R",
+      "cardno": "3562091781672891",
+      "exp": "08/2027",
+      "cvv": "671",
+      "id": 2
     }
   ]
 }

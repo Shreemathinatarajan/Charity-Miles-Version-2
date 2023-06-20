@@ -1,0 +1,52 @@
+<app-Header></app-Header>
+<section>
+  <div class="container">
+      <div class="pay">
+          <div class="overlay">
+              <i class="fa fa-arrow-circle-o-left"><a routerLink="/Membership"> Back</a></i>
+              <div *ngFor="let g of gmember">
+                <img src="assets/Image/gold.png" alt=""><br>
+                <h3>Membership Type: {{g.head}}</h3>
+                <h3>Price          : <i class="fa fa-dollar"></i> {{g.amount}}</h3>
+                <h3>Validity       : {{g.validity}}</h3> 
+              </div>
+          </div>
+          <form [formGroup]="goldpayment" (ngSubmit)="paymentdata(goldpayment)">
+              <div class="form">
+              <h1> MAKE DONATION HERE <i class="fa fa-arrow-circle-o-down"></i></h1>
+             <!-- <h2>{{eventdate}}</h2>
+              <h2>{{eventname}}</h2>-->
+              <span>Cards Accepted Here</span>
+              <img src="assets/Image/pay img.png" alt="">
+              <input type="text" formControlName="Rs" placeholder="Enter Amount">
+              <div *ngIf="goldpayment.controls['Rs'].invalid && (goldpayment.controls['Rs'].dirty || goldpayment.controls['uname'].touched)">
+                  <div class="error" *ngIf="goldpayment.controls['Rs'].errors?.['required']">Enter Amount</div>
+                  <div class="error" *ngIf="goldpayment.controls['Rs'].errors?.['pattern']">Enter a valid amount</div>
+              </div>
+              <input type="text" formControlName="uname" placeholder="CardHolder Name">
+              <div *ngIf="goldpayment.controls['uname'].invalid && (goldpayment.controls['uname'].dirty || goldpayment.controls['uname'].touched)">
+                  <div class="error" *ngIf="goldpayment.controls['uname'].errors?.['required']">Enter CardHolder Name</div>
+                  <div class="error" *ngIf="goldpayment.controls['uname'].errors?.['pattern']">Enter a valid Name</div>
+              </div>
+              <input type="text" formControlName="cardno" placeholder="Card Number">
+              <div *ngIf="goldpayment.controls['cardno'].invalid && (goldpayment.controls['cardno'].dirty || goldpayment.controls['cardno'].touched)">
+                  <div class="error" *ngIf="goldpayment.controls['cardno'].errors?.['required']">Enter Card Number</div>
+                  <div class="error" *ngIf="goldpayment.controls['cardno'].errors?.['pattern']">Enter a valid Card No</div>
+              </div>
+              <input type="text" formControlName="exp" placeholder="MM/YYYY">
+              <div *ngIf="goldpayment.controls['exp'].invalid && (goldpayment.controls['exp'].dirty || goldpayment.controls['exp'].touched)">
+                  <div class="error" *ngIf="goldpayment.controls['exp'].errors?.['required']">Enter exp month and year</div>
+                  <div class="error" *ngIf="goldpayment.controls['exp'].errors?.['pattern']">Enter a valid exp month and year</div>
+              </div>
+              <input type="text" formControlName="cvv" placeholder="CVV">
+              <div *ngIf="goldpayment.controls['cvv'].invalid && (goldpayment.controls['cvv'].dirty || goldpayment.controls['cvv'].touched)">
+                  <div class="error" *ngIf="goldpayment.controls['cvv'].errors?.['required']">Enter CVV</div>
+                  <div class="error" *ngIf="goldpayment.controls['cvv'].errors?.['pattern']">Enter a valid CVV</div>
+              </div><br>
+              <button [disabled]="goldpayment.invalid">Proceed</button>
+          </div>
+          </form>
+      </div>
+  </div>
+  </section>
+  

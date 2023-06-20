@@ -1,82 +1,70 @@
-<div class="container">
-  <form action="/CHARITY/Membership form/result.html" >
-      <div class="row">
-          <div class="col">
-              <h3 class="title">Membership Form</h3>
-              <div class="inputBox">
-                  <span>Name :</span>
-                  <input type="text" required>
+<app-Header></app-Header>
+<section class="member" id="member">
+    <h1 class="heading">CHARITY<span> MEMBERSHIP</span></h1>
+    <div class="content">
+        <div class="overlay">
+          <!--  <i class="fa fa-arrow-circle-o-left"><a routerLink="/Charity"> Back</a></i><br>-->
+            <img src="assets/Image/member.svg" alt="">
+        </div>
+        <div class="detail">
+            <h2>Let us join hands for a good things <i class="fa fa-handshake-o"></i></h2>
+            <div class="step">
+                <h1>Steps:</h1>
+                <p>Follow the steps given below <i class="fa fa-arrow-circle-o-down"></i></p>
+                <h4><i class="fa fa-angle-double-right"></i> To become a member view the instructions and benefits.</h4>
+                <h4><i class="fa fa-angle-double-right"></i> Choose the Membership type which you want (eg:Platinum member or Gold member or Silver member)</h4>
+                <h4><i class="fa fa-angle-double-right"></i> After choosing the membership type fill your details in the membership form </h4>
+                <h4><i class="fa fa-angle-double-right"></i> Add your Debit card details and procced to continue</h4>
+                <h4><i class="fa fa-angle-double-right"></i> Finally You will become member in our charity</h4>
+            </div>
+        </div>
+    </div>
+    <div class="instructions">
+        <h1>Instructions:</h1>
+        <p>1. The charity member will donate once in a month regularly<br><br>
+           2. They have to upgrade their Membership after the validity<br><br>
+           3. According to the membership type the validity will exist<br><br>
+           4. If the member choose the membership type as platinum, they can also change their membership type as gold or silver after the validaty got expired<br><br>
+        </p>
+        <h1>Benefits:</h1>
+        <p>1. The charity mmeber have choice to choose membership type as Platinum or Gold or Silver<br><br>
+           2. Platinum Membership will have validity upto 1 year<br><br>
+           3. Gold Membership will have validity upto 6 months<br><br>
+           4. Silver Membership will have validity upto 3 months<br><br>
+           5. After validity expires the member can change their Membership type<br><br>
+           6. Through this Membership our charity member have benefits in some of the hospitals and schools, which we connected with them</p>
+    </div>
+    <div class="membershiptype">
+        <h1 class="heading">MEMBERSHIP<span> TYPE</span></h1>
+      <div class="box-container">
+          <div class="box">
+              <div *ngFor="let p of pmember">
+              <img src="assets/Image/platinum.png" alt=""><br>
+              <h3><span>Membership Type:</span><br> {{p.head}}</h3>
+              <h3><span>Price          :</span> <i class="fa fa-dollar"></i> {{p.amount}}</h3>
+              <h3><span>Validity       :</span> {{p.validity}}</h3> 
               </div>
-              <div class="inputBox">
-                  <span>email :</span>
-                  <input type="email" required>
-              </div>
-              <div class="inputBox">
-                  <span>Mobile :</span>
-                  <input type="text" required>
-              </div>
-              <div class="inputBox">
-                  <span>address :</span>
-                  <input type="text" required>
-              </div>
-              <div class="inputBox">
-                  <span>state :</span>
-                  <input type="text" required>
-              </div>
-              <div class="inputBox">
-                  <span>District :</span>
-                  <input type="text" required>
-              </div>
-              <div class="inputBox">
-                  <span>zip code :</span>
-                  <input type="text" required>
-              </div>
+              <a routerLink="/Platinumpayment" class="btn">Choose Here <i class="fa fa-angle-double-right"></i></a>
           </div>
-          <div class="col">
-              <h3 class="title">Monthly Investment</h3>
-              <div class="flex">
-              <div class="inputBox">
-                  <span>Minimum :</span>
-                  <input type="number" required>
-              </div>
-              <div class="inputBox">
-                  <span>Maximum :</span>
-                  <input type="number" required>
-              </div>
-              </div>
-              <div class="inputbox">
-                  <span>Membership Type</span><br>
-                  <input type="radio" id="platinum" name="member" value="Platinum">
-                  <label for="Platinum">Platinum INR 5000</label><br>
-                  <input type="radio" id="gold" name="member" value="Gold">
-                  <label for="gold">Gold INR 3000</label><br>
-                  <input type="radio" id="silver" name="member" value="silver">
-                  <label for="silver">Silver INR 1000</label>
-              </div><br>
-              <h3 class="title">payment</h3>
-              <div class="inputBox">
-                  <span>card Name :</span>
-                  <input type="text" required>
-              </div>
-              <div class="inputBox">
-                  <span>card number :</span>
-                  <input type="number" required>
-              </div>
-              <div class="inputBox">
-                  <span>exp year :</span>
-                  <input type="number" required>
-              </div>
-              <div class="flex">
-                  <div class="inputBox">
-                      <span>exp month :</span>
-                      <input type="number" required>
-                  </div>
-              <div class="inputBox">
-                  <span>CVV :</span>
-                  <input type="password" required>
-              </div>
-          </div>   
+          <div class="box">
+            <div *ngFor="let g of gmember">
+                <img src="assets/Image/gold.png" alt=""><br>
+                <h3><span>Membership Type:</span><br> {{g.head}}</h3>
+                <h3><span>Price          :</span> <i class="fa fa-dollar"></i> {{g.amount}}</h3>
+                <h3><span>Validity       :</span> {{g.validity}}</h3> 
+                </div>
+                <a routerLink="/Goldpayment" class="btn">Choose Here <i class="fa fa-angle-double-right"></i></a>
+          </div>
+          <div class="box">
+            <div *ngFor="let s of smember">
+                <img src="assets/Image/silver.png" alt=""><br>
+                <h3><span>Membership Type:</span><br> {{s.head}}</h3>
+                <h3><span>Price          :</span> <i class="fa fa-dollar"></i> {{s.amount}}</h3>
+                <h3><span>Validity       :</span> {{s.validity}}</h3> 
+                </div>
+                <a routerLink="/Silverpayment" class="btn">Choose Here <i class="fa fa-angle-double-right"></i></a>
+          </div>
       </div>
-      <button>SUBMIT</button>
-  </div>
-  </form>
+    </div>
+  </section>
+  <app-Footer></app-Footer>

@@ -10,8 +10,7 @@ export class AdmindashboardComponent implements OnInit {
   regusers:any;
   constructor(private registerservice:RegisterService){
     this.registerservice.getuser().subscribe(data=>{
-      this.regusers.push(data);
-      console.log(this.regusers)
+     this.regusers=data;
     });
     
   }

@@ -1,4 +1,4 @@
-.panel-container {
+/*.panel-container {
     background-color: whitesmoke;
     border-radius: 2px;
     border: 2px solid mediumslateblue;
@@ -60,4 +60,39 @@
   }
   .btn:active {
     transform: scale(0.98);
+  }*/
+  section{
+    margin-top: 100px;
+    margin-left: 400px;
+  }
+  .row{
+    text-align: center;
+    justify-content: center;
+    width: 60%;
+    height: 30%;
+    border: 2px solid mediumslateblue;
+  }
+  .row h1{
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .row h1 span{
+    color: mediumslateblue;
+  }
+
+  .rating-list li {
+    color: #ddd;
+    padding: 20px;
+    font-size: 50px;
+  }
+  
+  .rating-list li:hover,
+  .rating-list li:hover ~ li {
+    color: greenyellow;
+  }
+  
+  .rating-list {
+    display: inline-block;
+    list-style: none;
   }

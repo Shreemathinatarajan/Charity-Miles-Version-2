@@ -4,8 +4,13 @@
     padding-top: 20px;
 }
 .profile img{
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
+}
+.profile a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
 }
 .profile{
     position: relative;
@@ -37,6 +42,4 @@
 }
 .profile:hover .dropdown-content{
     display: block;
-    
-    
 }

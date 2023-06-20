@@ -17,13 +17,13 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit() {
     this.registration = new FormGroup({
-      'uname':new FormControl("",[Validators.required,Validators.pattern("^[a-z]{3,20}$")]),
+      'uname':new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z]{3,20}$")]),
       'emailid':new FormControl("",[Validators.required,Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$")]),
       'mobileno':new FormControl("",[Validators.required,Validators.pattern("[6-9]+[0-9]{9}$")]),
       'pass':new FormControl("",[Validators.required,Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,20}")]),
-      'cpass':new FormControl("",[Validators.required]),
+      'cpass':new FormControl("",[Validators.required])
     }),
-    {validator:Confirmpassword('pass','cpass')}
+    { Validator : Confirmpassword('pass','cpass')}
   }
   registrationdata(registration:FormGroup){
     //console.log(this.registration.value);

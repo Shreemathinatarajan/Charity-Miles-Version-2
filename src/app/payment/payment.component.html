@@ -1,48 +1,46 @@
-<!--<div class="container">
-    <div class="payment">
+<app-Header></app-Header>
+<section>
+<div class="container">
+    <div class="pay">
         <div class="overlay">
-            <i class="fa-arrow-circle-o-left"><a routerLink="/Home"> Back to Home</a></i>
-            <img src="assets/Image/Payment.svg" alt="" style="width: 90%; height: 90%;">
+            <i class="fa fa-arrow-circle-o-left"><a routerLink="/Charity"> Back</a></i>
+            <img src="assets/Image/Payment.svg" alt="">
         </div>
-        <form #paymentform="ngForm" (submit)="SubmitForm()">
+        <form [formGroup]="payment" (ngSubmit)="paymentdata(payment)">
             <div class="form">
-                <h1> MAKE DONATION HERE <i class="fa fa-arrow-circle-o-down"></i></h1>
-                <span>Cards Accepted Here</span>
-                <img src="assets/Image/pay img.png" alt="">
-                <input type="text" name="amount" #uamount="ngModel" [(ngModel)]="amount" placeholder="Enter Amount" required pattern="[0-9]{2,10}$">
-                <div *ngIf="uamount.errors && (uamount.dirty||uamount.touched)" class="msg">
-                    <div [hidden]="!uamount.errors['required']">Enter amount</div>
-                    <div [hidden]="!uamount.errors['pattern']">Enter a valid amount</div>
-                </div>
-                <input type="text" name="name" #uname="ngModel" [(ngModel)]="name" placeholder="Cardholder Name" required pattern="[a-z,A-Z]{3,20}$">
-                <div *ngIf="uname.errors && (uname.dirty||uname.touched)" class="msg">
-                    <div [hidden]="!uname.errors['required']">Enter Username</div>
-                    <div [hidden]="!uname.errors['pattern']">Enter a valid name</div>
-                </div>
-                <input type="text" name="cardno" #ucardno="ngModel" [(ngModel)]="cardno" placeholder="Card Number" required pattern="[0-9]{12}$">
-                <div *ngIf="ucardno.errors && (ucardno.dirty||ucardno.touched)" class="msg">
-                    <div [hidden]="!ucardno.errors['required']">Enter Card Number</div>
-                    <div [hidden]="!ucardno.errors['pattern']">Enter a valid card number</div>
-                </div>
-                <div class="flex">
-                <input type="text" name="year" #uyear="ngModel" [(ngModel)]="year" placeholder="Exp year" required pattern="[0-9]{4}$">
-                <div *ngIf="uyear.errors && (uyear.dirty||uyear.touched)" class="msg">
-                    <div [hidden]="!uyear.errors['required']">Enter Exp Year</div>
-                    <div [hidden]="!uyear.errors['pattern']">Enter a valid year</div>
-                </div>
-                <input type="text" name="month" #umonth="ngModel" [(ngModel)]="month" placeholder="Exp month" required pattern="[0-9]{2}$">
-                <div *ngIf="umonth.errors && (umonth.dirty||umonth.touched)" class="msg">
-                    <div [hidden]="!umonth.errors['required']">Enter Exp month</div>
-                    <div [hidden]="!umonth.errors['pattern']">Enter a valid month</div>
-                </div>
-                </div>
-                <input type="text" name="ccv" #ucvv="ngModel" [(ngModel)]="cvv" placeholder="CCV" required pattern="[0-9]{3}$"><br>
-                <div *ngIf="ucvv.errors && (ucvv.dirty||ucvv.touched)" class="msg">
-                    <div [hidden]="!ucvv.errors['required']">Enter cvv</div>
-                    <div [hidden]="!ucvv.errors['pattern']">Enter a valid cvv</div>
-                </div>
-                <button [disabled]="paymentform.form.invalid">Proceed</button>
+            <h1> MAKE DONATION HERE<i class="fa fa-arrow-circle-o-down"></i></h1>
+           <!-- <h2>{{eventdate}}</h2>
+            <h2>{{eventname}}</h2>-->
+            <span>Cards Accepted Here</span>
+            <img src="assets/Image/pay img.png" alt="">
+            <input type="text" formControlName="Rs" placeholder="Enter Amount">
+            <div *ngIf="payment.controls['Rs'].invalid && (payment.controls['Rs'].dirty || payment.controls['uname'].touched)">
+                <div class="error" *ngIf="payment.controls['Rs'].errors?.['required']">Enter Amount</div>
+                <div class="error" *ngIf="payment.controls['Rs'].errors?.['pattern']">Enter a valid amount</div>
             </div>
+            <input type="text" formControlName="uname" placeholder="CardHolder Name">
+            <div *ngIf="payment.controls['uname'].invalid && (payment.controls['uname'].dirty || payment.controls['uname'].touched)">
+                <div class="error" *ngIf="payment.controls['uname'].errors?.['required']">Enter CardHolder Name</div>
+                <div class="error" *ngIf="payment.controls['uname'].errors?.['pattern']">Enter a valid Name</div>
+            </div>
+            <input type="text" formControlName="cardno" placeholder="Card Number">
+            <div *ngIf="payment.controls['cardno'].invalid && (payment.controls['cardno'].dirty || payment.controls['cardno'].touched)">
+                <div class="error" *ngIf="payment.controls['cardno'].errors?.['required']">Enter Card Number</div>
+                <div class="error" *ngIf="payment.controls['cardno'].errors?.['pattern']">Enter a valid Card No</div>
+            </div>
+            <input type="text" formControlName="exp" placeholder="MM/YYYY">
+            <div *ngIf="payment.controls['exp'].invalid && (payment.controls['exp'].dirty || payment.controls['exp'].touched)">
+                <div class="error" *ngIf="payment.controls['exp'].errors?.['required']">Enter exp month and year</div>
+                <div class="error" *ngIf="payment.controls['exp'].errors?.['pattern']">Enter a valid exp month and year</div>
+            </div>
+            <input type="text" formControlName="cvv" placeholder="CVV">
+            <div *ngIf="payment.controls['cvv'].invalid && (payment.controls['cvv'].dirty || payment.controls['cvv'].touched)">
+                <div class="error" *ngIf="payment.controls['cvv'].errors?.['required']">Enter CVV</div>
+                <div class="error" *ngIf="payment.controls['cvv'].errors?.['pattern']">Enter a valid CVV</div>
+            </div><br>
+            <button [disabled]="payment.invalid">Proceed</button>
+        </div>
         </form>
     </div>
-</div>-->
+</div>
+</section>

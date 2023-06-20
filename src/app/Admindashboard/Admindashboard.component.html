@@ -1,10 +1,43 @@
-<app-Admin></app-Admin>
+<app-Adminheader></app-Adminheader>
+<app-AdminProfile></app-AdminProfile>
 <div class="content">
   <div class="heading">
-    <h1><i class="fa fa-th"></i>  Dashboard</h1>
-   <!--{{regusers|json}}-->
-    <div *ngFor="let user of regusers">
-      
+    <h1><i class="fa fa-th"></i>  Dashboard </h1>
+    <div class="box-content">
+      <div class="box">
+        <h1>100+</h1>
+        <p>Charity miles helped 100+ students by taking care of their school fees</p>
+      </div>
+      <div class="box">
+        <h1>80+</h1>
+        <p>Charity miles taking care of medical expenses of poor and diabled people</p>
+      </div>
+      <div class="box">
+        <h1>200+</h1>
+        <p>Charity miles regularly provide healthy food for poor people and children</p>
+      </div>
     </div>
+    <h3>Registered User</h3>
+    <table class="table mt-3">
+      <thead>
+        <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Password</th>
+        <th scope="col">confirm Password</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of regusers">
+          <td>{{user.id}}</td>
+          <td>{{user.uname}}</td>
+          <td>{{user.emailid}}</td>
+          <td>{{user.mobileno}}</td>
+          <td>{{user.pass}}</td>
+          <td>{{user.cpass}}</td>
+      </tbody>
+    </table>
   </div>
 </div>

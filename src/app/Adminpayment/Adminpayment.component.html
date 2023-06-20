@@ -1,0 +1,27 @@
+<app-Adminheader></app-Adminheader>
+<app-AdminProfile></app-AdminProfile>
+<div class="content">
+    <div class="heading">
+        <h1><i class="fa fa-dollar"></i>  Payment Received</h1>
+        <h3>DONATION</h3>
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Donation</th>
+                    <th scope="col">Card Number</th>
+                    <th scope="col">Exp</th>
+                    <th scope="col">cvv</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pay of payment">
+                    <td>{{pay.uname}}</td>
+                    <td>{{pay.Rs}}</td>
+                    <td>{{pay.cardno}}</td>
+                    <td>{{pay.exp}}</td>
+                    <td>{{pay.cvv}}</td>
+                </tr>
+            </tbody>
+        </table>
+</div>

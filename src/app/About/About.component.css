@@ -1,5 +1,6 @@
-section{
-    padding-top: 130px;
+.about{
+    padding-top: 120px;
+    padding-bottom: 30px;
 }
 .heading{
     text-align: center;
@@ -16,18 +17,19 @@ section{
     align-items: center;
     flex-wrap: wrap;
     gap: 2px;
-    padding-bottom: 50px;
 }
 .about .row .image{
     flex: 100px;
-    padding-left: 70px;
+    padding-left: 50px;
 }
 .about .row .image img{
     width: 100%;
 }
 .about .row .content{
-    flex: 1 1 18rem;
-    padding-right: 70px;
+    flex: 1 1 10rem;
+    padding-right: 50px;
+    padding-top: 20px;
+    text-align: justify;
 }
 .about .row .content h4{
     color: var(--black);
@@ -46,3 +48,69 @@ section{
     text-transform: uppercase;
     font-weight: bold;
 }
+/*----review-----*/
+.review{
+    padding-bottom: 30px;
+}
+.review .box-container{
+    display: grid;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap:3rem;
+}
+.review .box-container .box{
+    border: 3px solid aliceblue;
+    box-shadow: var(--box-shadow);
+    padding: 7px;
+    background: whitesmoke;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+.review .box-container .box img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.review .box-container .box h3{
+    color:black;
+    font-size: 35px;
+    padding:.5rem 0;
+}
+.review .box-container .box .stars i{
+    color: lawngreen;
+    font-size: 38px;
+    padding-top: 20px;
+}
+.review .box-container .box .stars i:hover{
+    color: lightgreen;
+}
+.review .box-container .box .text{
+    color:var(--light-color);
+    line-height: 1.8;
+    font-size: 16px;
+    padding-top: 15px;
+}
+.review .box-container .box::before{
+    position: absolute;
+    transform:translateX(-50%);
+    background:var(--mediumslateblue);
+    height: 25rem;
+    width: 120%;
+    z-index: -1;
+}
+.review .rate{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+.review .rate i{
+    font-size: 30px;
+}
+.review .rate h3:hover{
+    color: mediumslateblue;
+}
+/*----review-----*/

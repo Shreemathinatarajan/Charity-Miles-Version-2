@@ -9,26 +9,26 @@ import { AboutComponent } from './About/About.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PaymentComponent } from './payment/payment.component';
-import { AdminComponent } from './Admin/Admin.component';
 import { HeaderComponent } from './Header/Header.component';
 import { FooterComponent } from './Footer/Footer.component';
 import { AdminheaderComponent } from './Adminheader/Adminheader.component';
 import { AdmindashboardComponent } from './Admindashboard/Admindashboard.component';
 import { AdmineventComponent } from './Adminevent/Adminevent.component';
-import { AdminAddComponent } from './AdminAdd/AdminAdd.component';
 import { AdminMembershipComponent } from './AdminMembership/AdminMembership.component';
-import { AdminreviewComponent } from './Adminreview/Adminreview.component';
 import { AdminProfileComponent } from './AdminProfile/AdminProfile.component';
 import { RatingComponent } from './Charity/rating/rating.component';
 import { MembershipComponent } from './Charity/Membership/Membership.component';
 import { LoginComponent } from './Login/Login.component';
 import { RegistrationComponent } from './Registration/Registration.component';
-
-
-
+import { EventComponent } from './Charity/Event/Event.component';
+import { PlatinumpaymentComponent } from './Charity/Membership/platinumpayment/platinumpayment.component';
+import { GoldpaymentComponent } from './Charity/Membership/goldpayment/goldpayment.component';
+import { SilverpaymentComponent } from './Charity/Membership/silverpayment/silverpayment.component';
+import { EventpaymentComponent } from './eventpayment/eventpayment.component';
+import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
 
 @NgModule({
-  declarations: [																																					
+  declarations: [																																							
     AppComponent,
       HomeComponent,
       CharityComponent,
@@ -41,14 +41,17 @@ import { RegistrationComponent } from './Registration/Registration.component';
       FooterComponent,
       RatingComponent,
       MembershipComponent,
-      AdminComponent,
       AdminheaderComponent,
       AdmineventComponent,
-      AdminAddComponent,
       AdminMembershipComponent,
-      AdminreviewComponent,
       AdminProfileComponent,
-      AdmindashboardComponent
+      AdmindashboardComponent,
+      EventComponent,
+      PlatinumpaymentComponent,
+      GoldpaymentComponent,
+      SilverpaymentComponent,
+      EventpaymentComponent,
+      AdminpaymentComponent
    ],
   imports: [
     BrowserModule,

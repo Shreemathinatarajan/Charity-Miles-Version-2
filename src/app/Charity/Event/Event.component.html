@@ -1,0 +1,37 @@
+
+<section class="event" id="event">
+  <h1 class="heading">UPCOMING<span> EVENTS</span> </h1>
+    <div class="box-container">
+    <!--<div class="search">
+        <input [(ngModel)]="searchterm" placeholder="Search the month" (change)="filterevents()">
+        <span><i class="fa fa-search"></i></span>
+      </div>
+      <div class="catetory">
+        <select [(ngModel)]="selectcat" (change)="filterevents()">
+          <option value="">All Categories</option>
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+        </select>
+      </div>-->
+        <div class="box">
+          <div class="eventid" data-eventid="1" *ngFor="let eve of events">
+            <i class="fa fa-calendar"></i><br><br>
+            <h3>{{eve.evedate}}</h3>
+            <h1>{{eve.event}}</h1>
+            <div class="msg"><p>{{eve.message}} <i class="fa fa-dollar"></i></div>
+            <a routerLink="/Payment" class="btn">View More <span class="fa fa-arrow-circle-right"></span> </a>
+          </div>
+        </div>
+    </div>
+</section>
+

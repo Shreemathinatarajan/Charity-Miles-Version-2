@@ -6,18 +6,21 @@ import { AboutComponent } from './About/About.component';
 import { ContactComponent } from './Contact/Contact.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AuthGuard } from './auth.guard';
-import { AdminComponent } from './Admin/Admin.component';
 import { HeaderComponent } from './Header/Header.component';
 import { AdminheaderComponent } from './Adminheader/Adminheader.component';
 import { AdmindashboardComponent } from './Admindashboard/Admindashboard.component';
 import { AdmineventComponent } from './Adminevent/Adminevent.component';
-import { AdminAddComponent } from './AdminAdd/AdminAdd.component';
 import { AdminMembershipComponent } from './AdminMembership/AdminMembership.component';
-import { AdminreviewComponent } from './Adminreview/Adminreview.component';
 import { RatingComponent } from './Charity/rating/rating.component';
 import { MembershipComponent } from './Charity/Membership/Membership.component';
 import { LoginComponent } from './Login/Login.component';
 import { RegistrationComponent } from './Registration/Registration.component';
+import { EventComponent } from './Charity/Event/Event.component';
+import { PlatinumpaymentComponent } from './Charity/Membership/platinumpayment/platinumpayment.component';
+import { GoldpaymentComponent } from './Charity/Membership/goldpayment/goldpayment.component';
+import { SilverpaymentComponent } from './Charity/Membership/silverpayment/silverpayment.component';
+import { EventpaymentComponent } from './eventpayment/eventpayment.component';
+import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
 
 
 
@@ -56,10 +59,6 @@ const routes: Routes = [
     canActivate:[AuthGuard]
   },
   {
-    path:'Admin',
-    component:AdminComponent
-  },
-  {
     path:'Adminheader',
     component:AdminheaderComponent
   },
@@ -72,16 +71,12 @@ const routes: Routes = [
     component:AdmineventComponent
   },
   {
-    path:'AdminAdd',
-    component:AdminAddComponent
-  },
-  {
     path:'AdminMembership',
     component:AdminMembershipComponent
   },
   {
-    path:'Adminreview',
-    component:AdminreviewComponent
+    path:'Adminpayment',
+    component:AdminpaymentComponent
   },
   {
     path:'rating',
@@ -89,7 +84,28 @@ const routes: Routes = [
   },
   {
     path:'Membership',
-    component:MembershipComponent
+    component:MembershipComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path:'Event',
+    component:EventComponent
+  },
+  {
+    path:'Platinumpayment',
+    component:PlatinumpaymentComponent
+  },
+  {
+    path:'Goldpayment',
+    component:GoldpaymentComponent
+  },
+  {
+    path:'Silverpayment',
+    component:SilverpaymentComponent
+  },
+  {
+    path:'Eventpayment',
+    component:EventpaymentComponent
   },
   {
     path:'**',

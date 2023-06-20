@@ -1,15 +1,26 @@
 <header>
-  <img src="assets/Image/logo.jpg" alt="">
-  
-  <nav class="navbar">
-  <a routerLink="/Home" ><i class="fa fa-home" aria-hidden="true"></i>Home</a>
-  <a routerLink="/Charity" ><i class="fa fa-heartbeat" aria-hidden="true"></i>Charity</a>
-  <a routerLink="/About" ><i class="fa fa-angle-double-right" aria-hidden="true"></i>About us</a>
-  <a routerLink="/Contact" ><i class="fa fa-phone" aria-hidden="true"></i>Contact us</a>
-  <a *ngIf="!loginservice.isLoggedIn" routerLink="/Login"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Login</a>
- 
-  <a *ngIf="loginservice.isLoggedIn" routerLink="/Home"  onclick="onLogout()"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Logout</a>
-
+  <h1><img src="assets/Image/logo.png" alt="">CHARITY <span>MILES</span></h1>
+<nav class="navbar">
+  <div [ngSwitch]="type" class="type">
+  <ul *ngSwitchCase="'default'">
+  <a routerLink="/Home" routerLinkActive="active"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+  <a routerLink="/Charity" routerLinkActive="active"><i class="fa fa-heartbeat" aria-hidden="true"></i>Charity</a>
+  <a routerLink="/About" routerLinkActive="active"><i class="fa fa-angle-double-right" aria-hidden="true"></i>About us</a>
+  <a routerLink="/Contact" routerLinkActive="active"><i class="fa fa-phone" aria-hidden="true"></i>Contact us</a>
+  <a routerLink="/Login" ><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Login</a>
+  </ul>
+  <ul *ngSwitchCase="'user'" class="user">
+  <a routerLink="/Home" routerLinkActive="active"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+  <a routerLink="/Charity" routerLinkActive="active"><i class="fa fa-heartbeat" aria-hidden="true"></i>Charity</a>
+  <a routerLink="/About" routerLinkActive="active"><i class="fa fa-angle-double-right" aria-hidden="true"></i>About us</a>
+  <a routerLink="/Contact" routerLinkActive="active"><i class="fa fa-phone" aria-hidden="true"></i>Contact us</a>
+  <a (click)="onLogout()"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>Logout</a>
+  <a routerLink="#"><img src="assets/Image/user icon.png" alt="" style="width: 30px;"> {{username}}</a>
+  </ul>
+  </div>
 </nav>
 
 </header>
+<!--<a *ngIf="!loginservice.isLoggedIn" routerLink="/Login"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Login</a>
+ 
+  <a *ngIf="loginservice.isLoggedIn" (click)="onLogout()"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>Logout</a>-->

@@ -8,18 +8,31 @@ import { LoginService } from '../Login/login.service';
   styleUrls: ['./Header.component.css']
 })
 export class HeaderComponent implements OnInit {
- 
-
+  
+  username:any;
+  type:string='default';
   constructor(private route:Router,public loginservice:LoginService) { }
   
   
   ngOnInit() {
+    if(localStorage.getItem('user')){
+      let un = localStorage.getItem('user');
+      let ud = un && JSON.parse(un);
+      this.username=ud.uname;
+      this.type='user';
+
+    }
+    else{
+      this.type='default';
+    }
    
   }
   
   onLogout(){
-    this.loginservice.onLogout();
-    this.route.navigate(['Home']);
+    //this.loginservice.onLogout();
+    localStorage.removeItem('user');
+    this.route.navigate[('/Home')];
+    window.location.reload();
   }
 }
 
