@@ -6,14 +6,15 @@
     <div class="image">
       <img src="assets/Image/contact.svg" alt="">
     </div>
-   <!-- <form action="">
+   <form action="">
       <h3>Have Questions?</h3>
       <input type="text" placeholder="NAME" class="box" required>
       <input type="email" placeholder="EMAIL" class="box" required>
       <input type="text" placeholder="SUBJECT" class="box" required>
       <input type="message" placeholder="MESSAGE" class="box" style="height: 100px;" required><br>
-      <button>SEND</button>-->
-      <form [formGroup]="contact" (ngSubmit)="contactdata(contact)">
+      <button>SEND</button>
+   </form>
+    <!--   <form [formGroup]="contact" (ngSubmit)="contactdata(contact)">
         <div class="form">
           <h3>Have Questions?</h3>
           <input type="text" formControlName="uname" placeholder="NAME" class="box">
@@ -28,9 +29,9 @@
           </div>
           <input type="text" formControlName="sub" placeholder="SUBJECT" class="box">
           <input type="TEXT" formControlName="msg" placeholder="MESSAGE" class="box"><br>
-        <button [disabled]="contact.invalid" class="btn">SEND</button>
+        <button class="btn">SEND</button>
         </div>
-        </form>
+        </form>-->
   </div>
 </div>
 </section>
