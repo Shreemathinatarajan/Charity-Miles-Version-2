@@ -32,7 +32,6 @@
       <div class="error" *ngIf="registration.controls['cpass'].errors?.['required']">Confirm your password</div>
       <div class="error" *ngIf="registration.controls['cpass'].errors?.['Confirmpassword']">Password doesn't match</div>
     </div>
-  
   <button [disabled]="registration.invalid" class="btn">REGISTER</button>
   </div>
   </form>

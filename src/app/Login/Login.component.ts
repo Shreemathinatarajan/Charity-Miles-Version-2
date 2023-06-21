@@ -12,7 +12,7 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent implements OnInit {
   login:FormGroup|any;
-  returl:any="";
+  returl:any="Home";
   uname:any="";
   pass:any="";
   submit:boolean=false;
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     this.loginservice.login(this.uname,this.pass).subscribe((data)=>{
       console.log("return to"+this.returl);
       if(this.returl!=null){
-        this.route.navigate([this.returl]);
+       this.route.navigate([this.returl]);
       }
     })
   }
@@ -61,10 +61,10 @@ export class LoginComponent implements OnInit {
         this.login.reset();
         this.route.navigate(['Home']);
       }
-      else{
+      /*else{
         alert("Invalid Username or Password");
         this.route.navigate(['Login']);
-      }
+      }*/
     },err=>{
       alert('Someting went wrong');
     })

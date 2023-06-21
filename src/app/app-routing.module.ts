@@ -21,6 +21,8 @@ import { GoldpaymentComponent } from './Charity/Membership/goldpayment/goldpayme
 import { SilverpaymentComponent } from './Charity/Membership/silverpayment/silverpayment.component';
 import { EventpaymentComponent } from './eventpayment/eventpayment.component';
 import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
+import { VieweventComponent } from './Charity/Event/viewevent/viewevent.component';
+import { ForgotComponent } from './Login/Forgot/Forgot.component';
 
 
 
@@ -106,6 +108,14 @@ const routes: Routes = [
   {
     path:'Eventpayment',
     component:EventpaymentComponent
+  },
+  {
+    path:'Event/:id',
+    component:VieweventComponent
+  },
+  {
+    path:'Forgot',
+    component:ForgotComponent
   },
   {
     path:'**',

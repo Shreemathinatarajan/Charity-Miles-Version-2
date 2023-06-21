@@ -51,7 +51,7 @@ eventname:any;
     .subscribe(res=>{
       this.paymentservice.success();
       this.payment.reset();
-      this.route.navigate(['/Home']);
+      this.route.navigate(['/rating']);
     },err=>{
       alert('Something went wrong');
     })

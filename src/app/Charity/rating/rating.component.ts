@@ -17,7 +17,7 @@ export class RatingComponent implements OnInit {
   countStar(star) {
     console.log('Value of star', star);
     alertifyjs.success('Rated Successfully');
-    this.route.navigate(['Home']);
+    this.route.navigate(['Charity']);
     
   }
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { AdmineventService } from 'src/app/Adminevent/adminevent.service';
+import { EventService } from './event.service';
 
 @Component({
   selector: 'app-Event',
@@ -9,13 +11,16 @@ import { AdmineventService } from 'src/app/Adminevent/adminevent.service';
 export class EventComponent implements OnInit {
 
   events:any;
-  filterevent:any;
+  viewevents:any;
+  /*filterevent:any;
   searchValue:any;
   selectcat:string='';
   searchterm:string='';
 
-  constructor(private event:AdmineventService) {
-    this.event.getevent(0).subscribe(res=>{
+  
+
+  constructor(private eventservice:AdmineventService,private param:ActivatedRoute,private service:EventService) {
+    this.eventservice.getevent(0).subscribe(res=>{
       this.events=res;
       this.filterevent=res;
     })
@@ -35,10 +40,16 @@ export class EventComponent implements OnInit {
       this.filterevent = this.events.filter(eve => eve.category.toLowerCase() === this.selectcat.toLowerCase() && 
       eve.model.toLowerCase().includes(this.searchterm.toLowerCase()));
     }
+   }*/
+
+   constructor(private adminevent:AdmineventService){
+    this.adminevent.getevent(0).subscribe(res=>{
+      this.events=res;
+    })
+    
+
    }
-
-
   ngOnInit() {
+    
   }
-
 }

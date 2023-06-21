@@ -1,4 +1,4 @@
-
+<app-Header></app-Header>
 <section class="event" id="event">
   <h1 class="heading">UPCOMING<span> EVENTS</span> </h1>
     <div class="box-container">
@@ -29,7 +29,8 @@
             <h3>{{eve.evedate}}</h3>
             <h1>{{eve.event}}</h1>
             <div class="msg"><p>{{eve.message}} <i class="fa fa-dollar"></i></div>
-            <a routerLink="/Payment" class="btn">View More <span class="fa fa-arrow-circle-right"></span> </a>
+            <!--<p>{{eve.title}}</p>-->
+            <a [routerLink]="['/Event',eve.id]" class="btn">View More <span class="fa fa-arrow-circle-right"></span> </a>
           </div>
         </div>
     </div>

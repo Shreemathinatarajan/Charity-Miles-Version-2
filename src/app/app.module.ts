@@ -26,6 +26,8 @@ import { GoldpaymentComponent } from './Charity/Membership/goldpayment/goldpayme
 import { SilverpaymentComponent } from './Charity/Membership/silverpayment/silverpayment.component';
 import { EventpaymentComponent } from './eventpayment/eventpayment.component';
 import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
+import { VieweventComponent } from './Charity/Event/viewevent/viewevent.component';
+import { ForgotComponent } from './Login/Forgot/Forgot.component';
 
 @NgModule({
   declarations: [																																							
@@ -51,7 +53,9 @@ import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
       GoldpaymentComponent,
       SilverpaymentComponent,
       EventpaymentComponent,
-      AdminpaymentComponent
+      AdminpaymentComponent,
+      VieweventComponent,
+      ForgotComponent
    ],
   imports: [
     BrowserModule,

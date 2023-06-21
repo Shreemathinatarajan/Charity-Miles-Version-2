@@ -13,7 +13,7 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot):  boolean  {
      if(!this.loginservice.isUserLoggedIn()){
         alert("Please Login to view the page");
-        this.router.navigate(["Login"],{queryParams:{returl:route.url}});
+       // this.router.navigate(["Login"],{queryParams:{returl:route.url}});
         return false;
       }
       return true;

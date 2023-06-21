@@ -1,0 +1,15 @@
+<app-Header></app-Header>
+<section>
+    <a routerLink="/Event"><span class="fa fa-arrow-circle-left"></span>  Back</a>
+    <h1>Charity Mi<span>les Events</span></h1>
+<div class="content" *ngIf="eventdata">
+  <h1>EVENT DAY : <span>{{eventdata[0].event}}</span></h1>
+  <h3>In our charity miles the event is going to held on <span>{{eventdata[0].evedate}}</span> </h3>
+  <h4>Event Description</h4>
+  <p>{{eventdata[0].title}}</p>
+  <h2>Let us join hands for good things and do services for people... <i class="fa fa-handshake-o"></i></h2>
+  <h3>For this event charity miles raising funds to serve people<br>
+  Help us by donating......</h3>
+  <a routerLink="/Payment" class="btn"> DONATE HERE <span class="fa fa-arrow-circle-right"></span></a>
+</div>
+</section>

@@ -6,14 +6,31 @@
     <div class="image">
       <img src="assets/Image/contact.svg" alt="">
     </div>
-    <form action="">
+   <!-- <form action="">
       <h3>Have Questions?</h3>
       <input type="text" placeholder="NAME" class="box" required>
       <input type="email" placeholder="EMAIL" class="box" required>
       <input type="text" placeholder="SUBJECT" class="box" required>
       <input type="message" placeholder="MESSAGE" class="box" style="height: 100px;" required><br>
-      <button>SEND</button>
-    </form>
+      <button>SEND</button>-->
+      <form [formGroup]="contact" (ngSubmit)="contactdata(contact)">
+        <div class="form">
+          <h3>Have Questions?</h3>
+          <input type="text" formControlName="uname" placeholder="NAME" class="box">
+          <div *ngIf="contact.controls['uname'].invalid && (contact.controls['uname'].dirty || contact.controls['uname'].touched)">
+            <div class="error" *ngIf="contact.controls['uname'].errors?.['required']">Enter Username</div>
+            <div class="error" *ngIf="contact.controls['uname'].errors?.['pattern']">Enter a valid username</div>
+          </div>
+          <input type="email" formControlName="emailid" placeholder="EMAIL" class="box">
+          <div *ngIf="contact.controls['emailid'].invalid && (contact.controls['emailid'].dirty || contact.controls['emailid'].touched)">
+            <div class="error" *ngIf="contact.controls['emailid'].errors?.['required']">Enter Email</div>
+            <div class="error" *ngIf="contact.controls['emailid'].errors?.['pattern']">Enter a valid email</div>
+          </div>
+          <input type="text" formControlName="sub" placeholder="SUBJECT" class="box">
+          <input type="TEXT" formControlName="msg" placeholder="MESSAGE" class="box"><br>
+        <button [disabled]="contact.invalid" class="btn">SEND</button>
+        </div>
+        </form>
   </div>
 </div>
 </section>
