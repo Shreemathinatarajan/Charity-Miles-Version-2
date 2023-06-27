@@ -28,9 +28,10 @@ import { EventpaymentComponent } from './eventpayment/eventpayment.component';
 import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
 import { VieweventComponent } from './Charity/Event/viewevent/viewevent.component';
 import { ForgotComponent } from './Login/Forgot/Forgot.component';
+import { OfferComponent } from './offer/offer.component';
 
 @NgModule({
-  declarations: [																																							
+  declarations: [																																								
     AppComponent,
       HomeComponent,
       CharityComponent,
@@ -55,7 +56,8 @@ import { ForgotComponent } from './Login/Forgot/Forgot.component';
       EventpaymentComponent,
       AdminpaymentComponent,
       VieweventComponent,
-      ForgotComponent
+      ForgotComponent,
+      OfferComponent
    ],
   imports: [
     BrowserModule,
