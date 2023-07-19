@@ -29,7 +29,7 @@ import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
 import { VieweventComponent } from './Charity/Event/viewevent/viewevent.component';
 import { ForgotComponent } from './Login/Forgot/Forgot.component';
 import { OfferComponent } from './offer/offer.component';
-import { ProfileComponent } from './profile/profile.component';
+
 
 @NgModule({
   declarations: [																																									
@@ -58,8 +58,7 @@ import { ProfileComponent } from './profile/profile.component';
       AdminpaymentComponent,
       VieweventComponent,
       ForgotComponent,
-      OfferComponent,
-      ProfileComponent
+      OfferComponent
    ],
   imports: [
     BrowserModule,
