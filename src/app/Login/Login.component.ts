@@ -73,8 +73,8 @@ export class LoginComponent implements OnInit {
     admin(){
     this.http.get<any>("http://localhost:3000/admin")
     .subscribe(res=>{
-      const admin = res.find((a:any)=>{
-        return a.uname === this.login.value.uname && a.pass === this.login.value.password
+      const admin = res.find((detail:any)=>{
+        return detail.uname === this.login.value.uname && detail.pass === this.login.value.password
       });
       if(admin){ 
         alert("Admin Loggedin Successfully");
