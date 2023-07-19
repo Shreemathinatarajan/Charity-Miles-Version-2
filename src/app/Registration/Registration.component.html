@@ -27,11 +27,11 @@
       <div class="error" *ngIf="registration.controls['pass'].errors?.['required']">Enter Password</div>
       <div class="error" *ngIf="registration.controls['pass'].errors?.['pattern']">8 character with 1 uppercase,1 lowercase,1 number,1 special symbol</div>
     </div>
-    <input type="password" formControlName="cpass" placeholder="Confirm Password">
+   <!-- <input type="password" formControlName="cpass" placeholder="Confirm Password">
     <div *ngIf="registration.controls['cpass'].invalid && (registration.controls['cpass'].dirty || registration.controls['cpass'].touched)">
       <div class="error" *ngIf="registration.controls['cpass'].errors?.['required']">Confirm your password</div>
       <div class="error" *ngIf="registration.controls['cpass'].errors?.['Confirmpassword']">Password doesn't match</div>
-    </div>
+    </div>-->
   <button [disabled]="registration.invalid" class="btn">REGISTER</button>
   </div>
   </form>
