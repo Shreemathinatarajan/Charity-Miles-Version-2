@@ -1,35 +1,3 @@
-/*header{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: fixed;
-    width:100%;
-    height: 20px;
-    background:#fff;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    padding:30px 9%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-}
-header .navbar a{
-    font-size: 22px;
-    margin-left: 2rem;
-    color: black;
-    text-decoration: none; 
-}
-header .navbar a i{
-    color: mediumslateblue;
-    padding-right: 5px;
-}
-header .navbar a:hover{
-    color:mediumslateblue;
-}
-header .navbar .user a{
-    font-size: 22px;
-    margin-left: 16px;
-    color: black;
-    text-decoration: none; 
-}*/
 header{
     display: flex;
     position: fixed;
@@ -37,12 +5,13 @@ header{
     background:#fff;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     width: 100%;
-    height: 80px;
+    height: 70px;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
     padding-left: 50px;
     padding-right: 50px;
+    padding-top: 10px;
 }
 header h1{
     color: black;

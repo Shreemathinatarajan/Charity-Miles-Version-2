@@ -8,17 +8,17 @@
             <thead>
                 <tr>
                     <th scope="col">Name</th>
-                    <th scope="col">Paid</th>
-                    <th scope="col">Card Number</th>
+                    <th scope="col">Paid</th>  
                     <th scope="col">Validity</th>
+                    <th scope="col">Expiry date</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let pmem of membership">
                     <td>{{pmem.uname}}</td>
                     <td>{{pmem.Rs}}</td>
-                    <td>{{pmem.cardno}}</td>
                     <td *ngFor="let val of validity">{{val.validity}}</td>
+                    <td>{{pmem.Exp}}</td>
                 </tr>
             </tbody>
         </table>
@@ -28,16 +28,17 @@
                 <tr>
                     <th scope="col">Name</th>
                     <th scope="col">Paid</th>
-                    <th scope="col">Card Number</th>
                     <th scope="col">Validity</th>
+                    <th scope="col">Expiry date</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let gmem of gmembership">
                     <td>{{gmem.uname}}</td>
                     <td>{{gmem.Rs}}</td>
-                    <td>{{gmem.cardno}}</td>
+                    
                     <td *ngFor="let gval of gvalidity">{{gval.validity}}</td>
+                    <td>{{gmem.Exp}}</td>
                 </tr>
             </tbody>
         </table>
@@ -47,16 +48,17 @@
                 <tr>
                     <th scope="col">Name</th>
                     <th scope="col">Paid</th>
-                    <th scope="col">Card Number</th>
                     <th scope="col">Validity</th>
+                    <th scope="col">Expiry date</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let smem of smembership">
                     <td>{{smem.uname}}</td>
                     <td>{{smem.Rs}}</td>
-                    <td>{{smem.cardno}}</td>
+                   
                     <td *ngFor="let sval of svalidity">{{sval.validity}}</td>
+                    <td>{{smem.Exp}}</td>
                 </tr>
             </tbody>
         </table>

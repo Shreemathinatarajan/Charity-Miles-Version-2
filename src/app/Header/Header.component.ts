@@ -10,6 +10,7 @@ import { LoginService } from '../Login/login.service';
 export class HeaderComponent implements OnInit {
   
   username:any;
+  Email:any;
   type:string='default';
   constructor(private route:Router,public loginservice:LoginService) { }
   
@@ -18,9 +19,10 @@ export class HeaderComponent implements OnInit {
     if(localStorage.getItem('user')){
       let un = localStorage.getItem('user');
       let ud = un && JSON.parse(un);
+      let mail = un && JSON.parse(un);
       this.username=ud.uname;
+      this.Email=ud.mail;
       this.type='user';
-
     }
     else{
       this.type='default';

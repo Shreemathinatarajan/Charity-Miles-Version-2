@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoginService } from './login.service';
-
+import * as alertifyjs from 'alertifyjs';
 
 @Component({
   selector: 'app-Login',
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.login = new FormGroup({
-      'uname':new FormControl("",[Validators.required,Validators.pattern("[a-zA-Z]{3,20}$")]),
+      'uname':new FormControl("",[Validators.required,Validators.pattern("[a-zA-Z0-9]{3,20}$")]),
       'password':new FormControl("",[Validators.required,Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*].{8,20}$")]),
     }),
     this.router.queryParamMap.subscribe(parama=>{
@@ -61,10 +61,10 @@ export class LoginComponent implements OnInit {
         this.login.reset();
         this.route.navigate(['Home']);
       }
-      /*else{
-        alert("Invalid Username or Password");
+      else{
+        alertifyjs.success("Invalid Username or Password");
         this.route.navigate(['Login']);
-      }*/
+      }
     },err=>{
       alert('Someting went wrong');
     })

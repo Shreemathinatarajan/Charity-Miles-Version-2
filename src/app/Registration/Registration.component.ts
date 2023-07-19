@@ -13,18 +13,23 @@ import { Confirmpassword } from './confirmpassword';
 export class RegistrationComponent implements OnInit {
   registration:FormGroup|any;
   reg:any;
-  constructor(private route:Router,private http:HttpClient,private Register:RegisterService) { }
+  constructor(private route:Router,private http:HttpClient,private Register:RegisterService) { 
+  
+  }
 
   ngOnInit() {
     this.registration = new FormGroup({
-      'uname':new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z]{3,20}$")]),
+      'uname':new FormControl("",[Validators.required,Validators.pattern("^(?!.*(.).*\\1{3})[a-zA-Z][a-zA-Z0-9_-]{3,15}$")]),
       'emailid':new FormControl("",[Validators.required,Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$")]),
       'mobileno':new FormControl("",[Validators.required,Validators.pattern("[6-9]+[0-9]{9}$")]),
       'pass':new FormControl("",[Validators.required,Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,20}")]),
       'cpass':new FormControl("",[Validators.required])
-    }),
-    { Validator : Confirmpassword('pass','cpass')}
+     
+  })//,{
+   // validator: Confirmpassword('pass','cpass')
+ // }
   }
+  
   registrationdata(registration:FormGroup){
     //console.log(this.registration.value);
     this.reg = this.registration.value.uname

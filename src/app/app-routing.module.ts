@@ -23,6 +23,7 @@ import { EventpaymentComponent } from './eventpayment/eventpayment.component';
 import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
 import { VieweventComponent } from './Charity/Event/viewevent/viewevent.component';
 import { ForgotComponent } from './Login/Forgot/Forgot.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -118,9 +119,12 @@ const routes: Routes = [
     component:ForgotComponent
   },
   {
+    path:'profile',
+    component:ProfileComponent
+  },
+  {
     path:'**',
     component:HomeComponent
-    
   }
 ];
 

@@ -1,30 +1,4 @@
 {
-  "users": [
-    {
-      "uname": "priya",
-      "emailid": "priya25@gmail.com",
-      "mobileno": "9813426789",
-      "pass": "Priya@123",
-      "cpass": "Priya@123",
-      "id": 1
-    },
-    {
-      "uname": "shreemathi",
-      "emailid": "shreemathi2901@gmail.com",
-      "mobileno": "9344800721",
-      "pass": "Shree29@01",
-      "cpass": "Shree29@01",
-      "id": 2
-    },
-    {
-      "uname": "priya",
-      "emailid": "priya@gmail.com",
-      "mobileno": "9561728189",
-      "pass": "Priya@123",
-      "cpass": "Priya@123",
-      "id": 3
-    }
-  ],
   "admin": [
     {
       "uname": "Admin",
@@ -39,98 +13,27 @@
     {
       "Rs": "2500",
       "uname": "PRIYA S",
-      "cardno": "562710987256718627",
-      "exp": "05/2027",
-      "cvv": "561",
       "id": 1
     },
     {
       "Rs": "5000",
       "uname": "SHREEMATHI R N",
-      "cardno": "6789012789012789",
-      "exp": "09/2024",
-      "cvv": "618",
       "id": 2
     },
     {
       "Rs": "1000",
       "uname": "RAM S",
-      "cardno": "9872128912912736",
-      "exp": "08/2023",
-      "cvv": "290",
       "id": 3
     },
     {
-      "Rs": "2000",
-      "uname": "POOJA M",
-      "cardno": "9871108278190128",
-      "exp": "07/2028",
-      "cvv": "781",
+      "Rs": "10,000",
+      "uname": "VARUN S",
       "id": 4
     },
     {
-      "Rs": "15000",
-      "uname": "SWETHA R",
-      "cardno": "2818728171682878",
-      "exp": "05/2026",
-      "cvv": "781",
+      "Rs": "15,000",
+      "uname": "SAM SUNDHAR",
       "id": 5
-    },
-    {
-      "Rs": "1000",
-      "uname": "SHREEMATHI R N",
-      "cardno": "6785678910672867",
-      "exp": "07/2027",
-      "cvv": "718",
-      "id": 6
-    },
-    {
-      "Rs": "3000",
-      "uname": "SHREEMATHI R N",
-      "cardno": "7256189208219821",
-      "exp": "01/2024",
-      "cvv": "718",
-      "id": 7
-    },
-    {
-      "Rs": "100",
-      "uname": "SHREEMATHI R N",
-      "cardno": "6716217218119271",
-      "exp": "02/2024",
-      "cvv": "618",
-      "id": 8
-    },
-    {
-      "Rs": "2000",
-      "uname": "RAM S",
-      "cardno": "3254570987123457",
-      "exp": "09/2023",
-      "cvv": "710",
-      "id": 9
-    },
-    {
-      "Rs": "5000",
-      "uname": "SHREE R N",
-      "cardno": "7689162789107281",
-      "exp": "07/2026",
-      "cvv": "981",
-      "id": 10
-    },
-    {
-      "Rs": "200",
-      "uname": "HARIRAM",
-      "cardno": "1234567890123456",
-      "exp": "08/2024",
-      "cvv": "891",
-      "id": 11
-    },
-    {
-      "Rs": "8900",
-      "uname": "SHREEMATHI",
-      "cardno": "7182162128121819",
-      "exp": "02/2024",
-      "cvv": "613",
-      "id": 12
     }
   ],
   "registereduser": [
@@ -151,7 +54,7 @@
       "id": 2
     },
     {
-      "uname": "shreemathi",
+      "uname": "Shreemathi",
       "emailid": "shreemathi2901@gmail.com",
       "mobileno": "9768123678",
       "pass": "Shree@123",
@@ -159,150 +62,114 @@
       "id": 3
     },
     {
-      "uname": "suji",
-      "emailid": "suji2002@gmail.com",
-      "mobileno": "9871067829",
-      "pass": "Suji@1234",
-      "cpass": "Suji@1234",
+      "uname": "varun",
+      "emailid": "varun2901@gmail.com",
+      "mobileno": "9871829102",
+      "pass": "Varun@123",
+      "cpass": "Varun@123",
       "id": 4
     },
     {
-      "uname": "pooja",
-      "emailid": "pooja123@gmail.com",
-      "mobileno": "9715560981",
-      "pass": "Pooja@123",
-      "cpass": "pooja@123",
+      "uname": "Sam20",
+      "emailid": "sam@gmail.com",
+      "mobileno": "9876135627",
+      "pass": "Sam@12345",
+      "cpass": "Sam@12345",
       "id": 5
-    },
-    {
-      "uname": "swathi",
-      "emailid": "smileswathi@gmail.com",
-      "mobileno": "9781056209",
-      "pass": "Swathi@123",
-      "cpass": "Swathi@123",
-      "id": 6
-    },
-    {
-      "uname": "Saru",
-      "emailid": "saru@gmail.com",
-      "mobileno": "9780917820",
-      "pass": "Saru@1234",
-      "cpass": "Saru@1234",
-      "id": 7
-    },
-    {
-      "uname": "swetha",
-      "emailid": "swetha@gmail.com",
-      "mobileno": "9810789201",
-      "pass": "Swetha@123",
-      "cpass": "Swetha@123",
-      "id": 8
-    },
-    {
-      "uname": "Suthi",
-      "emailid": "suthi@gmail.com",
-      "mobileno": "9856378109",
-      "pass": "Suthi@123",
-      "cpass": "Suthi@123",
-      "id": 9
-    },
-    {
-      "uname": "sanjhey",
-      "emailid": "sanjhey@gmail.com",
-      "mobileno": "9751506760",
-      "pass": "Sanjhey@123",
-      "cpass": "Sanjhey@123",
-      "id": 10
     }
   ],
   "loginuser": [
     {
-      "uname": "shreemathi",
+      "uname": "Shreemathi",
       "password": "Shree@123",
       "id": 1
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 2
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 3
     }
   ],
   "events": [
     {
       "id": 1,
-      "evedate": "29 June 2023",
-      "event": "Bakrid",
-      "message": "On this special day we are here to do services for peoples Help us by denoting"
-    },
-    {
-      "id": 2,
       "evedate": "28 July 2023",
       "event": "Muharram",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 3,
+      "id": 2,
       "evedate": "13 August 2023",
       "event": "World Organ Donation Day",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 4,
+      "id": 3,
       "evedate": "15 August 2023",
       "event": "Independence Day",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 5,
+      "id": 4,
       "evedate": "29 August 2023",
       "event": "Onam",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 6,
+      "id": 5,
       "evedate": "30 August 2023",
       "event": "Raksha Bandhan",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 7,
+      "id": 6,
       "evedate": "17 September 2023",
       "event": "Ganesh Chaturthi",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 8,
+      "id": 7,
       "evedate": "24 September 2023",
       "event": "Pooja Celebration",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 9,
+      "id": 8,
       "evedate": "02 October 2023",
       "event": "Gandhi Jayanti",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 10,
+      "id": 9,
       "evedate": "12 October 2023",
       "event": "Diwali Celebration",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 11,
+      "id": 10,
       "evedate": "11 November 2023",
       "event": "National Education Day",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 12,
+      "id": 11,
       "evedate": "14 November 2023",
       "event": "Children's Day",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 13,
+      "id": 12,
       "evedate": "27 November 2023",
       "event": "National Organ Donation Day",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 14,
+      "id": 13,
       "evedate": "25 December 2023",
       "event": "Christmas Day",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
@@ -335,117 +202,32 @@
   "Platinummember": [
     {
       "Rs": "999",
-      "uname": "SHREEMATHI",
-      "cardno": "6789012781097219",
-      "exp": "09/2026",
-      "cvv": "618",
+      "uname": "RAM S",
+      "Exp": "17 July 2024",
       "id": 1
     },
     {
       "Rs": "999",
-      "uname": "RAM KUMAR P",
-      "cardno": "6378987626718091",
-      "exp": "02/2025",
-      "cvv": "981",
+      "uname": "SAM SUNDHAR",
+      "Exp": "14 July 2024",
       "id": 2
-    },
-    {
-      "Rs": "999",
-      "uname": "SWETHA R",
-      "cardno": "7327382781567153",
-      "exp": "03/2028",
-      "cvv": "618",
-      "id": 3
-    },
-    {
-      "Rs": "999",
-      "uname": "SUTHI G",
-      "cardno": "7168290764764647",
-      "exp": "12/2024",
-      "cvv": "187",
-      "id": 4
-    },
-    {
-      "Rs": "999",
-      "uname": "SANJHEY SA",
-      "cardno": "6718672096345289",
-      "exp": "06/2028",
-      "cvv": "618",
-      "id": 5
-    },
-    {
-      "Rs": "999",
-      "uname": "SHREE",
-      "cardno": "9281781738087617",
-      "exp": "02/2027",
-      "cvv": "812",
-      "id": 6
     }
   ],
   "Goldmember": [
     {
       "Rs": "699",
       "uname": "PRIYA",
-      "cardno": "8790198017891082",
-      "exp": "09/2027",
-      "cvv": "701",
-      "id": 3
-    },
-    {
-      "Rs": "699",
-      "uname": "SUJITH P",
-      "cardno": "8790768910272722",
-      "exp": "07/2027",
-      "cvv": "413",
-      "id": 4
-    },
-    {
-      "Rs": "699",
-      "uname": "SARULATHA D",
-      "cardno": "3659056729187263",
-      "exp": "07/2029",
-      "cvv": "761",
-      "id": 5
+      "Exp": "15 January 2024",
+      "id": 1
     }
   ],
   "Silvermember": [
     {
       "Rs": "399",
-      "uname": "POOJA M",
-      "cardno": "7890567815628090",
-      "exp": "07/2026",
-      "cvv": "861",
+      "uname": "VARUN S",
+      "Exp": "14 October 2024",
       "id": 1
-    },
-    {
-      "Rs": "399",
-      "uname": "SWATHI R",
-      "cardno": "3562091781672891",
-      "exp": "08/2027",
-      "cvv": "671",
-      "id": 2
     }
   ],
-  "contact": [
-    {
-      "uname": "",
-      "emailid": "",
-      "id": 1
-    },
-    {
-      "uname": "",
-      "emailid": "",
-      "id": 2
-    },
-    {
-      "uname": "",
-      "emailid": "",
-      "id": 3
-    },
-    {
-      "uname": "",
-      "emailid": "",
-      "id": 4
-    }
-  ]
+  "contact": []
 }
