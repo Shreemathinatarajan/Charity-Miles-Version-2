@@ -29,5 +29,13 @@ export class MembershipComponent implements OnInit {
 
   ngOnInit() {
   }
+  calculateOfferprice(pmember:any):number{
+    if(pmember.amount>=100){
+      return pmember.amount *0.9;
+    }
+    else{
+      return pmember.amount;
+    }
 
+  }
 }

@@ -23,6 +23,9 @@ import { EventpaymentComponent } from './eventpayment/eventpayment.component';
 import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
 import { VieweventComponent } from './Charity/Event/viewevent/viewevent.component';
 import { ForgotComponent } from './Login/Forgot/Forgot.component';
+import { RegisterComponent } from './Register/Register.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { AppointmentComponent } from './Appointment/Appointment.component';
 
 
 
@@ -56,6 +59,11 @@ const routes: Routes = [
     path:'Registration',
     component:RegistrationComponent
   }, 
+  {
+    path:'Register',
+    component:RegisterComponent
+
+  },
   {
     path:'Payment',
     component:PaymentComponent,
@@ -117,6 +125,14 @@ const routes: Routes = [
   {
     path:'Forgot',
     component:ForgotComponent
+  },
+  {
+    path:'UserProfile',
+    component:UserprofileComponent
+  },
+  {
+    path:'Appointment',
+    component:AppointmentComponent
   },
   {
     path:'**',

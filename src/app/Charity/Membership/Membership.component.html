@@ -1,6 +1,7 @@
 <app-Header></app-Header>
 <section class="member" id="member">
     <h1 class="heading">CHARITY<span> MEMBERSHIP</span></h1>
+   
     <div class="content">
         <div class="overlay">
           <!--  <i class="fa fa-arrow-circle-o-left"><a routerLink="/Charity"> Back</a></i><br>-->
@@ -39,6 +40,8 @@
       <div class="box-container">
           <div class="box">
               <div *ngFor="let p of pmember">
+                <!--<app-offer [expirationDate]="p.expirationDate"></app-offer>-->
+                <p>{{calculateOfferprice(pmember)}}></p>
               <img src="assets/Image/platinum.png" alt=""><br>
               <h3><span>Membership Type:</span><br> {{p.head}}</h3>
               <h3><span>Price          :</span> INR {{p.amount}}</h3>

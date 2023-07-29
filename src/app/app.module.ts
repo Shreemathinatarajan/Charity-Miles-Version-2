@@ -29,10 +29,13 @@ import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
 import { VieweventComponent } from './Charity/Event/viewevent/viewevent.component';
 import { ForgotComponent } from './Login/Forgot/Forgot.component';
 import { OfferComponent } from './offer/offer.component';
+import { RegisterComponent } from './Register/Register.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { AppointmentComponent } from './Appointment/Appointment.component';
 
 
 @NgModule({
-  declarations: [																																									
+  declarations: [																																												
     AppComponent,
       HomeComponent,
       CharityComponent,
@@ -58,7 +61,10 @@ import { OfferComponent } from './offer/offer.component';
       AdminpaymentComponent,
       VieweventComponent,
       ForgotComponent,
-      OfferComponent
+      OfferComponent,
+      RegisterComponent,
+      UserprofileComponent,
+      AppointmentComponent
    ],
   imports: [
     BrowserModule,
