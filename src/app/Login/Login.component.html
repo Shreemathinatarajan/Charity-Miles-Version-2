@@ -20,9 +20,9 @@
       <div class="error" *ngIf="login.controls['password'].errors?.['pattern']">8 character with 1 uppercase,1 lowercase,1 number,1 special symbol</div>
     </div>
  
-  <button [disabled]="!login.valid" (click)="onLogin()" class="btn">LOGIN</button>
+  <button [disabled]="!login.valid" class="btn">LOGIN</button>
   <p class="button">
-      <a routerLink="/Forgot">Forgot Password</a><br><br>
+     <!-- <a routerLink="/Forgot">Forgot Password</a><br><br>-->
       Don't Have an Account? <a routerLink="/Registration">Register Here</a>
   </p>
 </div>

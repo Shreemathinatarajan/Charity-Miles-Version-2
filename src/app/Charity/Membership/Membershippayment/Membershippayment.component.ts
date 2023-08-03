@@ -1,50 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { FormGroup } from '@angular/forms';
+import { LoginService } from 'src/app/Login/login.service';
 import { member } from 'src/app/member.model';
-import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { MembershipService } from '../membership.service';
 
 @Component({
-  selector: 'app-Membership',
-  templateUrl: './Membership.component.html',
-  styleUrls: ['./Membership.component.css']
+  selector: 'app-Membershippayment',
+  templateUrl: './Membershippayment.component.html',
+  styleUrls: ['./Membershippayment.component.css']
 })
-export class MembershipComponent implements OnInit {
+export class MembershippaymentComponent implements OnInit {
+  username:any;
+  status:boolean=true;
+  role:any;
+  today:any;
+  toggleCase(){
+    this.status=!this.status
+  }
+  constructor(private service:MembershipService,private http:HttpClient,private route:Router) { }
+
   discount:member={
     discountPrice:849,
     golddiscountPrice:594,
     silverdiscountPrice:339
   };
-  
-  pmember:any;
-  gmember:any;
-  smember:any;
-  constructor(private http:HttpClient) {
-    this.http.get<any>(environment.platinum)
-    .subscribe(res=>{
-      this.pmember=res;
-    }),
-    this.http.get<any>(environment.gold)
-    .subscribe(res=>{
-      this.gmember=res;
-    }),
-    this.http.get<any>(environment.silver)
-    .subscribe(res=>{
-      this.smember=res;
-    })
-   }
-  
-
- 
-  calculateOfferprice(pmember:any):number{
-    if(pmember.amount>=100){
-      return pmember.amount *0.9;
-    }
-    else{
-      return pmember.amount;
-    }
-
-  }
-  //@Input() discount:member;
   offerend:any;
   timeLeft:any;
   timer:any;
@@ -58,7 +39,6 @@ export class MembershipComponent implements OnInit {
   isOfferActive():boolean{
     return this.timeLeft>0;
   }
-  
   private startTimer():void{
     const currentTime=new Date().getTime();
    // const offerEndTime=currentTime+this.discount.offerDuration;
@@ -83,5 +63,7 @@ export class MembershipComponent implements OnInit {
   private clearTimer():void{
     clearInterval(this.timer);
   }
+  
+  todaydate=new Date();
 
 }

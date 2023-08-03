@@ -3,11 +3,12 @@
   <div class="container">
       <div class="pay">
           <div class="overlay">
-              <i class="fa fa-arrow-circle-o-left"><a routerLink="/Membership"> Back</a></i>
+              <i class="fa fa-arrow-circle-o-left"><a routerLink="/Membershippayment"> Back</a></i>
               <div *ngFor="let p of pmember">
                 <img src="assets/Image/silver.png" alt=""><br>
                 <h3>Membership Type: {{p.head}}</h3>
-                <h3>Price          : INR {{p.amount}}</h3>
+                <h3 *ngIf="isOfferActive()" style="text-decoration: line-through;">Price: INR {{p.amount}}</h3>
+                <h3 *ngIf="isOfferActive()"><span>Offer Price:</span> INR {{discount.silverdiscountPrice}}</h3>
                 <h3>Validity       : {{p.validity}}</h3> 
               </div>
           </div>
@@ -18,11 +19,12 @@
               <h2>{{eventname}}</h2>-->
               <span>Cards Accepted Here</span>
               <img src="assets/Image/pay img.png" alt="">
-              <input type="text" formControlName="Rs" placeholder="Enter Amount">
-              <div *ngIf="silverpayment.controls['Rs'].invalid && (silverpayment.controls['Rs'].dirty || silverpayment.controls['uname'].touched)">
-                  <div class="error" *ngIf="silverpayment.controls['Rs'].errors?.['required']">Enter Amount</div>
-                  <div class="error" *ngIf="silverpayment.controls['Rs'].errors?.['pattern']">Enter a valid amount</div>
-              </div>
+              <h3 *ngIf="isOfferActive()"><span *ngFor="let p of pmember">Price: <span style="text-decoration: line-through;">INR {{p.amount}}</span></span>   <span *ngIf="isOfferActive()" style="color: black;">    INR {{discount.silverdiscountPrice}}</span></h3>
+              <!--<input type="text" formControlName="Rs" placeholder="Enter Amount">
+              <div *ngIf="goldpayment.controls['Rs'].invalid && (goldpayment.controls['Rs'].dirty || goldpayment.controls['Rs'].touched)">
+                  <div class="error" *ngIf="goldpayment.controls['Rs'].errors?.['required']">Enter Amount</div>
+                  <div class="error" *ngIf="goldpayment.controls['Rs'].errors?.['pattern']">Enter a valid amount</div>
+              </div>-->
               <input type="text" formControlName="uname" placeholder="CardHolder Name">
               <div *ngIf="silverpayment.controls['uname'].invalid && (silverpayment.controls['uname'].dirty || silverpayment.controls['uname'].touched)">
                   <div class="error" *ngIf="silverpayment.controls['uname'].errors?.['required']">Enter CardHolder Name</div>

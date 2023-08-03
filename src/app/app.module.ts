@@ -28,10 +28,9 @@ import { EventpaymentComponent } from './eventpayment/eventpayment.component';
 import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
 import { VieweventComponent } from './Charity/Event/viewevent/viewevent.component';
 import { ForgotComponent } from './Login/Forgot/Forgot.component';
-import { OfferComponent } from './offer/offer.component';
-import { RegisterComponent } from './Register/Register.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { AppointmentComponent } from './Appointment/Appointment.component';
+import { MembershippaymentComponent } from './Charity/Membership/Membershippayment/Membershippayment.component';
 
 
 @NgModule({
@@ -61,8 +60,7 @@ import { AppointmentComponent } from './Appointment/Appointment.component';
       AdminpaymentComponent,
       VieweventComponent,
       ForgotComponent,
-      OfferComponent,
-      RegisterComponent,
+      MembershippaymentComponent,
       UserprofileComponent,
       AppointmentComponent
    ],

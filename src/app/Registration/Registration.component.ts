@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { RegisterService } from './Register.service';
 import {ErrorStateMatcher} from '@angular/material/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-Registration',
@@ -23,13 +24,13 @@ export class RegistrationComponent implements OnInit {
       'emailid':new FormControl("",[Validators.required,Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$")]),
       'mobileno':new FormControl("",[Validators.required,Validators.pattern("[6-9]+[0-9]{9}$")]),
       'pass':new FormControl("",[Validators.required,Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*].{8,20}$")]),
-      'cpass':new FormControl("",[Validators.required,Validators.pattern("pass===cpass")]),
+      'cpass':new FormControl("",[Validators.required])
   });
   }  
   registrationdata(registration:FormGroup){
     //console.log(this.registration.value);
     this.reg = this.registration.value.uname
-    this.http.post<any>("http://localhost:3000/registereduser", this.registration.value)
+    this.http.post<any>(environment.registeruser, this.registration.value)
     .subscribe(res=>{
       this.Register.success();
       this.registration.reset();

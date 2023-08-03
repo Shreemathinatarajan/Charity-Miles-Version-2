@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ success(){
   alert("Thank you for joining as a member in charity miles Welcome.......");
 }
 getplatinum(){
-  return this.http.get("http://localhost:3000/platinum");
+  return this.http.get(environment.platinum);
 }
 
 }

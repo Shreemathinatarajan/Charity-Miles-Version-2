@@ -1,0 +1,45 @@
+<app-Header></app-Header>
+<section>
+  <div class="container">
+    <a routerLink="/Membership" style="font-size: 18px;text-decoration: none;color: black;padding-left: 220px;"><i style="color: mediumslateblue;" class="fa fa-arrow-circle-o-left"></i> Back</a>
+    <div class="content">
+      <div class="overlay">
+        <img src="assets/Image/member2.svg" alt="">
+      </div>
+      <div class="display">
+        <h3 *ngIf="isOfferActive()">Offers Ends in : {{demo}}</h3>
+        <h3 *ngIf="!isOfferActive()">Offer Expired</h3>
+        <h2>Date: {{todaydate | date }}</h2>
+        <h2>Choose your Membership Type:</h2>
+        <select [(ngModel)]="role">
+          <option value="999">Platinum</option>
+          <option value="699">Gold</option>
+          <option value="399">Silver</option>
+        </select>
+        <ul [ngSwitch]="role">
+          <li *ngSwitchCase="'999'"><span><i class="fa fa-angle-double-right"></i> Our charity membership brings together 
+            like-minded<br> individuals who share a passion for making the world<br> a better place.<br><br>
+            <i class="fa fa-angle-double-right"></i> For Platinum there is validity upto 1 year.<br><br></span>
+            <span><i class="fa fa-angle-double-right"></i> Validity will expire form the date of registration.</span><br><br>
+            <span *ngIf="!isOfferActive()" style="color:darkgray;"><i class="fa fa-angle-double-right"></i> Platinum Membership Price : INR {{role}}</span>
+            <span *ngIf="isOfferActive()" style="color:darkgray;"><i class="fa fa-angle-double-right"></i> Platinum Membership Price : INR {{discount.discountPrice}}</span><br><br>
+            <a routerLink="/Platinumpayment" class="btn">Proceed to Pay</a></li>
+          <li *ngSwitchCase="'699'"><span><i class="fa fa-angle-double-right"></i> Our charity membership brings together 
+            like-minded<br> individuals who share a passion for making the world<br> a better place.<br><br>
+            <i class="fa fa-angle-double-right"></i> For Gold there is validity upto 6 months.<br><br>
+            <i class="fa fa-angle-double-right"></i> Validity will expire form the date of registration.<br><br></span>
+            <span *ngIf="!isOfferActive()" style="color: gold;"><i class="fa fa-angle-double-right"></i> Gold Membership Price : INR {{role}}</span>
+            <span *ngIf="isOfferActive()" style="color: gold;"><i class="fa fa-angle-double-right"></i> Gold Membership Price : INR {{discount.golddiscountPrice}}</span><br><br>
+            <a routerLink="/Goldpayment" class="btn">Proceed to Pay</a></li>
+          <li *ngSwitchCase="'399'"><span><i class="fa fa-angle-double-right"></i> Our charity membership brings together 
+            like-minded<br> individuals who share a passion for making the world<br> a better place.<br><br>
+            <i class="fa fa-angle-double-right"></i> For Silver there is validity upto 3 months.<br><br>
+            <i class="fa fa-angle-double-right"></i> Validity will expire form the date of registration.<br><br></span>
+            <span *ngIf="!isOfferActive()" style="color:silver"><i class="fa fa-angle-double-right"></i> Silver Membership Price : INR {{role}}</span>
+            <span *ngIf="isOfferActive()" style="color:silver"><i class="fa fa-angle-double-right"></i> Silver Membership Price : INR {{discount.silverdiscountPrice}}</span><br><br>
+            <a routerLink="/Silverpayment" class="btn">Proceed to Pay</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

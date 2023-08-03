@@ -9,6 +9,18 @@
 .heading span{
   color: mediumslateblue;
   font-size: 30px;
+}
+.offer{
+  text-align: center;
+  margin-left: 380px;
+  border: 1px solid lightgreen;
+  width: 40%;
+}
+.offer h1{
+  color: hotpink;
+}
+.offer h3{
+  font-size: 18px;
 
 }
 .content{
@@ -100,7 +112,6 @@
   padding-left:80px;
   padding-right: 80px;
   padding-top: 30px;
-  
 }
 .box-container .box{
   background: white;
@@ -140,8 +151,10 @@
   border: 2px solid mediumslateblue;
   padding: 2.5px;
   border-radius: 1px;
+  margin-left: 520px;
+  margin-top: 20px;
 }
-.btn span{
+.btn i{
   color: mediumslateblue;
 }
 .btn:hover{

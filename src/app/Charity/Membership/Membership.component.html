@@ -1,7 +1,11 @@
 <app-Header></app-Header>
 <section class="member" id="member">
     <h1 class="heading">CHARITY<span> MEMBERSHIP</span></h1>
-   
+    <div class="offer">
+      <h3>Extend Your Heart and Join Our Charity Membership Today!</h3>
+      <h1 *ngIf="isOfferActive()">Offer Ends in : {{demo}}</h1>
+      <h1 *ngIf="!isOfferActive()">Offer Expired</h1>
+    </div>
     <div class="content">
         <div class="overlay">
           <!--  <i class="fa fa-arrow-circle-o-left"><a routerLink="/Charity"> Back</a></i><br>-->
@@ -28,49 +32,63 @@
            4. If the member choose the membership type as platinum, they can also change their membership type as gold or silver after the validaty got expired<br><br>
         </p>
         <h1>Benefits:</h1>
-        <p>1. The charity mmeber have choice to choose membership type as Platinum or Gold or Silver<br><br>
-           2. Platinum Membership will have validity upto 1 year<br><br>
-           3. Gold Membership will have validity upto 6 months<br><br>
-           4. Silver Membership will have validity upto 3 months<br><br>
-           5. After validity expires the member can change their Membership type<br><br>
-           6. Through this Membership our charity member have benefits in some of the hospitals and schools, which we connected with them</p>
+        <p>1. You will receive regular newsletters and reports, keeping you informed about how your donations are being utilized and the 
+          positive changes they are bringing about.<br><br>
+           2. The charity mmeber have choice to choose membership type as Platinum or Gold or Silver<br><br>
+           3. Platinum Membership will have validity upto 1 year<br><br>
+           4. Gold Membership will have validity upto 6 months<br><br>
+           5. Silver Membership will have validity upto 3 months<br><br>
+           6. After validity expires the member can change their Membership type<br><br>
+           7. Through this Membership our charity member have benefits in some of the hospitals and schools, which we connected with them</p>
     </div>
     <div class="membershiptype">
         <h1 class="heading">MEMBERSHIP<span> TYPE</span></h1>
+        <h4 style="text-align: center; padding-top: 30px; margin-left: 50px; margin-right: 50px;">As a member, your contributions will have a more significant and sustained effect on the beneficiaries of our charity programs. 
+          Your support will help us plan and implement long-term services, providing lasting solutions to those in need.Our charity membership program brings together like-minded individuals who share a passion for making the world a better place.
+           This network of compassionate souls can inspire, collaborate, and create meaningful connections.We sincerely hope you will accept this invitation and become an essential part of our charity community. Together, we can achieve remarkable
+            feats and bring hope to countless lives in need.</h4>
       <div class="box-container">
           <div class="box">
               <div *ngFor="let p of pmember">
-                <!--<app-offer [expirationDate]="p.expirationDate"></app-offer>-->
-                <p>{{calculateOfferprice(pmember)}}></p>
               <img src="assets/Image/platinum.png" alt=""><br>
               <h3><span>Membership Type:</span><br> {{p.head}}</h3>
-              <h3><span>Price          :</span> INR {{p.amount}}</h3>
+              <h3 *ngIf="!isOfferActive()"><span>Price:</span> INR {{p.amount}} </h3>
+              <h3 *ngIf="isOfferActive()" style="text-decoration: line-through;">Price: INR {{p.amount}}</h3>
+              <h3 *ngIf="isOfferActive()"><span>Offer Price:</span> INR {{discount.discountPrice}}</h3>
+              <h2 *ngIf="!isOfferActive()">Offer Expired</h2>
+              <h2 *ngIf="isOfferActive()" style="color:lightpink;">Time left: {{demo }}</h2>
               <h3><span>Validity       :</span> {{p.validity}}</h3> 
               <span>Validity will Expire from the date registration</span>
               </div><br>
-              <a routerLink="/Platinumpayment" class="btn">Proceed to continue <i class="fa fa-angle-double-right"></i></a>
           </div>
           <div class="box">
             <div *ngFor="let g of gmember">
                 <img src="assets/Image/gold.png" alt=""><br>
                 <h3><span>Membership Type:</span><br> {{g.head}}</h3>
-                <h3><span>Price          :</span> INR {{g.amount}}</h3>
+                <h3 *ngIf="!isOfferActive()"><span>Price:</span> INR {{g.amount}} </h3>
+                <h3 *ngIf="isOfferActive()" style="text-decoration: line-through;">Price: INR {{g.amount}}</h3>
+                <h3 *ngIf="isOfferActive()"><span>Offer Price:</span> INR {{discount.golddiscountPrice}}</h3>
+                <h2 *ngIf="!isOfferActive()">Offer Expired</h2>
+                <h2 *ngIf="isOfferActive()" style="color:lightpink;">Time left: {{demo }}</h2>
                 <h3><span>Validity       :</span> {{g.validity}}</h3> 
                 <span>Validity will Expire from the date registration</span>
                 </div><br>
-                <a routerLink="/Goldpayment" class="btn">Proceed to continue <i class="fa fa-angle-double-right"></i></a>
           </div>
           <div class="box">
             <div *ngFor="let s of smember">
                 <img src="assets/Image/silver.png" alt=""><br>
                 <h3><span>Membership Type:</span><br> {{s.head}}</h3>
-                <h3><span>Price          :</span> INR {{s.amount}}</h3>
+                <h3 *ngIf="!isOfferActive()"><span>Price:</span> INR {{s.amount}} </h3>
+                <h3 *ngIf="isOfferActive()" style="text-decoration: line-through;">Price: INR {{s.amount}}</h3>
+                <h3 *ngIf="isOfferActive()"><span>Offer Price:</span> INR {{discount.silverdiscountPrice}}</h3>
+                <h2 *ngIf="!isOfferActive()">Offer Expired</h2>
+                <h2 *ngIf="isOfferActive()" style="color:lightpink;">Time left: {{demo }}</h2>
                 <h3><span>Validity       :</span> {{s.validity}}</h3> 
                 <span>Validity will Expire from the date registration</span>
                 </div><br>
-                <a routerLink="/Silverpayment" class="btn">Proceed to continue <i class="fa fa-angle-double-right"></i></a>
           </div>
       </div>
+      <a routerLink="/Membershippayment" class="btn">Procced to continue  <i class="fa fa-angle-double-right"></i></a>
     </div>
   </section>
   <app-Footer></app-Footer>

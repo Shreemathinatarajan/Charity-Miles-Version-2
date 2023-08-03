@@ -8,34 +8,22 @@ import { of } from 'rxjs';
 })
 export class LoginService {
 
-  isLoggedIn:boolean=false;
-  uname:string="";
-  pass:string="";
+  private isLoggedIn:boolean;
+  private uname:string="";
+  private pass:string="";
  
-  
-constructor(private route:Router) { 
+constructor(private route:Router) {
+  this.isLoggedIn=false;
  
 }
-/*authUser(user: any){
-  let UserArray= [user];
-  if(localStorage.getItem('Users')){
-    UserArray=JSON.parse(localStorage.getItem('Users') as string);
-  }
-  return UserArray.find(p => p.userName === user.userName && p.password === user.password);
-}*/
 login(username:string,password:string){
   this.uname=username;
   this.pass=password;
   this.isLoggedIn=true;
   return of(this.isLoggedIn);
 }
-/*isUserLoggedIn():boolean{
-  return this.isLoggedIn;
-}*/
 
-success(){
-  
-}
+success(){}
 onLogin(){
   this.isLoggedIn=true;
 }
@@ -43,7 +31,11 @@ onLogout(){
   this.isLoggedIn=false;
   this.route.navigate(['/Home']);
 }
-isUserLoggedIn(){
+isUserLoggedIn():boolean{
   return this.isLoggedIn;
 }
+/*logoutUser():void{
+  this.isLoggedIn=false;
+  this.route.navigate(['/Home']);
+}*/
 }

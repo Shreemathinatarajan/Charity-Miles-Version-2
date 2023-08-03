@@ -4,6 +4,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoginService } from './login.service';
 import * as alertifyjs from 'alertifyjs';
+import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-Login',
@@ -12,7 +14,7 @@ import * as alertifyjs from 'alertifyjs';
 })
 export class LoginComponent implements OnInit {
   login:FormGroup|any;
-  returl:any="Home";
+  returl:any="";
   uname:any="";
   pass:any="";
   submit:boolean=false;
@@ -24,20 +26,29 @@ export class LoginComponent implements OnInit {
       'uname':new FormControl("",[Validators.required,Validators.pattern("[a-zA-Z0-9]{3,20}$")]),
       'password':new FormControl("",[Validators.required,Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*].{8,20}$")]),
     }),
-    this.router.queryParamMap.subscribe(parama=>{
-      this.returl=parama.get('returl');
-      console.log("LoginComponent/ngOnInit",this.returl);
-    })
+    this.router.queryParamMap.subscribe(params=>{
+      this.returl=params.get('returl');
+      console.log("LoginComponent/ngOnInit"+this.returl);
+    });
   }
-  onLogin(){
+
+ /* onLogin(){
     this.loginservice.login(this.uname,this.pass).subscribe((data)=>{
       console.log("return to"+this.returl);
       if(this.returl!=null){
        this.route.navigate([this.returl]);
       }
     })
-  }
+  }*/
   logindata(login:FormGroup){
+    this.loginservice.login(login.value.uname,login.value.pass).subscribe((data)=>{
+      console.log('return to'+this.returl);
+      if(this.returl!=null){
+       this.route.navigate([this.returl]);
+      }else{
+        this.route.navigate(['/Home']);
+      }
+    });
     this.submit = true;
     if (this.login.invalid) {
       return;
@@ -49,13 +60,13 @@ export class LoginComponent implements OnInit {
   }
     //console.log(this.login.value);
     user()  {
-     this.http.get<any>("http://localhost:3000/registereduser")
+     this.http.get<any>(environment.registeruser)
     .subscribe(res=>{
       const user = res.find((a:any)=>{
         return a.uname === this.login.value.uname && a.pass === this.login.value.password
       });
       if(user){ 
-        alert("Login Successfully");
+        alertifyjs.success("Login Successfully");
         localStorage.setItem('user',JSON.stringify(user));
         this.loginservice.onLogin();
         this.login.reset();
@@ -71,13 +82,13 @@ export class LoginComponent implements OnInit {
   
   }
     admin(){
-    this.http.get<any>("http://localhost:3000/admin")
+    this.http.get<any>(environment.admin)
     .subscribe(res=>{
       const admin = res.find((detail:any)=>{
         return detail.uname === this.login.value.uname && detail.pass === this.login.value.password
       });
       if(admin){ 
-        alert("Admin Loggedin Successfully");
+        alertifyjs.success("Admin Loggedin Successfully");
         localStorage.setItem('admin',JSON.stringify(admin));
         this.loginservice.onLogin();
         this.login.reset();
@@ -90,12 +101,12 @@ export class LoginComponent implements OnInit {
     
     }),
   
-    this.http.post<any>("http://localhost:3000/loginuser",this.login.value)
+    this.http.post<any>(environment.loginuser,this.login.value)
     .subscribe(res=>{
     })
    
   }
-  onLogout(){
+ onLogout(){
     this.isLoggedIn=false;
     this.route.navigate(['Home']);
   }
