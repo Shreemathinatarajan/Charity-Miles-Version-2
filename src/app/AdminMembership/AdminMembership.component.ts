@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MembershipService } from '../Charity/Membership/membership.service';
 import { HttpClient } from '@angular/common/http';
 import { LoginService } from '../Login/login.service';
-import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Component({

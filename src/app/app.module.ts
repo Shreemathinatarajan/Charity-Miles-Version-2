@@ -26,7 +26,6 @@ import { GoldpaymentComponent } from './Charity/Membership/goldpayment/goldpayme
 import { SilverpaymentComponent } from './Charity/Membership/silverpayment/silverpayment.component';
 import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
 import { VieweventComponent } from './Charity/Event/viewevent/viewevent.component';
-import { AppointmentComponent } from './Appointment/Appointment.component';
 import { MembershippaymentComponent } from './Charity/Membership/Membershippayment/Membershippayment.component';
 
 
@@ -55,8 +54,7 @@ import { MembershippaymentComponent } from './Charity/Membership/Membershippayme
       SilverpaymentComponent,
       AdminpaymentComponent,
       VieweventComponent,
-      MembershippaymentComponent,
-      AppointmentComponent
+      MembershippaymentComponent
    ],
   imports: [
     BrowserModule,
