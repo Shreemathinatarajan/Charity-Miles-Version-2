@@ -114,6 +114,16 @@
       "uname": "Admin",
       "password": "Admin@123",
       "id": 1
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 2
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 3
     }
   ],
   "events": [

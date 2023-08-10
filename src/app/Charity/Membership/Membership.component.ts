@@ -62,7 +62,7 @@ export class MembershipComponent implements OnInit {
   private startTimer():void{
     const currentTime=new Date().getTime();
    // const offerEndTime=currentTime+this.discount.offerDuration;
-   this.offerend = new Date("August 03,2023 18:00:00").getTime();
+   this.offerend = new Date("August 10,2023 18:00:00").getTime();
     this.timer=setInterval(()=>{
       const now=new Date().getTime();
      // this.timeLeft=Math.max(offerEndTime - now,0);
