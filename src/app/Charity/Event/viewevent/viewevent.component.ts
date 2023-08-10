@@ -12,9 +12,7 @@ export class VieweventComponent implements OnInit {
   geteventid:any;
   eventdata:any;
   viewevents:any;
-  constructor(private eventservice:EventService,private param:ActivatedRoute) {
-    
-   }
+  constructor(private eventservice:EventService,private param:ActivatedRoute) {}
 
   ngOnInit() {
     this.geteventid = this.param.snapshot.paramMap.get('id');

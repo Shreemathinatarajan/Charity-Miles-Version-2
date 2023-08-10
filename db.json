@@ -49,6 +49,14 @@
       "exp": "11/2028",
       "cvv": "617",
       "id": 5
+    },
+    {
+      "Rs": "1000",
+      "uname": "RAM",
+      "cardno": "8289190287189018",
+      "exp": "10/2029",
+      "cvv": "819",
+      "id": 6
     }
   ],
   "registereduser": [
@@ -103,69 +111,9 @@
   ],
   "loginuser": [
     {
-      "uname": "Ram25",
-      "password": "Ram@12345",
+      "uname": "Admin",
+      "password": "Admin@123",
       "id": 1
-    },
-    {
-      "uname": "Shreemathi",
-      "password": "Shree@123",
-      "id": 2
-    },
-    {
-      "uname": "Priya",
-      "password": "Priya@123",
-      "id": 3
-    },
-    {
-      "uname": "Swathi",
-      "password": "Swathi@123",
-      "id": 4
-    },
-    {
-      "uname": "Swathi",
-      "password": "Swathi@123",
-      "id": 5
-    },
-    {
-      "uname": "Ram",
-      "password": "Ram@12345",
-      "id": 6
-    },
-    {
-      "uname": "Ram25",
-      "password": "Ram@12345",
-      "id": 7
-    },
-    {
-      "uname": "John",
-      "password": "John@12345",
-      "id": 8
-    },
-    {
-      "uname": "Shreemathi",
-      "password": "Shree@123",
-      "id": 9
-    },
-    {
-      "uname": "Shreemathi",
-      "password": "Shree@123",
-      "id": 10
-    },
-    {
-      "uname": "Shreemathi",
-      "password": "Shree@123",
-      "id": 11
-    },
-    {
-      "uname": "Shreemathi",
-      "password": "Shree@123",
-      "id": 12
-    },
-    {
-      "uname": "Shreemathi",
-      "password": "Shree@123",
-      "id": 13
     }
   ],
   "events": [
@@ -271,42 +219,42 @@
   ],
   "Platinummember": [
     {
+      "date": "28 July 2023",
       "uname": "RAM",
       "cardno": "9878917258192689",
       "exp": "07/2026",
       "cvv": "716",
-      "sd": "28 July 2023",
       "ed": "28 July 2024",
       "id": 1
     },
     {
+      "date": "01 August 2023",
       "uname": "JOHN ",
       "cardno": "6718267289102671",
       "exp": "05/2027",
       "cvv": "681",
-      "sd": "01 August 2023",
       "ed": "01 August 2024",
       "id": 2
     }
   ],
   "Goldmember": [
     {
+      "date": "23 July 2023",
       "uname": "PRIYA",
       "cardno": "8910278901982719",
       "exp": "10/2026",
       "cvv": "819",
-      "sd": "23 July 2023",
       "ed": "23 February 2024",
       "id": 1
     }
   ],
   "Silvermember": [
     {
+      "date": "20 July 2023",
       "uname": "SWATHI",
       "cardno": "7819627819278910",
       "exp": "03/2028",
       "cvv": "618",
-      "sd": "20 July 2023",
       "ed": "20 October 2023",
       "id": 1
     }

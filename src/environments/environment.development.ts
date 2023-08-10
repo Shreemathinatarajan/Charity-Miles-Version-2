@@ -6,7 +6,8 @@ export const environment = {
     platinum:"http://localhost:3000/platinum",
     gold:"http://localhost:3000/gold",
     silver:"http://localhost:3000/silver",
-    pmember:"http://localhost:3000/platinummember",
-    gmember:"http://localhost:3000/goldmember",
-    smember:"http://localhost:3000/silvermember"
+    platinummember:"http://localhost:3000/platinummember",
+    goldmember:"http://localhost:3000/goldmember",
+    silvermember:"http://localhost:3000/silvermember",
+    payment:"http://localhost:3000/payment",
 };

@@ -15,12 +15,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let pmem of membership">
-                    <td>{{pmem.uname}}</td>
+                <tr *ngFor="let platinum of platinummembership">
+                    <td>{{platinum.uname}}</td>
                     <td>999</td>
-                    <td *ngFor="let val of validity">{{val.validity}}</td>
-                    <td>{{pmem.sd}}</td>
-                    <td>{{pmem.ed}}</td>
+                    <td *ngFor="let validity of validity">{{validity.validity}}</td>
+                    <td>{{platinum.date}}</td>
+                    <td>{{platinum.ed}}</td>
                 </tr>
             </tbody>
         </table>
@@ -36,12 +36,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let gmem of gmembership">
-                    <td>{{gmem.uname}}</td>
+                <tr *ngFor="let gold of goldmembership">
+                    <td>{{gold.uname}}</td>
                     <td>699</td>
-                    <td *ngFor="let gval of gvalidity">{{gval.validity}}</td>
-                    <td>{{gmem.sd}}</td>
-                    <td>{{gmem.ed}}</td>
+                    <td *ngFor="let goldvalidity of goldvalidity">{{goldvalidity.validity}}</td>
+                    <td>{{gold.date}}</td>
+                    <td>{{gold.ed}}</td>
                 </tr>
             </tbody>
         </table>
@@ -57,12 +57,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let smem of smembership">
-                    <td>{{smem.uname}}</td>
+                <tr *ngFor="let silver of silvermembership">
+                    <td>{{silver.uname}}</td>
                     <td>399</td>  
-                    <td *ngFor="let sval of svalidity">{{sval.validity}}</td>
-                    <td>{{smem.sd}}</td>
-                    <td>{{smem.ed}}</td>
+                    <td *ngFor="let silvervaliditiy of silvervalidity">{{silvervaliditiy.validity}}</td>
+                    <td>{{silver.date}}</td>
+                    <td>{{silver.ed}}</td>
                 </tr>
             </tbody>
         </table>

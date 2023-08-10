@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-Adminpayment',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdminpaymentComponent implements OnInit {
   payment:any;
   constructor(private http:HttpClient) {
-    this.http.get("http://localhost:3000/payment").subscribe(res=>{
+    this.http.get(environment.payment).subscribe(res=>{
       this.payment=res;
     })
    }

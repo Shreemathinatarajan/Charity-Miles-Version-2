@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { MembershipService } from '../membership.service';
 import { Router } from '@angular/router';
 import { member } from 'src/app/member.model';
+import { addDays, getDate, toDate } from 'date-fns';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -20,15 +21,15 @@ export class PlatinumpaymentComponent implements OnInit {
   };
 
   platinumpayment:FormGroup|any;
-  pmember:any;
+  platinummember:any;
   user:any;
 
   constructor(private http:HttpClient,private service:MembershipService,private route:Router) { 
-    this.http.get<any>("http://localhost:3000/platinum")
+    this.http.get<any>(environment.platinum)
     .subscribe(res=>{
-      this.pmember=res;
+      this.platinummember=res;
     }),
-    this.http.get<any>("http://localhost:3000/loginuser")
+    this.http.get<any>(environment.loginuser)
     .subscribe(res=>{
       this.user=res;
     })
@@ -36,17 +37,18 @@ export class PlatinumpaymentComponent implements OnInit {
 
   ngOnInit() {
     this.platinumpayment = new FormGroup({
-      //'Rs':new FormControl("",[Validators.required,Validators.pattern("[9][9][9]$")]),
+      'date':new FormControl("",[Validators.required]),
       'uname':new FormControl("",[Validators.required,Validators.pattern("[A-Z ]{3,20}$")]),
       'cardno':new FormControl("",[Validators.required,Validators.pattern("[0-9]{16}$")]),
       'exp':new FormControl("",[Validators.required,Validators.pattern("[0-9]{2}/[0-9]{4}$")]),
       'cvv':new FormControl("",[Validators.required,Validators.pattern("[0-9]{3}")]),
     }),
+  
     this.startTimer();
   }
   paymentdata(payment:FormGroup){
 
-    this.http.post<any>(environment.pmember,this.platinumpayment.value)
+    this.http.post<any>(environment.platinummember,this.platinumpayment.value)
     .subscribe(res=>{
       this.service.success();
       this.platinumpayment.reset();
@@ -68,11 +70,9 @@ export class PlatinumpaymentComponent implements OnInit {
   }
   private startTimer():void{
     const currentTime=new Date().getTime();
-   // const offerEndTime=currentTime+this.discount.offerDuration;
-   this.offerend = new Date("August 03,2023 18:00:00").getTime();
+   this.offerend = new Date("August 10,2023 18:00:00").getTime();
     this.timer=setInterval(()=>{
       const now=new Date().getTime();
-     // this.timeLeft=Math.max(offerEndTime - now,0);
      this.timeLeft=this.offerend-now;
       var distance=this.timeLeft;
       var days = Math.floor(distance/(1000*60*60*24));
@@ -81,7 +81,6 @@ export class PlatinumpaymentComponent implements OnInit {
       var seconds = Math.floor((distance % (1000*60))/1000);
       this.demo=days + "d" + " " + hours + "h" + " " + minutes + "m" + " " + seconds + "s";
       if(this.timeLeft===0){
-       // this.discount.price=this.discount.discountPrice;
         this.clearTimer();
         alert();
       }
@@ -90,5 +89,19 @@ export class PlatinumpaymentComponent implements OnInit {
   private clearTimer():void{
     clearInterval(this.timer);
   }
-  
+
+  packageDuration: any; 
+  endDate: any;
+
+ 
+ registrationDate: Date = new Date(); 
+
+  calculateEndDate(): Date {
+    const numberOfDaysInPackage = 365; // Change this as needed
+    const endDate = new Date(this.registrationDate);
+    endDate.setDate(endDate.getDate() + numberOfDaysInPackage);
+    return endDate;
+  } 
 }
+
+

@@ -20,17 +20,18 @@ export class SilverpaymentComponent implements OnInit {
   };
 
   silverpayment:FormGroup|any;
-  pmember:any;
+  silvermember:any;
 
   constructor(private http:HttpClient,private service:MembershipService,private route:Router) { 
-    this.http.get<any>("http://localhost:3000/silver")
+    this.http.get<any>(environment.silver)
     .subscribe(res=>{
-      this.pmember=res;
+      this.silvermember=res;
     })
   }
 
   ngOnInit() {
     this.silverpayment = new FormGroup({
+      'date':new FormControl("",[Validators.required]),
       'uname':new FormControl("",[Validators.required,Validators.pattern("[A-Z ]{3,20}$")]),
       'cardno':new FormControl("",[Validators.required,Validators.pattern("[0-9]{16}$")]),
       'exp':new FormControl("",[Validators.required,Validators.pattern("[0-9]{2}/[0-9]{4}$")]),
@@ -40,7 +41,7 @@ export class SilverpaymentComponent implements OnInit {
   }
   paymentdata(payment:FormGroup){
 
-    this.http.post<any>(environment.smember,this.silverpayment.value)
+    this.http.post<any>(environment.silvermember,this.silverpayment.value)
     .subscribe(res=>{
       this.service.success();
       this.silverpayment.reset();
@@ -62,11 +63,9 @@ export class SilverpaymentComponent implements OnInit {
   }
   private startTimer():void{
     const currentTime=new Date().getTime();
-   // const offerEndTime=currentTime+this.discount.offerDuration;
-   this.offerend = new Date("August 03,2023 18:00:00").getTime();
+   this.offerend = new Date("August 10,2023 18:00:00").getTime();
     this.timer=setInterval(()=>{
       const now=new Date().getTime();
-     // this.timeLeft=Math.max(offerEndTime - now,0);
      this.timeLeft=this.offerend-now;
       var distance=this.timeLeft;
       var days = Math.floor(distance/(1000*60*60*24));
@@ -75,7 +74,6 @@ export class SilverpaymentComponent implements OnInit {
       var seconds = Math.floor((distance % (1000*60))/1000);
       this.demo=days + "d" + " " + hours + "h" + " " + minutes + "m" + " " + seconds + "s";
       if(this.timeLeft===0){
-       // this.discount.price=this.discount.discountPrice;
         this.clearTimer();
         alert();
       }
@@ -84,5 +82,17 @@ export class SilverpaymentComponent implements OnInit {
   private clearTimer():void{
     clearInterval(this.timer);
   }
+  
+  packageDuration: any; 
+  endDate: any;
 
+ 
+ registrationDate: Date = new Date(); 
+
+  calculateEndDate(): Date {
+    const numberOfDaysInPackage = 91; // Change this as needed
+    const endDate = new Date(this.registrationDate);
+    endDate.setDate(endDate.getDate() + numberOfDaysInPackage);
+    return endDate;
+  } 
 }

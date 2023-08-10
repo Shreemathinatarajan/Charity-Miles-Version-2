@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { AdmineventService } from 'src/app/Adminevent/adminevent.service';
-import { EventService } from './event.service';
 
 @Component({
   selector: 'app-Event',
@@ -16,10 +14,6 @@ export class EventComponent implements OnInit {
     this.adminevent.getevent(0).subscribe(res=>{
       this.events=res;
     })
-    
-
    }
-  ngOnInit() {
-    
-  }
+  ngOnInit() { }
 }

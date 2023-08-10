@@ -4,28 +4,24 @@
       <div class="pay">
           <div class="overlay">
               <i class="fa fa-arrow-circle-o-left"><a routerLink="/Membershippayment"> Back</a></i>
-              <div *ngFor="let g of gmember">
+              <div *ngFor="let gold of goldmember">
                 <img src="assets/Image/gold.png" alt=""><br>
-                <h3>Membership Type: {{g.head}}</h3>
-                <h3 *ngIf="!isOfferActive()"><span>Price:</span> INR {{g.amount}} </h3>
-                <h3 *ngIf="isOfferActive()" style="text-decoration: line-through;">Price: INR {{g.amount}}</h3>
-                <h3 *ngIf="isOfferActive()"><span>Offer Price:</span> INR {{discount.golddiscountPrice}}</h3>
-                <h3>Validity       : {{g.validity}}</h3> 
+                <h3>Membership Type: {{gold.head}}</h3>
+                <h3 *ngIf="isOfferActive()"><span *ngFor="let gold of goldmember">Price: <span style="text-decoration: line-through;">INR {{gold.amount}}</span></span>  
+                     <span *ngIf="isOfferActive()" style="color: black;">    INR {{discount.golddiscountPrice}}</span></h3>
+                <h3>Validity       : {{gold.validity}}</h3> 
+                <h4>If you register today your membership validity will expiry in : {{ calculateEndDate() | date:'longDate' }}</h4>
               </div>
           </div>
           <form [formGroup]="goldpayment" (ngSubmit)="paymentdata(goldpayment)">
               <div class="form">
               <h1> MAKE DONATION HERE <i class="fa fa-arrow-circle-o-down"></i></h1>
-             <!-- <h2>{{eventdate}}</h2>
-              <h2>{{eventname}}</h2>-->
               <span>Cards Accepted Here</span>
               <img src="assets/Image/pay img.png" alt="">
-              <h3 *ngIf="isOfferActive()"><span *ngFor="let g of gmember">Price: <span style="text-decoration: line-through;">INR {{g.amount}}</span></span>   <span *ngIf="isOfferActive()" style="color: black;">    INR {{discount.golddiscountPrice}}</span></h3>
-              <!--<input type="text" formControlName="Rs" placeholder="Enter Amount">
-              <div *ngIf="goldpayment.controls['Rs'].invalid && (goldpayment.controls['Rs'].dirty || goldpayment.controls['Rs'].touched)">
-                  <div class="error" *ngIf="goldpayment.controls['Rs'].errors?.['required']">Enter Amount</div>
-                  <div class="error" *ngIf="goldpayment.controls['Rs'].errors?.['pattern']">Enter a valid amount</div>
-              </div>-->
+                 <input type="date" formControlName="date" placeholder="Choose Today Date">
+                 <div *ngIf="goldpayment.controls['date'].invalid && (goldpayment.controls['date'].dirty || goldpayment.controls['date'].touched)">
+                   <div class="error" *ngIf="goldpayment.controls['date'].errors?.['required']">Choose a date</div>
+                 </div>
               <input type="text" formControlName="uname" placeholder="CardHolder Name">
               <div *ngIf="goldpayment.controls['uname'].invalid && (goldpayment.controls['uname'].dirty || goldpayment.controls['uname'].touched)">
                   <div class="error" *ngIf="goldpayment.controls['uname'].errors?.['required']">Enter CardHolder Name</div>

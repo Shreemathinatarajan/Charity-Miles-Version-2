@@ -4,31 +4,26 @@
   <div class="container">
       <div class="pay">
           <div class="overlay">
-              <!--<div *ngFor="let log of user">
-                <h1>{{log.uname}}</h1>
-              </div>-->
               <i class="fa fa-arrow-circle-o-left"><a routerLink="/Membershippayment"> Back</a></i>
-              <div *ngFor="let p of pmember">
+              <div *ngFor="let platinum of platinummember">
                 <img src="assets/Image/platinum.png" alt=""><br>
-                <h3>Membership Type: {{p.head}}</h3>
-                <h3 *ngIf="isOfferActive()" style="text-decoration: line-through;">Price: INR {{p.amount}}</h3>
-                <h3 *ngIf="isOfferActive()"><span>Offer Price:</span> INR {{discount.discountPrice}}</h3>
-                <h3>Validity       : {{p.validity}}</h3>  
+                <h3>Membership Type: {{platinum.head}}</h3>
+                <h3 *ngIf="!isOfferActive()">Price : {{platinum.amount}}</h3>
+                <h3 *ngIf="isOfferActive()"><span *ngFor="let platinum of platinummember">Price: <span style="text-decoration: line-through;">INR {{platinum.amount}}</span></span>   
+                    <span *ngIf="isOfferActive()" style="color: black;">    INR {{discount.discountPrice}}</span></h3>
+                <h3>Validity       : {{platinum.validity}}</h3>  
+                <h4>If you register today your membership validity will expiry in : {{ calculateEndDate() | date:'longDate' }}</h4>
               </div>
           </div>
           <form [formGroup]="platinumpayment" (ngSubmit)="paymentdata(platinumpayment)">
               <div class="form">
               <h1> MAKE DONATION HERE <i class="fa fa-arrow-circle-o-down"></i></h1>
-             <!-- <h2>{{eventdate}}</h2>
-              <h2>{{eventname}}</h2>-->
               <span>Cards Accepted Here</span>
               <img src="assets/Image/pay img.png" alt="">
-              <h3 *ngIf="isOfferActive()"><span *ngFor="let p of pmember">Price: <span style="text-decoration: line-through;">INR {{p.amount}}</span></span>   <span *ngIf="isOfferActive()" style="color: black;">    INR {{discount.discountPrice}}</span></h3>
-              <!--<input type="text" formControlName="Rs" placeholder="Enter Amount">
-              <div *ngIf="goldpayment.controls['Rs'].invalid && (goldpayment.controls['Rs'].dirty || goldpayment.controls['Rs'].touched)">
-                  <div class="error" *ngIf="goldpayment.controls['Rs'].errors?.['required']">Enter Amount</div>
-                  <div class="error" *ngIf="goldpayment.controls['Rs'].errors?.['pattern']">Enter a valid amount</div>
-              </div>-->
+              <input type="date" formControlName="date" placeholder="Choose Today Date">
+              <div *ngIf="platinumpayment.controls['date'].invalid && (platinumpayment.controls['date'].dirty || platinumpayment.controls['date'].touched)">
+                <div class="error" *ngIf="platinumpayment.controls['date'].errors?.['required']">Choose a date</div>
+              </div>
               <input type="text" formControlName="uname" placeholder="CardHolder Name">
               <div *ngIf="platinumpayment.controls['uname'].invalid && (platinumpayment.controls['uname'].dirty || platinumpayment.controls['uname'].touched)">
                   <div class="error" *ngIf="platinumpayment.controls['uname'].errors?.['required']">Enter CardHolder Name</div>
@@ -51,6 +46,7 @@
               </div><br>
               <button [disabled]="platinumpayment.invalid">Proceed</button>
           </div>
+          
           </form>
       </div>
   </div>

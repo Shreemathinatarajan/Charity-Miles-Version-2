@@ -19,9 +19,7 @@ export class HeaderComponent implements OnInit {
     if(localStorage.getItem('user')){
       let un = localStorage.getItem('user');
       let ud = un && JSON.parse(un);
-     // let mail = un && JSON.parse(un);
       this.username=ud.uname;
-     // this.Email=ud.mail;
       this.type='user';
     }
     else{
@@ -31,15 +29,9 @@ export class HeaderComponent implements OnInit {
   }
   
   onLogout(){
-    //this.loginservice.onLogout();
     localStorage.removeItem('user');
     this.route.navigate[('/Home')];
     window.location.reload();
   }
-  /*logout() {
-   // localStorage.removeItem('user');
-    this.loginservice.logoutUser();
-    this.route.navigate(['home']);
-  }*/
 }
 

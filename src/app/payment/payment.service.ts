@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AdmineventService } from '../Adminevent/adminevent.service';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ success(){
   
 }
 getpayment(){
-  return this.http.get("http://localhost:3000/payment");
+  return this.http.get(environment.payment);
 }
 
 }

@@ -82,66 +82,59 @@ section{
 
 /*-----Services------*/
 .service{
-    padding-top: 85px;
+    padding-top: 50px;
 }
 .service .content1{
-    text-align: left;
-    margin-top: 40px;
-    margin-left: 120px;
-    background-color: whitesmoke;
-    margin-bottom: 15px;
-    width: 40%;
-}
-.service .flex{
     display: flex;
 }
-.service .flex img{
+.service .content1 .flex{
+    display: flex;
     width: 40%;
-    height: 30%;
+    height: 20%;
+    margin-top: 30px;
+    margin-left: 90px;
+    margin-bottom: 20px;
+    border: 2px solid mediumslateblue;
 }
-.service .flex h3{
-    font-size: 15px;
+.service .content1 .flex img{
+    width: 40%;
+    height: 40%;
+}
+.service .content1 .flex h3{
+    font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 5px;
-    padding-top: 60px;
 }
 .service .content2{
-    text-align: left;
-    margin-left: 600px;
-    background-color: whitesmoke;
-    margin-bottom: 15px;
+    display: flex;
+}
+.service .content2 .flex{
+    display: flex;
     width: 40%;
+    height: 20%;
+    margin-top: 30px;
+    margin-left: 90px;
+    margin-bottom: 20px;
+    border: 2px solid mediumslateblue;
 }
-.service .content3{
-    text-align: left;
-    margin-left: 120px;
-    background-color: whitesmoke;
-    margin-bottom: 15px;
+.service .content2 .flex img{
     width: 40%;
+    height: 40%;
 }
-.service .content4{
-    text-align: left;
-    margin-left: 600px;
-    background-color: whitesmoke;
-    margin-bottom: 15px;
-    width: 40%;
+.service .content2 .flex h3{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
 }
-.service .content1:hover{
-    background-color: white;
-    border: 1px solid mediumslateblue;
+.service .content2 .flex:hover{
+    background-color:whitesmoke;
+    border: 2px solid aliceblue;
 }
-.service .content2:hover{
-    background-color: white;
-    border: 1px solid mediumslateblue;
+.service .content1 .flex:hover{
+    background-color:whitesmoke;
+    border: 2px solid aliceblue;
 }
-.service .content3:hover{
-    background-color: white;
-    border: 1px solid mediumslateblue;
-}
-.service .content4:hover{
-    background-color: white;
-    border: 1px solid mediumslateblue;
-}
+
 /*-----Services------*/
 
 /*-----Images-----*/
