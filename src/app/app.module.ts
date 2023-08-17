@@ -27,10 +27,15 @@ import { SilverpaymentComponent } from './Charity/Membership/silverpayment/silve
 import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
 import { VieweventComponent } from './Charity/Event/viewevent/viewevent.component';
 import { MembershippaymentComponent } from './Charity/Membership/Membershippayment/Membershippayment.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { AppointmentComponent } from './Appointment/Appointment.component';
+import { AdminAppointmentComponent } from './AdminAppointment/AdminAppointment.component';
+import { CharitymembershipComponent } from './Charity/Membership/Charitymembership/Charitymembership.component';
+import { OffercharitymembershipComponent } from './Charity/Membership/offercharitymembership/offercharitymembership.component';
 
 
 @NgModule({
-  declarations: [																																													
+  declarations: [																																																
     AppComponent,
       HomeComponent,
       CharityComponent,
@@ -54,7 +59,12 @@ import { MembershippaymentComponent } from './Charity/Membership/Membershippayme
       SilverpaymentComponent,
       AdminpaymentComponent,
       VieweventComponent,
-      MembershippaymentComponent
+      MembershippaymentComponent,
+      UserdetailsComponent,
+      AppointmentComponent,
+      AdminAppointmentComponent,
+      CharitymembershipComponent,
+      OffercharitymembershipComponent
    ],
   imports: [
     BrowserModule,

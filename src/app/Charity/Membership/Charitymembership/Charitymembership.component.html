@@ -1,0 +1,102 @@
+<app-Header></app-Header>
+<section>
+    <div class="container">
+        <h1>Membership <span>Type</span></h1>
+        <div class="note">
+          <p><span style="color: mediumslateblue; text-decoration: underline;">Note:<br></span> 1. After the Expiry Date, the Membership is not valid. You have to Renewal the Membership<br>
+                   2. You can only register for one Membership type. 
+          </p>
+        </div>
+        <div class="content">
+          <h3>Choose Your Membership Type:</h3>
+          <select [(ngModel)]="selecttype">
+            <option *ngFor="let type of Membershiptype" [value]="type.value">{{type.label}}</option>
+          </select>  
+          <div *ngIf="selecttype === 'Platinum'" class="data">
+          <div class="showdata">
+            <img src="assets/Image/platinum.png" alt="" style="width: 200px;"><br>
+            <label for="">Name : </label>
+            <input name="Name" #name [(ngModel)]="Name"><br>
+            <label for="">Mobile : </label>
+            <input name="Phone" #mobile [(ngModel)]="Phone"><br>
+            <label for="">Price : </label>
+            <input  name="platinumprice" #price [(ngModel)]="platinumprice"><br>
+            <label for="">Validity : </label>
+            <input name="platinumvalidity" #validity [(ngModel)]="platinumvalidity"><br>
+            <label for="" name="platinumstartdate" #From [(ngModel)]="platinumstartdate">Start Date : </label>{{registrationDate | date:'longDate'}}<br>
+            <label for="" name="platinumenddate" #Expiry [(ngModel)]="platinumenddate">Expiry Date : </label>{{platinumdate | date:'longDate'}}<br>
+          </div>
+          <div class="carddata">
+            <form #MembershipForm="ngForm">
+            <label for="">Cards Accepted Here:</label><br>
+            <img src="assets/Image/pay img.png" alt="" style="width: 300px;height: 70px;"><br>
+            <label for="">CardHolder Name:</label><br>
+            <input type="text" name="platinumcardname" #cardholdername [(ngModel)]="platinumcardname" required pattern="[A-Z ]{3,20}$"><br>
+            <label for="">Card Number:</label><br>
+            <input type="number" name="platinumcardno" #cardnumber [(ngModel)]="platinumcardno" required pattern="[0-9]{16}$"><br>
+            <label for="">Exp:</label><br>
+            <input type="text" name="platinumcardexp" #exp [(ngModel)]="platinumcardexp" required pattern="[0-9]{2}/[0-9]{4}$" placeholder="MM/YYYY"><br>
+            <label for="">cvv:</label><br>
+            <input type="text" name="platinumcardcvv" #cvv [(ngModel)]="platinumcardcvv" required pattern="[0-9]{3}"><br>
+            <button [disabled]="!MembershipForm.valid" (click)="PlatinumMembershipSubmit()">Proceed</button>
+            </form>
+            
+          </div>
+          </div>
+          <div *ngIf="selecttype === 'Gold'" class="data">
+            <div class="showdata">
+              <label for="">Name:</label>
+              <input  name="Name" #name [(ngModel)]="Name"><br>
+              <label for="">Mobile:</label>
+              <input name="Phone" #mobile [(ngModel)]="Phone"> <br>
+              <label for="">Price:</label>
+              <input name="goldprice" #gprice [(ngModel)]="goldprice"><br>
+              <label for="">Validity:</label>
+              <input name="goldvalidity" #gvalidity [(ngModel)]="goldvalidity"><br>
+              <label for="" name="goldstartdate" #gFrom [(ngModel)]="goldstartdate">Start Date:</label>{{registrationDate | date:'longDate'}}<br>
+              <label for="" name="goldenddate" #gExpiry [(ngModel)]="goldenddate">Expiry Date:</label>{{golddate | date:'longDate'}}
+            </div>
+            <div class="carddata">
+              <form #MembershipForm="ngForm">
+              <label for="">CardHolder Name:</label><br>
+              <input type="text" name="goldcardname" #gcardholdername [(ngModel)]="goldcardname" required=""><br>
+              <label for="">Card Number:</label><br>
+              <input type="number" name="goldcardno" #gcardnumber [(ngModel)]="goldcardno" required=""><br>
+              <label for="">Exp:</label><br>
+              <input type="text" name="goldcardexp" #gexp [(ngModel)]="goldcardexp" required=""><br>
+              <label for="">cvv:</label><br>
+              <input type="text" name="goldcardcvv" #gcvv [(ngModel)]="goldcardcvv" required="">
+            </form>
+            <button [disabled]="!MembershipForm.valid" (click)="goldMembershipSubmit()">Proceed</button>
+            </div>
+            </div>
+            <div *ngIf="selecttype === 'Silver'" class="data">
+              <div class="showdata">
+                <label for="">Name:</label>
+                <input name="Name" #name [(ngModel)]="Name"><br>
+                <label for=""  >Mobile:</label>
+                <input name="Phone" #mobile [(ngModel)]="Phone"><br>
+                <label for=""  >Price:</label>
+                <input name="silverprice" #sprice [(ngModel)]="silverprice"><br>
+                <label for="">Validity:</label>
+                <input  name="silvervalidity" #svalidity [(ngModel)]="silvervalidity"><br>
+                <label for=""  name="silverstartdate" #sFrom [(ngModel)]="silverstartdate" >Start Date:</label>{{registrationDate | date:'longDate'}}<br>
+                <label for=""  name="silverenddate" #sExpiry [(ngModel)]="silverenddate" >Expiry Date:</label>{{silverdate | date:'longDate'}}
+              </div>
+              <div class="carddata">
+                <form #MembershipForm="ngForm">
+                <label for="">CardHolder Name:</label><br>
+                <input type="text" name="silvercardname" #scardholdername [(ngModel)]="silvercardname" required=""><br>
+                <label for="">Card Number:</label><br>
+                <input type="number" name="silvercardno" #scardnumber [(ngModel)]="silvercardno" required=""><br>
+                <label for="">Exp:</label><br>
+                <input type="text" name="silvercardexp" #sexp [(ngModel)]="silvercardexp" required=""><br>
+                <label for="">cvv:</label><br>
+                <input type="text" name="silvercardcvv" #scvv [(ngModel)]="silvercardcvv" required="">
+              </form>
+               <button [disabled]="!MembershipForm.valid" (click)="silverMembershipSubmit()">Proceed</button>
+              </div>  
+              </div>
+        </div>
+    </div>
+</section>

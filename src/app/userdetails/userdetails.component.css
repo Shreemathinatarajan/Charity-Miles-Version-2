@@ -1,0 +1,38 @@
+section{
+    padding-top: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.profile{
+    margin: 40px;
+    width: 33%;
+    height: 400px;
+    border: 2px solid lavender;
+    background-color: whitesmoke;
+}
+.profile h3{
+    margin-left:40px ;
+}
+.profile .flex{
+    display: flex;
+    margin-left: 15px;
+}
+.profile .flex button{
+    border: 1.5px solid mediumslateblue;
+    background-color: white;
+}
+.profile .flex button:hover{
+    background-color: azure;
+    border: 1.5px solid black;
+}
+.content{
+    display: flex;
+}
+.details{
+    margin-top: 40px;
+    width: 70%;
+}
+.details h1{
+    color: lightslategray;
+    text-decoration: overline;
+    text-decoration-color:mediumslateblue;
+}

@@ -16,11 +16,11 @@
             </thead>
             <tbody>
                 <tr *ngFor="let platinum of platinummembership">
-                    <td>{{platinum.uname}}</td>
-                    <td>999</td>
-                    <td *ngFor="let validity of validity">{{validity.validity}}</td>
-                    <td>{{platinum.date}}</td>
-                    <td>{{platinum.ed}}</td>
+                    <td>{{platinum.Name}}</td>
+                    <td>{{platinum.platinumprice}}</td>
+                    <td>{{platinum.platinumvalidity}}</td>
+                    <td>{{platinum.platinumstartdate}}</td>
+                    <td>{{platinum.platinumenddate}}</td>
                 </tr>
             </tbody>
         </table>
@@ -37,11 +37,11 @@
             </thead>
             <tbody>
                 <tr *ngFor="let gold of goldmembership">
-                    <td>{{gold.uname}}</td>
-                    <td>699</td>
-                    <td *ngFor="let goldvalidity of goldvalidity">{{goldvalidity.validity}}</td>
-                    <td>{{gold.date}}</td>
-                    <td>{{gold.ed}}</td>
+                    <td>{{gold.Name}}</td>
+                    <td>{{gold.goldprice}}</td>
+                    <td>{{gold.goldvalidity}}</td>
+                    <td>{{gold.goldstartdate}}</td>
+                    <td>{{gold.goldenddate}}</td>
                 </tr>
             </tbody>
         </table>
@@ -58,11 +58,11 @@
             </thead>
             <tbody>
                 <tr *ngFor="let silver of silvermembership">
-                    <td>{{silver.uname}}</td>
-                    <td>399</td>  
-                    <td *ngFor="let silvervaliditiy of silvervalidity">{{silvervaliditiy.validity}}</td>
-                    <td>{{silver.date}}</td>
-                    <td>{{silver.ed}}</td>
+                    <td>{{silver.Name}}</td>
+                    <td>{{silver.silverprice}}</td>
+                    <td>{{silver.silvervalidity}}</td>
+                    <td>{{silver.silverstartdate}}</td>
+                    <td>{{silver.silverenddate}}</td>
                 </tr>
             </tbody>
         </table>

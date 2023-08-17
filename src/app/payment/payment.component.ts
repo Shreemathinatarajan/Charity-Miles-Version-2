@@ -13,18 +13,26 @@ import { environment } from 'src/environments/environment';
 })
 export class PaymentComponent implements OnInit {
 
+  Name:any;
+  Mobile:any;
+  paymentdate:Date=new Date();
   payment:FormGroup|any;
   pay:any;
 
-payforevent:any;
-getValueid:any;
-eventdate:any;
-eventname:any;
 
   constructor(private route:Router,private http:HttpClient,private paymentservice:PaymentService,private adminevent:AdmineventService) { }
   
   ngOnInit() {
+    if(localStorage.getItem('user')){
+      let un = localStorage.getItem('user');
+      let ud = un && JSON.parse(un);
+      this.Name=ud.uname;
+      this.Mobile=ud.mobileno;
+   };   
     this.payment = new FormGroup({
+      'Name':new FormControl(),
+      'Mobile':new FormControl(),
+      'Paydate':new FormControl(),
       'Rs':new FormControl("",[Validators.required,Validators.pattern("[0-9]{2,10}$")]),
       'uname':new FormControl("",[Validators.required,Validators.pattern("[A-Z ]{3,20}$")]),
       'cardno':new FormControl("",[Validators.required,Validators.pattern("[0-9]{16}$")]),
@@ -41,7 +49,10 @@ eventname:any;
       this.route.navigate(['/rating']);
     },err=>{
       alert('Something went wrong');
-    })
+    });
+
+
+    
   }
   
 }

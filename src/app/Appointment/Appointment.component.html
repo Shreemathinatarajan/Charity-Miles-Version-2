@@ -1,0 +1,71 @@
+<app-Header></app-Header>
+<section>
+  <div class="container">
+    <h1 class="heading">APPOIN<span>TMENT</span></h1>
+    <div class="content">
+      <div class="image">
+        <a routerLink="/Charity" style="font-size: 18px;text-decoration: none;color: black;padding-left: 220px;"><i><span class="fa fa-arrow-circle-left"></span></i>  Back</a><br><br>
+        <img src="assets/Image/Appointment1.svg">
+      </div>
+      <div class="contain">
+        <h2><span>Let us join hands for a good things <i class="fa fa-handshake-o"></i></span><br>
+        We would like to schedule a donation appointment at your convenience. 
+        By setting up an appointment, you can choose a date and time that works best for you. Your Apointment has the potential to create a lasting difference in the lives of those we serve.</h2>
+          <p><span>Steps to Make Appointment:</span><br><br>
+            <i class="fa fa-angle-double-right"></i> Click Make Appointment.<br>
+            <i class="fa fa-angle-double-right"></i> Choose the available date and time for your Donations.<br>
+            <i class="fa fa-angle-double-right"></i> You can ask appointment only to donate Food ,Clothes and Stationary Products (Example: Notebooks, Pen, Pencil for Students and Wheelchairs, Bed for Hospitals).<br>
+            <i class="fa fa-angle-double-right"></i> By filling all the information you can request an appointment.<br>
+            <i class="fa fa-angle-double-right"></i> An appointment request will send to Charity Miles.You will receive an accepted or cancelled status from the Charity.<br></p>
+            <button (click)="Appointment()" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: gray;font-size: 15px;font-weight: 500;padding: 5px;border: 2px solid mediumslateblue;background-color:white;">Make Appointment</button>
+      </div>
+    </div>
+  
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">APPOINTMENT</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <label for="">Name</label>
+          <input name="Name" #username [(ngModel)]="Name" class="form-control">
+          <label class="form-label">Mobile No</label>
+          <input name="Mobile" #mobileno [(ngModel)]="Mobile" class="form-control">       
+          <form #appointmentForm="ngForm">
+            <div class="mb-3">
+              <label class="form-label">Select Date</label>
+              <input type="date" name="AppointmentDate" #AppDate [(ngModel)]="AppointmentDate" required class="form-control">
+            </div> 
+            <div class="mb-3">
+              <label class="form-label">Select Time</label>
+              <input  type="time" name="Appointmenttime" #time [(ngModel)]="Appointmenttime" required class="form-control">
+            </div> 
+            <div class="mb-3">
+              <label class="form-label">Donation Type</label><br>
+              <select name="Donationitems" #Items [(ngModel)]="Donationitems"  class="form-control">
+                <option value="Food" >Food</option>
+                <option value="Clothes">Clothes</option>
+                <option value="Stationary">Stationary</option>
+              </select>
+            </div> 
+            <div class="mb-3">
+              <label class="form-label">Quantity</label>
+              <input type="text" name="Quantity" placeholder="Example: 10 food Parcels or 50 Clothes or 30 Stationary Products" #NoofQuantity name="Quantity" [(ngModel)]="Quantity" required class="form-control">
+            </div>  
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <input type="text" #Say name="Message" [(ngModel)]="Message" required class="form-control">
+            </div>          
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" [disabled]="!appointmentForm.valid" (click)="AppointmentSubmit()" class="btn btn-primary">Make Apointment</button>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

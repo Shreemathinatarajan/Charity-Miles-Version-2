@@ -57,6 +57,50 @@
       "exp": "10/2029",
       "cvv": "819",
       "id": 6
+    },
+    {
+      "Name": null,
+      "Mobile": null,
+      "Paydate": null,
+      "Rs": "1000",
+      "uname": "SHREEMATHI",
+      "cardno": "6356162711828919",
+      "exp": "10/2026",
+      "cvv": "618",
+      "id": 7
+    },
+    {
+      "Name": null,
+      "Mobile": null,
+      "Paydate": null,
+      "Rs": "1000",
+      "uname": "SHREEMATHI",
+      "cardno": "8917363717187219",
+      "exp": "10/2027",
+      "cvv": "267",
+      "id": 8
+    },
+    {
+      "Name": null,
+      "Mobile": null,
+      "Paydate": null,
+      "Rs": "1000",
+      "uname": "SHREEMATHI",
+      "cardno": "7647218721682781",
+      "exp": "10/2028",
+      "cvv": "782",
+      "id": 9
+    },
+    {
+      "Name": null,
+      "Mobile": null,
+      "Paydate": null,
+      "Rs": "1000",
+      "uname": "SHREEMATHI",
+      "cardno": "7182718721768178",
+      "exp": "10/2023",
+      "cvv": "928",
+      "id": 10
     }
   ],
   "registereduser": [
@@ -74,7 +118,17 @@
       "mobileno": "9681720198",
       "pass": "Priya@123",
       "cpass": "Priya@123",
-      "id": 2
+      "id": 2,
+      "status": "Appointment Accepted",
+      "date": "2023-08-22",
+      "Time": "21:30",
+      "items": "Food",
+      "quantity": "100 Food Parcels",
+      "Type": "Gold",
+      "price": 699,
+      "validity": "6 Months",
+      "startdate": "2023-07-23",
+      "enddate": "2024-02-23"
     },
     {
       "uname": "Ram25",
@@ -82,7 +136,12 @@
       "mobileno": "8910827910",
       "pass": "Ram@12345",
       "cpass": "Ram@12345",
-      "id": 3
+      "id": 3,
+      "price": 999,
+      "Type": "Platinum",
+      "validity": "1 Year",
+      "startdate": "2023-07-28",
+      "enddate": "2024-07-28"
     },
     {
       "uname": "Saru",
@@ -98,7 +157,12 @@
       "mobileno": "9871027839",
       "pass": "John@12345",
       "cpass": "John@12345",
-      "id": 5
+      "id": 5,
+      "Type": "Platinum",
+      "price": 999,
+      "validity": "1 Year",
+      "startdate": "2023-08-01",
+      "enddate": "2024-08-01"
     },
     {
       "uname": "Swathi",
@@ -106,13 +170,18 @@
       "mobileno": "8917829017",
       "pass": "Swathi@123",
       "cpass": "Swathi@123",
-      "id": 6
+      "id": 6,
+      "Type": "Silver",
+      "price": 399,
+      "validity": "3 Months",
+      "startdate": "2023-07-20",
+      "enddate": "2024-10-20"
     }
   ],
   "loginuser": [
     {
-      "uname": "Admin",
-      "password": "Admin@123",
+      "uname": "Priya",
+      "password": "Priya@123",
       "id": 1
     },
     {
@@ -129,77 +198,120 @@
       "uname": "Shreemathi",
       "password": "Shree@123",
       "id": 4
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 5
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 6
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 7
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 8
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 9
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 10
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 11
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 12
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 13
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 14
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 15
     }
   ],
   "events": [
     {
       "id": 1,
-      "evedate": "13 August 2023",
-      "event": "World Organ Donation Day",
-      "message": "On this special day we are here to do services for peoples Help us by denoting"
-    },
-    {
-      "id": 2,
-      "evedate": "15 August 2023",
-      "event": "Independence Day",
-      "message": "On this special day we are here to do services for peoples Help us by denoting"
-    },
-    {
-      "id": 3,
       "evedate": "29 August 2023",
       "event": "Onam",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 4,
+      "id": 2,
       "evedate": "30 August 2023",
       "event": "Raksha Bandhan",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 5,
+      "id": 3,
       "evedate": "17 September 2023",
       "event": "Ganesh Chaturthi",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 6,
+      "id": 4,
       "evedate": "24 September 2023",
       "event": "Pooja Celebration",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 7,
+      "id": 5,
       "evedate": "02 October 2023",
       "event": "Gandhi Jayanti",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 8,
+      "id": 6,
       "evedate": "12 October 2023",
       "event": "Diwali Celebration",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 9,
+      "id": 7,
       "evedate": "11 November 2023",
       "event": "National Education Day",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 10,
+      "id": 8,
       "evedate": "14 November 2023",
       "event": "Children's Day",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 11,
+      "id": 9,
       "evedate": "27 November 2023",
       "event": "National Organ Donation Day",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
     },
     {
-      "id": 12,
+      "id": 10,
       "evedate": "25 December 2023",
       "event": "Christmas Day",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
@@ -232,48 +344,90 @@
       "validity": "3 months"
     }
   ],
+  "Price": [
+    {
+      "id": 1,
+      "platinumprice": "999",
+      "platinumofferprice": "849",
+      "goldprice": "699",
+      "goldofferprice": "594",
+      "silverprice": "399",
+      "silverofferprice": "339"
+    }
+  ],
   "Platinummember": [
     {
-      "date": "28 July 2023",
-      "uname": "RAM",
-      "cardno": "9878917258192689",
-      "exp": "07/2026",
-      "cvv": "716",
-      "ed": "28 July 2024",
+      "Name": "Ram25",
+      "Mobile": "8910827910",
+      "platinumprice": 999,
+      "platinumvalidity": "1 Year",
+      "platinumstartdate": "2023-07-28",
+      "platinumenddate": "2024-07-28",
+      "cardname": "RAM",
+      "cardno": 9878917258192688,
+      "cardexp": "07/2026",
+      "cardcvv": "716",
       "id": 1
     },
     {
-      "date": "01 August 2023",
-      "uname": "JOHN ",
-      "cardno": "6718267289102671",
-      "exp": "05/2027",
-      "cvv": "681",
-      "ed": "01 August 2024",
+      "Name": "JOHN",
+      "Mobile": "9871027839",
+      "platinumprice": 999,
+      "platinumvalidity": "1 Year",
+      "platinumstartdate": "2023-08-01",
+      "platinumenddate": "2024-08-01",
+      "cardname": "JOHN",
+      "cardno": 6718267289102671,
+      "cardexp": "05/2027",
+      "cardcvv": "681",
       "id": 2
     }
   ],
   "Goldmember": [
     {
-      "date": "23 July 2023",
-      "uname": "PRIYA",
-      "cardno": "8910278901982719",
-      "exp": "10/2026",
-      "cvv": "819",
-      "ed": "23 February 2024",
+      "Name": "Priya",
+      "Mobile": "9681720198",
+      "goldprice": 699,
+      "goldvalidity": "6 Months",
+      "goldstartdate": "2023-07-23",
+      "goldenddate": "2024-02-23",
+      "cardname": "PRIYA",
+      "cardno": 989829,
+      "cardexp": "10/2026",
+      "cardcvv": "819",
       "id": 1
     }
   ],
   "Silvermember": [
     {
-      "date": "20 July 2023",
-      "uname": "SWATHI",
-      "cardno": "7819627819278910",
-      "exp": "03/2028",
-      "cvv": "618",
-      "ed": "20 October 2023",
+      "Name": "Swathi",
+      "Mobile": "9681720198",
+      "silverprice": 399,
+      "silvervalidity": "3 Months",
+      "silverstartdate": "2023-07-20",
+      "silverenddate": "2024-10-20",
+      "cardname": "SWATHI",
+      "cardno": 7819627819278910,
+      "cardexp": "03/2028",
+      "cardcvv": "618",
       "id": 1
     }
   ],
-  "contact": [],
-  "Membership": []
+  "Appointment": [
+   
+  ],
+  "AcceptedRequest": [
+    {
+      "name": "Shreemathi",
+      "mobile": "9768123678",
+      "date": "2023-08-19",
+      "Time": "10:00",
+      "items": "Food",
+      "quantity": "100 Food Parcels",
+      "status": "Appointment Accepted",
+      "id": 1
+    }
+  ],
+  "CancelRequest": [
+  ]
 }

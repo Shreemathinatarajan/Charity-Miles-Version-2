@@ -1,0 +1,47 @@
+section{
+    padding-top: 95px;
+}
+.heading{
+    font-size: 30px;
+    text-align: center;
+}
+.heading span{
+    color: mediumslateblue;
+    font-size: 30px;
+}
+.content{
+    display: flex;
+    margin: 30px;
+}
+.image img{
+    width: 80%;
+}
+.contain{
+    width: 80%;
+}
+.contain h2 span{
+   font-size: 22px;
+   color: gray;
+}
+.contain h2 span i{
+   color: mediumslateblue;
+   font-size: 25px;
+}
+.contain h2{
+    text-align: justify;
+    font-size: 15px;
+    font-weight: normal;
+}
+.contain p{
+    font-size: 13px; 
+    text-align: justify;
+}
+.contain p span{
+    color: mediumslateblue;
+    font-size: 16px;
+    font-weight: 500;
+}
+.contain p i{
+    color: mediumslateblue;
+    font-size: 18px;
+}

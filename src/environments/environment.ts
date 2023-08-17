@@ -11,4 +11,7 @@ export const environment = {
     goldmember:"http://localhost:3000/goldmember",
     silvermember:"http://localhost:3000/silvermember",
     payment:"http://localhost:3000/payment",
+    Appointment:"http://localhost:3000/Appointment",
+    Membership:"http://localhost:3000/Membership",
+    Price:"http://localhost:3000/Price"
 };

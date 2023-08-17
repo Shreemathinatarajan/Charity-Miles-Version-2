@@ -1,0 +1,95 @@
+section{
+    padding-top: 90px;
+}
+.container h1{
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+}
+.container h1 span{
+    color: mediumslateblue;
+    font-size: 30px;
+}
+.note{
+    margin-top: 30px;
+    width: 45%;
+    margin-left: 300px;
+    border: 1px solid gray;
+}
+.note p{
+    padding: 10px;
+}
+.content h3{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 18px;
+    color: mediumslateblue;
+    font-weight: 500;
+}
+.content select{
+    width: 25%;
+    padding: 8px;
+    margin-left: 410px;
+    border: 1.5px solid lightgray;
+    color: grey;
+    font-size: 16px;
+    font-weight: 500;
+}
+.data{
+    display: flex;
+    width: 70%;
+    height: 70%;
+    border: 1px solid black;
+    margin-left: 150px;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    box-shadow: 20px 20px 60px gray;
+}
+.showdata{
+  font-size: 18px;
+  padding: 30px;
+  margin-left: 40px;
+  background-color: white;
+  width: 50%;
+  
+}
+.showdata label{
+    color: mediumslateblue;
+    font-weight: 500;
+    margin: 7px;
+}
+.showdata input{
+    border: none;
+}
+.carddata{
+    font-size: 18px;
+    width: 50%;
+}
+.carddata form{
+   background-color: aliceblue;
+}
+.carddata label{
+    color: mediumslateblue;
+    font-weight: 500;
+    margin: 7px;
+}
+.carddata input{
+    border: 1.5px solid lightgray;
+    width: 80%;
+    margin: 9px;
+    padding: 4px;
+}
+.carddata input:hover{
+    background-color: white;
+    border: 1px solid black;
+}
+.carddata button{
+    padding: 5px;
+    border: 2px solid mediumslateblue;
+    font-size: 16px;
+    background-color: white;
+    margin-left: 120px;
+}
+.carddata button:hover{
+    background-color: lightsteelblue;
+}

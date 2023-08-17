@@ -10,7 +10,6 @@ export class MembershipService {
 
 constructor(private http:HttpClient) { }
 success(){
-  alert("Thank you for joining as a member in charity miles Welcome.......");
 }
 getplatinum(){
   return this.http.get(environment.platinum);
@@ -18,6 +17,17 @@ getplatinum(){
 getplatinummember(){
   return this.http.get(environment.platinummember);
 }
-
+postplatinummembership(body:any){
+  return this.http.post(environment.platinummember,body);
+}
+postgoldmembership(body:any){
+  return this.http.post(environment.goldmember,body);
+}
+postsilvermembership(body:any){
+  return this.http.post(environment.silvermember,body);
+}
+updatemembership(info:any,id:any){
+  return this.http.patch('$(environment.registeruser)${id}',info);
+}
 
 }

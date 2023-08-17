@@ -1,0 +1,77 @@
+<app-Header></app-Header>
+<section>
+  <div class="container">
+    <div class="content">
+      <div class="profile">
+      <img src="assets/Image/user.jpg" alt="" style="width: 230px; padding-left: 80px; padding-top: 10px;"> 
+      <h2 style="text-align: center;color: mediumslateblue;">{{ud.uname}}</h2>
+      <h3><span style="font-weight: 800;">Name :</span>  {{ud.uname}}<br>
+          <span style="font-weight: 800;">Email :</span>  {{ud.emailid}}<br>
+          <span style="font-weight: 800;">Mobile No :</span>  {{ud.mobileno}}<br>
+          <span style="font-weight: 800;">Membership :</span> {{Data.Type}}
+      </h3>
+      <div class="flex">
+      <div class="btn">
+      <button>Update Profile</button>
+      </div>
+      <div class="btn">
+      <button>Change Password</button>
+      </div>
+      </div>
+      </div>
+      <div class="details">
+       <!-- <h1>My Donations</h1>-->
+        <h1>Appointment History</h1>
+        <div>
+          <table class="table mt-4">
+            <thead>
+                <tr> 
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Donation Type</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="col">{{Data.date}}</th> 
+                <th scope="col">{{Data.Time}}</th> 
+                <th scope="col">{{Data.items}}</th>
+                <th scope="col">{{Data.quantity}}</th>
+                <th scope="col">{{Data.status}} <span>{{Data.Message}}</span></th>
+              </tr>   
+            </tbody>
+          </table>
+        </div>
+        <h1>Membership</h1>
+        <div>
+          <table class="table mt-4">
+            <thead>
+                <tr>
+                    <th scope="col">Type</th>  
+                    <th scope="col">Price</th>
+                    <th scope="col">Validity</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">End Date</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="col">{{Data.Type}}</th> 
+                <th scope="col">{{Data.price}}</th> 
+                <th scope="col">{{Data.validity}}</th> 
+                <th scope="col">{{Data.startdate}}</th>
+                <th scope="col">{{Data.enddate}}</th>             
+              </tr>   
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main" *ngIf="Data.length==0">
+    <h5>No Information</h5>
+  </div>
+</section>

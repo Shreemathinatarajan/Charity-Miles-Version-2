@@ -1,0 +1,91 @@
+<app-Adminheader></app-Adminheader>
+<app-AdminProfile></app-AdminProfile>
+<section>
+<h1><i class="fa fa-users"></i>  Appointment History</h1>
+<h3>Apointment Request</h3>
+<table class="table mt-4">
+  <thead>
+      <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Mobile no</th>  
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+          <th scope="col">Donation Type</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Message</th>
+          <th scope="col">Accept</th>
+          <th scope="col">Reject</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let app of Request" [hidden]="app.status=='Accepted' || app.status=='Cancelled' ">
+      <td>{{app.Name}}</td>
+      <td>{{app.Mobile}}</td>
+      <td>{{app.AppointmentDate}}</td>
+      <td>{{app.Time}}</td>
+      <td>{{app.Donationitems}}</td>
+      <td>{{app.Quantity}}</td>
+      <td>{{app.Message}}</td>
+      <td><button (click)="Accept(app,app.id,app.Name,app.Mobile,app.AppointmentDate,app.Time,app.Donationitems,app.Quantity,app.Message)">Accept</button></td>
+      <td><button (click)="Cancel(app,app.Name,app.Mobile,app.AppointmentDate,app.Time,app.Donationitems,app.Quantity)">Cancel</button></td>
+    </tr>   
+  </tbody>
+</table>
+<h3>Alloted Appointment</h3>
+<table class="table mt-4">
+  <thead>
+      <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Mobile no</th>  
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+          <th scope="col">Donation Type</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Status</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let accept of Acceptrequest">
+      <td>{{accept.name}}</td>
+      <td>{{accept.mobile}}</td>
+      <td>{{accept.date}}</td>
+      <td>{{accept.Time}}</td>
+      <td>{{accept.items}}</td>
+      <td>{{accept.quantity}}</td>
+      <td>{{accept.status}}</td>
+    </tr>   
+  </tbody>
+</table>
+<h3>Cancelled Appointment</h3>
+<form action="">
+<table class="table mt-4">
+  <thead>
+    <th>Name</th>
+    <th>Mobile no</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Donation Type</th>
+    <th>Quantity</th>
+    <th>Reason for Cancellation</th>
+    <th>Status</th>
+    <th>Select</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let req of CancelRequest "[formGroup]="Message"> 
+      <td>{{req.cancelledName}}</td>
+      <td>{{req.cancelledMobileno}}</td>
+      <td>{{req.cancelledDate}}</td>
+      <td>{{req.cancelledTime}}</td>
+      <td>{{req.cancelleditem}}</td>
+      <td>{{req.cancelledquantity}}</td>
+      <td><textarea [hidden]="req.reporting=='Reason Sent'" name="Message" id="" cols="20" rows="2" formControlName="msg">{{req.Messagedetail}}</textarea></td>
+      <td>{{req.reporting}}</td>
+      <td><button [disabled]="req.reporting=='Reason Sent'" (click)="Sendmsg(req)"  [ngClass]="{blur:req.reporting=='Reason Sent'}">Send</button></td>
+    </tr>   
+  </tbody>
+</table>
+</form>
+<div class="main" *ngIf="CancelRequest.length==0">
+  <h4>Cancel Section Cleared</h4>
+</div>
+</section>

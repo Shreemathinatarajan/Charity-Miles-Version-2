@@ -22,6 +22,11 @@ import { SilverpaymentComponent } from './Charity/Membership/silverpayment/silve
 import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
 import { VieweventComponent } from './Charity/Event/viewevent/viewevent.component';
 import { MembershippaymentComponent } from './Charity/Membership/Membershippayment/Membershippayment.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { AppointmentComponent } from './Appointment/Appointment.component';
+import { AdminAppointmentComponent } from './AdminAppointment/AdminAppointment.component';
+import { CharitymembershipComponent } from './Charity/Membership/Charitymembership/Charitymembership.component';
+import { OffercharitymembershipComponent } from './Charity/Membership/offercharitymembership/offercharitymembership.component';
 
 const routes: Routes = [
   {
@@ -62,7 +67,7 @@ const routes: Routes = [
     component:AdminheaderComponent
   },
   {
-    path:'Admindashboard',
+    path:'Admin',
     component:AdmindashboardComponent
   },
   {
@@ -109,6 +114,27 @@ const routes: Routes = [
   {
     path:'Membershippayment',
     component:MembershippaymentComponent
+  },
+  {
+    path:'User',
+    component:UserdetailsComponent
+  },
+  {
+    path:'Appointment',
+    component:AppointmentComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path:'AdminAppointment',
+    component:AdminAppointmentComponent
+  },
+  {
+    path:'ChooseMembership',
+    component:CharitymembershipComponent
+  },
+  {
+    path:'OfferMembership',
+    component:OffercharitymembershipComponent
   },
   {
     path:'**',

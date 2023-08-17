@@ -88,7 +88,8 @@
                 </div><br>
           </div>
       </div>
-      <a routerLink="/Membershippayment" class="btn">Procced to continue  <i class="fa fa-angle-double-right"></i></a>
+      <a  *ngIf="!isOfferActive()" routerLink="/ChooseMembership" class="btn">Proceed to continue  <i class="fa fa-angle-double-right"></i></a>
+      <a  *ngIf="isOfferActive()" routerLink="/OfferMembership" class="btn">Proceed to continue <i class="fa fa-angle-double-right"></i></a>
     </div>
   </section>
   <app-Footer></app-Footer>
