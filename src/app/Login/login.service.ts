@@ -27,9 +27,14 @@ success(){}
 onLogin(){
   this.isLoggedIn=true;
 }
-onLogout(){
+/*onLogout(){
   this.isLoggedIn=false;
   this.route.navigate(['/Home']);
+}*/
+onLogout(){
+  sessionStorage.removeItem('user');
+  this.route.navigate[('/Home')];
+  window.location.reload();
 }
 isUserLoggedIn():boolean{
   return this.isLoggedIn;

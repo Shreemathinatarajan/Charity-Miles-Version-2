@@ -21,12 +21,8 @@ import { MembershipComponent } from './Charity/Membership/Membership.component';
 import { LoginComponent } from './Login/Login.component';
 import { RegistrationComponent } from './Registration/Registration.component';
 import { EventComponent } from './Charity/Event/Event.component';
-import { PlatinumpaymentComponent } from './Charity/Membership/platinumpayment/platinumpayment.component';
-import { GoldpaymentComponent } from './Charity/Membership/goldpayment/goldpayment.component';
-import { SilverpaymentComponent } from './Charity/Membership/silverpayment/silverpayment.component';
 import { AdminpaymentComponent } from './Adminpayment/Adminpayment.component';
 import { VieweventComponent } from './Charity/Event/viewevent/viewevent.component';
-import { MembershippaymentComponent } from './Charity/Membership/Membershippayment/Membershippayment.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { AppointmentComponent } from './Appointment/Appointment.component';
 import { AdminAppointmentComponent } from './AdminAppointment/AdminAppointment.component';
@@ -54,12 +50,8 @@ import { OffercharitymembershipComponent } from './Charity/Membership/offerchari
       AdminProfileComponent,
       AdmindashboardComponent,
       EventComponent,
-      PlatinumpaymentComponent,
-      GoldpaymentComponent,
-      SilverpaymentComponent,
       AdminpaymentComponent,
       VieweventComponent,
-      MembershippaymentComponent,
       UserdetailsComponent,
       AppointmentComponent,
       AdminAppointmentComponent,

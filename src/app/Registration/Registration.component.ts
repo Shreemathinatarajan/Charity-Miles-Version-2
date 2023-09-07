@@ -14,6 +14,7 @@ import { environment } from 'src/environments/environment';
 export class RegistrationComponent implements OnInit {
   registration:FormGroup|any;
   reg:any;
+  uname:string='';
   constructor(private route:Router,private http:HttpClient,private Register:RegisterService,private fb:FormBuilder) { 
   
   }
@@ -32,13 +33,11 @@ export class RegistrationComponent implements OnInit {
     this.reg = this.registration.value.uname
     this.http.post<any>(environment.registeruser, this.registration.value)
     .subscribe(res=>{
-      this.Register.success();
+      this.Register.success(this.uname);
       this.registration.reset();
       this.route.navigate(['Login']);
     },err=>{
       alert('Something went wrong');
-    })
-    
-    
+    })  
   }
 }

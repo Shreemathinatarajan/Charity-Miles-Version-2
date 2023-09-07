@@ -20,7 +20,24 @@
       </div>
       </div>
       <div class="details">
-       <!-- <h1>My Donations</h1>-->
+        <h1>My Donations</h1>
+        <div>
+          <table class="table mt-4">
+            <thead>
+                <tr> 
+                    <th scope="col">Payment Date</th>
+                    <th scope="col">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of paydata">
+                <td>{{user.Paydate}}</td> 
+                <td>{{user.amount}}</td> 
+              </tr>   
+            </tbody>
+          </table>
+        </div>
+
         <h1>Appointment History</h1>
         <div>
           <table class="table mt-4">
@@ -35,11 +52,11 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="col">{{Data.date}}</th> 
-                <th scope="col">{{Data.Time}}</th> 
-                <th scope="col">{{Data.items}}</th>
-                <th scope="col">{{Data.quantity}}</th>
-                <th scope="col">{{Data.status}} <span>{{Data.Message}}</span></th>
+                <td>{{Data.date}}</td> 
+                <td>{{Data.Time}}</td> 
+                <td>{{Data.items}}</td>
+                <td>{{Data.quantity}}</td>
+                <td>{{Data.status}} <span>{{Data.Message}}</span></td>
               </tr>   
             </tbody>
           </table>
@@ -59,11 +76,12 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="col">{{Data.Type}}</th> 
-                <th scope="col">{{Data.price}}</th> 
-                <th scope="col">{{Data.validity}}</th> 
-                <th scope="col">{{Data.startdate}}</th>
-                <th scope="col">{{Data.enddate}}</th>             
+                <td>{{Data.Type}}</td> 
+                <td>{{Data.price}}</td> 
+                <td>{{Data.validity}}</td> 
+                <td>{{Data.startdate}}</td>
+                <td>{{Data.enddate}}</td> 
+                <td><button [disabled]="!Renew()">Renew</button></td>            
               </tr>   
             </tbody>
           </table>

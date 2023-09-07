@@ -27,8 +27,8 @@ export class OffercharitymembershipComponent implements OnInit {
    }
 
   ngOnInit() {
-    if(localStorage.getItem('user')){
-      let un = localStorage.getItem('user');
+    if(sessionStorage.getItem('user')){
+      let un = sessionStorage.getItem('user');
       let ud = un && JSON.parse(un);
       this.Name=ud.uname;
       this.Phone=ud.mobileno;

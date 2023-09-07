@@ -32,7 +32,7 @@ export class AppointmentComponent implements OnInit {
       this.Mobile=ud.mobileno;
    }   
   }
-
+ 
   AppointmentDate:any;
   Appointmenttime:any;
   Donationitems:any;

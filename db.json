@@ -11,96 +11,84 @@
   ],
   "payment": [
     {
-      "Rs": "5000",
-      "uname": "PRIYA",
-      "cardno": "6789019827367819",
-      "exp": "10/2026",
-      "cvv": "910",
+      "username": "Priya",
+      "Paydate": "2023-08-12",
+      "amount": "1000",
+      "cardname": "PRIYA",
+      "cardno": "3891871298137182",
+      "exp": "10/2029",
+      "cvv": "109",
       "id": 1
     },
     {
-      "Rs": "2200",
-      "uname": "RAM",
-      "cardno": "8289190287189018",
+      "username": "Priya",
+      "Paydate": "2023-08-16",
+      "amount": "550",
+      "cardname": "PRIYA",
+      "cardno": "3891871298137182",
       "exp": "10/2029",
-      "cvv": "819",
+      "cvv": "109",
       "id": 2
     },
     {
-      "Rs": "10000",
-      "uname": "SHREEMATHI",
-      "cardno": "8910239201019201",
-      "exp": "10/2027",
-      "cvv": "810",
+      "username": "Priya",
+      "Paydate": "2023-08-18",
+      "amount": "500",
+      "cardname": "PRIYA",
+      "cardno": "3198237136172778",
+      "exp": "10/2029",
+      "cvv": "108",
       "id": 3
     },
     {
-      "Rs": "1500",
-      "uname": "PRIYA",
-      "cardno": "8917029837818109",
-      "exp": "10/2026",
-      "cvv": "019",
+      "username": "Shreemathi",
+      "Paydate": "2023-08-19",
+      "amount": "300",
+      "cardname": "SHREE",
+      "cardno": "1282778178279880",
+      "exp": "10/2029",
+      "cvv": "172",
       "id": 4
     },
     {
-      "Rs": "3000",
-      "uname": "SWATHI",
-      "cardno": "6789016278901909",
-      "exp": "11/2028",
-      "cvv": "617",
+      "username": "Swetha",
+      "Paydate": "2023-08-20",
+      "amount": "1000",
+      "cardname": "SWETHA",
+      "cardno": "3768181287812738",
+      "exp": "10/2028",
+      "cvv": "981",
       "id": 5
     },
     {
-      "Rs": "1000",
-      "uname": "RAM",
-      "cardno": "8289190287189018",
-      "exp": "10/2029",
-      "cvv": "819",
+      "username": "Swetha",
+      "Paydate": "2023-08-23",
+      "amount": "400",
+      "cardname": "SWETHA",
+      "cardno": "8183367367181571",
+      "exp": "10/2026",
+      "cvv": "637",
       "id": 6
     },
     {
-      "Name": null,
-      "Mobile": null,
-      "Paydate": null,
-      "Rs": "1000",
-      "uname": "SHREEMATHI",
-      "cardno": "6356162711828919",
-      "exp": "10/2026",
-      "cvv": "618",
+      "username": "Swetha",
+      "Paydate": "2023-08-22",
+      "amount": "1000",
+      "cardname": "SWETHA",
+      "cardno": "8765324565667887",
+      "exp": "09/2028",
+      "cvv": "656",
       "id": 7
     },
     {
-      "Name": null,
-      "Mobile": null,
-      "Paydate": null,
-      "Rs": "1000",
-      "uname": "SHREEMATHI",
-      "cardno": "8917363717187219",
-      "exp": "10/2027",
-      "cvv": "267",
+      "username": "Swetha",
+      "Paydate": "2023-08-25",
+      "amount": "900",
+      "cardname": "SWETHA",
+      "cardno": "1728172716271565",
+      "exp": "10/2029",
+      "cvv": "182",
       "id": 8
-    },
-    {
-      "Name": null,
-      "Mobile": null,
-      "Paydate": null,
-      "Rs": "1000",
-      "uname": "SHREEMATHI",
-      "cardno": "7647218721682781",
-      "exp": "10/2028",
-      "cvv": "782",
-      "id": 9
-    },
-    {
-      "Name": null,
-      "Mobile": null,
-      "Paydate": null,
-      "Rs": "1000",
-      "uname": "SHREEMATHI",
-      "cardno": "7182718721768178",
-      "exp": "10/2023",
-      "cvv": "928",
-      "id": 10
     }
   ],
   "registereduser": [
@@ -110,7 +98,27 @@
       "mobileno": "9768123678",
       "pass": "Shree@123",
       "cpass": "Shree@123",
-      "id": 1
+      "id": 1,
+      "status": "Appointment Accepted",
+      "date": "2023-08-25",
+      "Time": "10:00",
+      "items": "Food",
+      "quantity": "50",
+      "Type": "Platinum",
+      "Name": "Shreemathi",
+      "Mobile": null,
+      "price": 999,
+      "validity": "1 Year",
+      "startdate": "2023-08-30T12:56:13.606Z",
+      "enddate": "2024-08-29T12:56:13.606Z",
+      "cardname": "SHREEMATHI",
+      "cardno": 9654343251234568,
+      "cardexp": "10/2028",
+      "cardcvv": "876",
+      "Paydate": null,
+      "Rs": "1000",
+      "exp": "10/2028",
+      "cvv": "918"
     },
     {
       "uname": "Priya",
@@ -119,16 +127,11 @@
       "pass": "Priya@123",
       "cpass": "Priya@123",
       "id": 2,
-      "status": "Appointment Accepted",
-      "date": "2023-08-22",
-      "Time": "21:30",
-      "items": "Food",
-      "quantity": "100 Food Parcels",
       "Type": "Gold",
       "price": 699,
       "validity": "6 Months",
       "startdate": "2023-07-23",
-      "enddate": "2024-02-23"
+      "enddate": "2023-02-23"
     },
     {
       "uname": "Ram25",
@@ -176,6 +179,37 @@
       "validity": "3 Months",
       "startdate": "2023-07-20",
       "enddate": "2024-10-20"
+    },
+    {
+      "uname": "Swetha",
+      "emailid": "swetha@gmail.com",
+      "mobileno": "9672837127",
+      "pass": "Swetha@123",
+      "cpass": "Swetha@123",
+      "id": 7,
+      "status": "Appointment Accepted",
+      "date": "2023-08-29",
+      "Time": "10:00",
+      "items": "Clothes",
+      "quantity": "50",
+      "Type": "Platinum",
+      "Name": "Swetha",
+      "price": 999,
+      "validity": "1 Year",
+      "startdate": "2023-08-27T13:47:37.621Z",
+      "enddate": "2024-08-26T13:47:37.621Z",
+      "cardname": "SWETHA",
+      "cardno": 8123456789012345,
+      "cardexp": "10/2039",
+      "cardcvv": "102"
+    },
+    {
+      "uname": "Shreemathi",
+      "emailid": "shreemathi2901@gmail.com",
+      "mobileno": "9344800721",
+      "pass": "Shree@123",
+      "cpass": "Shree@123",
+      "id": 8
     }
   ],
   "loginuser": [
@@ -253,6 +287,231 @@
       "uname": "Shreemathi",
       "password": "Shree@123",
       "id": 15
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 16
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 17
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 18
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 19
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 20
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 21
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 22
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 23
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 24
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 25
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 26
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 27
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 28
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 29
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 30
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 31
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 32
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 33
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 34
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 35
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 36
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 37
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 38
+    },
+    {
+      "uname": "Priya",
+      "password": "Priya@123",
+      "id": 39
+    },
+    {
+      "uname": "Swathi",
+      "password": "Swathi@123",
+      "id": 40
+    },
+    {
+      "uname": "Swetha",
+      "password": "Swetha@123",
+      "id": 41
+    },
+    {
+      "uname": "Swetha",
+      "password": "Swetha@123",
+      "id": 42
+    },
+    {
+      "uname": "Swetha",
+      "password": "Swetha@123",
+      "id": 43
+    },
+    {
+      "uname": "Swetha",
+      "password": "Swetha@123",
+      "id": 44
+    },
+    {
+      "uname": "Swetha",
+      "password": "Swetha@123",
+      "id": 45
+    },
+    {
+      "uname": "Swetha",
+      "password": "Swetha@123",
+      "id": 46
+    },
+    {
+      "uname": "Swetha",
+      "password": "Swetha@123",
+      "id": 47
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 48
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 49
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 50
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 51
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 52
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 53
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 54
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 55
+    },
+    {
+      "uname": "Ram25",
+      "password": "Ram@12345",
+      "id": 56
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 57
+    },
+    {
+      "uname": "Shreemathi",
+      "password": "Shree@123",
+      "id": 58
+    },
+    {
+      "uname": "Swetha",
+      "password": "Swetha@123",
+      "id": 59
+    },
+    {
+      "uname": "Swetha",
+      "password": "Swetha@123",
+      "id": 60
     }
   ],
   "events": [
@@ -315,6 +574,12 @@
       "evedate": "25 December 2023",
       "event": "Christmas Day",
       "message": "On this special day we are here to do services for peoples Help us by denoting"
+    },
+    {
+      "id": 11,
+      "evedate": "01 January 2024",
+      "event": "New Year",
+      "message": "Donate us!"
     }
   ],
   "platinum": [
@@ -357,12 +622,13 @@
   ],
   "Platinummember": [
     {
+      "Type": "Platinum",
       "Name": "Ram25",
       "Mobile": "8910827910",
-      "platinumprice": 999,
-      "platinumvalidity": "1 Year",
-      "platinumstartdate": "2023-07-28",
-      "platinumenddate": "2024-07-28",
+      "price": 999,
+      "validity": "1 Year",
+      "startdate": "2023-07-28",
+      "enddate": "2024-07-28",
       "cardname": "RAM",
       "cardno": 9878917258192688,
       "cardexp": "07/2026",
@@ -370,29 +636,71 @@
       "id": 1
     },
     {
-      "Name": "JOHN",
+      "Type": "Platinum",
+      "Name": "John",
       "Mobile": "9871027839",
-      "platinumprice": 999,
-      "platinumvalidity": "1 Year",
-      "platinumstartdate": "2023-08-01",
-      "platinumenddate": "2024-08-01",
+      "price": 999,
+      "validity": "1 Year",
+      "startdate": "2023-08-01",
+      "enddate": "2024-08-01",
       "cardname": "JOHN",
       "cardno": 6718267289102671,
       "cardexp": "05/2027",
       "cardcvv": "681",
       "id": 2
+    },
+    {
+      "Type": "Platinum",
+      "Name": "Shreemathi",
+      "Mobile": "9768123678",
+      "price": 999,
+      "validity": "1 Year",
+      "startdate": "2023-08-17T15:42:52.246Z",
+      "enddate": "2024-08-16T15:42:52.246Z",
+      "cardname": "SHREEMATHI R N",
+      "cardno": 1234567890123456,
+      "cardexp": "10/2024",
+      "cardcvv": "192",
+      "id": 3
+    },
+    {
+      "Type": "Platinum",
+      "Name": "Swetha",
+      "price": 999,
+      "validity": "1 Year",
+      "startdate": "2023-08-27T13:47:37.621Z",
+      "enddate": "2024-08-26T13:47:37.621Z",
+      "cardname": "SWETHA",
+      "cardno": 8123456789012345,
+      "cardexp": "10/2039",
+      "cardcvv": "102",
+      "id": 4
+    },
+    {
+      "Type": "Platinum",
+      "Name": "Shreemathi",
+      "price": 999,
+      "validity": "1 Year",
+      "startdate": "2023-08-30T12:56:13.606Z",
+      "enddate": "2024-08-29T12:56:13.606Z",
+      "cardname": "SHREEMATHI",
+      "cardno": 9654343251234568,
+      "cardexp": "10/2028",
+      "cardcvv": "876",
+      "id": 5
     }
   ],
   "Goldmember": [
     {
+      "Type": "Gold",
       "Name": "Priya",
       "Mobile": "9681720198",
-      "goldprice": 699,
-      "goldvalidity": "6 Months",
-      "goldstartdate": "2023-07-23",
-      "goldenddate": "2024-02-23",
+      "price": 699,
+      "validity": "6 Months",
+      "startdate": "2023-07-23",
+      "enddate": "2024-02-23",
       "cardname": "PRIYA",
-      "cardno": 989829,
+      "cardno": 9898296712671828,
       "cardexp": "10/2026",
       "cardcvv": "819",
       "id": 1
@@ -400,12 +708,13 @@
   ],
   "Silvermember": [
     {
+      "Type": "Silver",
       "Name": "Swathi",
       "Mobile": "9681720198",
-      "silverprice": 399,
-      "silvervalidity": "3 Months",
-      "silverstartdate": "2023-07-20",
-      "silverenddate": "2024-10-20",
+      "price": 399,
+      "validity": "3 Months",
+      "startdate": "2023-07-20",
+      "enddate": "2024-10-20",
       "cardname": "SWATHI",
       "cardno": 7819627819278910,
       "cardexp": "03/2028",
@@ -414,7 +723,32 @@
     }
   ],
   "Appointment": [
-   
+    {
+      "Name": "Shreemathi",
+      "Mobile": "9768123678",
+      "AppointmentDate": "2023-08-25",
+      "Time": "10:00",
+      "Donationitems": "Food",
+      "Quantity": "50",
+      "Message": "Donation for my Birthday",
+      "attemptstatus": "true",
+      "appStatus": "Pending",
+      "id": 1,
+      "status": "Accepted"
+    },
+    {
+      "Name": "Swetha",
+      "Mobile": "9672837127",
+      "AppointmentDate": "2023-08-29",
+      "Time": "10:00",
+      "Donationitems": "Clothes",
+      "Quantity": "50",
+      "Message": "Due to my sister's birthday",
+      "attemptstatus": "true",
+      "appStatus": "Pending",
+      "id": 2,
+      "status": "Accepted"
+    }
   ],
   "AcceptedRequest": [
     {
@@ -426,8 +760,27 @@
       "quantity": "100 Food Parcels",
       "status": "Appointment Accepted",
       "id": 1
+    },
+    {
+      "name": "Shreemathi",
+      "mobile": "9768123678",
+      "date": "2023-08-25",
+      "Time": "10:00",
+      "items": "Food",
+      "quantity": "50",
+      "status": "Appointment Accepted",
+      "id": 2
+    },
+    {
+      "name": "Swetha",
+      "mobile": "9672837127",
+      "date": "2023-08-29",
+      "Time": "10:00",
+      "items": "Clothes",
+      "quantity": "50",
+      "status": "Appointment Accepted",
+      "id": 3
     }
   ],
-  "CancelRequest": [
-  ]
+  "CancelRequest": []
 }

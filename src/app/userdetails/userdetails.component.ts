@@ -12,14 +12,17 @@ export class UserdetailsComponent implements OnInit {
 
   ud:any;
   Data:any;
+  paydata:any;
+  expdate:any;
+  todaydate:Date=new Date();
   constructor(
     private route: Router,
     private http:HttpClient,
   ) {}
 
   ngOnInit() {
-    if(localStorage.getItem('user')){
-      let un = localStorage.getItem('user');
+    if(sessionStorage.getItem('user')){
+      let un = sessionStorage.getItem('user');
       this.ud = un && JSON.parse(un);
     }
     this.http.get<any>(environment.registeruser).subscribe(data=>{
@@ -29,6 +32,18 @@ export class UserdetailsComponent implements OnInit {
       if(value){
         this.Data=value
       }
-    })
+      this.expdate=new Date(data.enddate);
+    });
+    this.getpaymentdetail();
+  }
+
+  getpaymentdetail(){
+    this.http.get(environment.payment).subscribe((data:any)=>{
+      const finduser=this.ud.uname;
+      this.paydata=data.filter(user=>user.username===finduser);
+    });
+  }
+  Renew():boolean{
+    return this.expdate && this.todaydate >= this.expdate;
   }
 }

@@ -20,8 +20,8 @@ export class HeaderComponent implements OnInit {
   
   
   ngOnInit() {
-    if(localStorage.getItem('user')){
-      let un = localStorage.getItem('user');
+    if(sessionStorage.getItem('user')){
+      let un = sessionStorage.getItem('user');
       let ud = un && JSON.parse(un);
       this.details=ud.uname;
       this.details1=ud.emailid;
@@ -51,7 +51,7 @@ export class HeaderComponent implements OnInit {
   }
   
   onLogout(){
-    localStorage.removeItem('user');
+    sessionStorage.removeItem('user');
     this.route.navigate[('/Home')];
     window.location.reload();
   }

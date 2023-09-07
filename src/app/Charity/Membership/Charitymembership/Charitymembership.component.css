@@ -45,6 +45,7 @@ section{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     box-shadow: 20px 20px 60px gray;
 }
+
 .showdata{
   font-size: 18px;
   padding: 30px;
@@ -60,6 +61,9 @@ section{
 }
 .showdata input{
     border: none;
+}
+.showdata input .hide{
+    display: none;
 }
 .carddata{
     font-size: 18px;

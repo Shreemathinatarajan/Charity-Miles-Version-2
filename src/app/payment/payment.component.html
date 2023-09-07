@@ -9,19 +9,22 @@
         <form [formGroup]="payment" (ngSubmit)="paymentdata(payment)">
             <div class="form">
             <h1> MAKE DONATION HERE<i class="fa fa-arrow-circle-o-down"></i></h1> 
-           <!-- <h2>{{eventdate}}</h2>
-            <h2>{{eventname}}</h2>-->
+            <form #Paymentform="ngForm">
+            <label for="" >Name:</label>
+            {{userdetail.uname}}
+            <input *ngIf="Input"  name="Name" #name [(ngModel)]="Name"><br>
+            </form>
             <span>Cards Accepted Here</span>
             <img src="assets/Image/pay img.png" alt="">
-            <input type="text" formControlName="Rs" placeholder="Enter Amount">
-            <div *ngIf="payment.controls['Rs'].invalid && (payment.controls['Rs'].dirty || payment.controls['uname'].touched)">
-                <div class="error" *ngIf="payment.controls['Rs'].errors?.['required']">Enter Amount</div>
-                <div class="error" *ngIf="payment.controls['Rs'].errors?.['pattern']">Enter a valid amount</div>
+            <input type="text" formControlName="amount" placeholder="Enter Amount">
+            <div *ngIf="payment.controls['amount'].invalid && (payment.controls['amount'].dirty || payment.controls['amount'].touched)">
+                <div class="error" *ngIf="payment.controls['amount'].errors?.['required']">Enter Amount</div>
+                <div class="error" *ngIf="payment.controls['amount'].errors?.['pattern']">Enter a valid amount</div>
             </div>
-            <input type="text" formControlName="uname" placeholder="CardHolder Name">
-            <div *ngIf="payment.controls['uname'].invalid && (payment.controls['uname'].dirty || payment.controls['uname'].touched)">
-                <div class="error" *ngIf="payment.controls['uname'].errors?.['required']">Enter CardHolder Name</div>
-                <div class="error" *ngIf="payment.controls['uname'].errors?.['pattern']">Enter a valid Name</div>
+            <input type="text" formControlName="cardname" placeholder="CardHolder Name">
+            <div *ngIf="payment.controls['cardname'].invalid && (payment.controls['cardname'].dirty || payment.controls['cardname'].touched)">
+                <div class="error" *ngIf="payment.controls['cardname'].errors?.['required']">Enter CardHolder Name</div>
+                <div class="error" *ngIf="payment.controls['cardname'].errors?.['pattern']">Enter a valid Name</div>
             </div>
             <input type="text" formControlName="cardno" placeholder="Card Number">
             <div *ngIf="payment.controls['cardno'].invalid && (payment.controls['cardno'].dirty || payment.controls['cardno'].touched)">

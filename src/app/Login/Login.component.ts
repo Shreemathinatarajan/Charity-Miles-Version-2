@@ -14,7 +14,7 @@ import { environment } from 'src/environments/environment';
 })
 export class LoginComponent implements OnInit {
   login:FormGroup|any;
-  returl:any="";
+  returl:any="Home";
   uname:any="";
   pass:any="";
   submit:boolean=false;
@@ -67,7 +67,7 @@ export class LoginComponent implements OnInit {
       });
       if(user){ 
         alertifyjs.success("Login Successfully");
-        localStorage.setItem('user',JSON.stringify(user));
+        sessionStorage.setItem('user',JSON.stringify(user));
         this.loginservice.onLogin();
         this.login.reset();
         this.route.navigate(['Home']);
@@ -89,7 +89,7 @@ export class LoginComponent implements OnInit {
       });
       if(admin){ 
         alertifyjs.success("Admin Loggedin Successfully");
-        localStorage.setItem('admin',JSON.stringify(admin));
+        sessionStorage.setItem('admin',JSON.stringify(admin));
         this.loginservice.onLogin();
         this.login.reset();
         this.route.navigate(['/Admindashboard']);
@@ -106,9 +106,15 @@ export class LoginComponent implements OnInit {
     })
    
   }
- onLogout(){
+/* onLogout(){
     this.isLoggedIn=false;
-    this.route.navigate(['Home']);
+    this.route.navigate(['/Home']);
   }
-  isLoggedIn=false;
+  isLoggedIn=false;*/
+
+  onLogout(){
+    sessionStorage.removeItem('user');
+    this.route.navigate[('/Home')];
+    window.location.reload();
+  }
 }

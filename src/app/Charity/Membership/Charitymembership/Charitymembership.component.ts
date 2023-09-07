@@ -18,6 +18,7 @@ export class CharitymembershipComponent implements OnInit {
   Phone:any;
   Price:any;
   @ViewChild('MembershipForm') MembershipForm!: NgForm;
+  Input=false;
  
   constructor(private member:MembershipService,private http:HttpClient) {
     this.http.get<any>(environment.Price).subscribe(data=>{
@@ -26,11 +27,11 @@ export class CharitymembershipComponent implements OnInit {
    }
 
   ngOnInit() {
-    if(localStorage.getItem('user')){
-      let un = localStorage.getItem('user');
-      let ud = un && JSON.parse(un);
-      this.Name=ud.uname;
-      this.Phone=ud.mobileno;
+    if(sessionStorage.getItem('user')){
+      let un = sessionStorage.getItem('user');
+      this.ud = un && JSON.parse(un);
+    //  this.Name=ud.uname;
+      //this.Phone=ud.mobileno;
    }    
   }
 
@@ -81,7 +82,7 @@ export class CharitymembershipComponent implements OnInit {
   PlatinumMembershipSubmit(){
     var body={
     Type:this.Type,
-    Name:this.Name,
+    Name:this.ud.uname,
     Mobile:this.Phone,
     price:this.platinumprice,
     validity:this.platinumvalidity,
@@ -96,7 +97,7 @@ export class CharitymembershipComponent implements OnInit {
     this.member.postplatinummembership(body).subscribe(res=>{
       alert("Thank you for joining in Membership. Welcome to Charity Miles");
     });   
-    this.http.patch("http://localhost:3000/registereduser/1",body).subscribe(res=>{
+    this.http.patch("http://localhost:3000/registereduser/"+this.ud.id,body).subscribe(res=>{
       alert("Membership Updated to Donor");
     })
   }
@@ -131,7 +132,7 @@ export class CharitymembershipComponent implements OnInit {
       alert("Thank you for joining in Membership. Welcome to Charity Miles");
       
     });
-    this.http.patch("http://localhost:3000/registereduser/1",body).subscribe(res=>{
+    this.http.patch("http://localhost:3000/registereduser/"+this.ud.id,body).subscribe(res=>{
       alert("Membership Updated to Donor");
     })
 }
@@ -139,8 +140,8 @@ export class CharitymembershipComponent implements OnInit {
 
   //Silver
   Type2='Silver';
-  silverprice=699;
-  silvervalidity='6 Months';
+  silverprice=399;
+  silvervalidity='3 Months';
   silverstartdate:any;
   silverenddate:any;
   silvercardname:any;
@@ -164,7 +165,7 @@ export class CharitymembershipComponent implements OnInit {
     this.member.postsilvermembership(body).subscribe(res=>{
       alert("Thank you for joining in Membership. Welcome to Charity Miles");
     });
-    this.http.patch("http://localhost:3000/registereduser/1",body).subscribe(res=>{
+    this.http.patch("http://localhost:3000/registereduser/"+this.ud.id,body).subscribe(res=>{
       alert("Membership Updated to Donor");
     })
   }
